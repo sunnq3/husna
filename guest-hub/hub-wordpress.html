@@ -1,0 +1,277 @@
+<!-- ============================================================
+     HUSNA VACATIONS · BEACH & BEYOND 10 · GUEST HUB
+     Paste this whole file into one Elementor "HTML" widget
+     on a page that uses the "Elementor Canvas" template.
+     Content lives here; CONFIG (images, emails) lives in hub.js on GitHub.
+     ============================================================ -->
+
+
+<!-- Styles and behaviour are hosted on GitHub Pages. Edit hub.css / hub.js there, not here. -->
+<link rel="stylesheet" href="https://USERNAME.github.io/husna/guest-hub/hub.css">
+<script src="https://USERNAME.github.io/husna/guest-hub/hub.js" defer></script>
+
+<div id="husna-hub">
+
+  <!-- ================= HERO ================= -->
+  <header class="hh-hero">
+    <img class="hh-hero__img" data-src="hero" alt="" fetchpriority="high">
+    <div class="hh-hero__shade"></div>
+    <img class="hh-hero__logo" data-src="wordmark" alt="Husna Vacations">
+    <div class="hh-hero__title">
+      <span class="hh-hero__wave">10th wave</span>
+      <span class="hh-hero__eyebrow">Beach &amp; Beyond</span>
+      <span class="hh-hero__script">Punta Cana</span>
+    </div>
+  </header>
+
+  <!-- ================= COUNTDOWN ================= -->
+  <section class="hh-count" aria-label="Trip dates">
+    <div class="hh-count__days">
+      <span class="hh-count__num" id="hh-days">–</span>
+      <span class="hh-count__lbl"><b id="hh-days-b">days</b><span id="hh-days-s">to go</span></span>
+    </div>
+    <div class="hh-count__date">
+      <b>Dec 19 – 24, 2026</b>
+      <span>Sat to Thu · Nickelodeon Punta Cana</span>
+    </div>
+  </section>
+
+  <div class="hh-wrap">
+
+    <!-- ================= PRIMARY ACTIONS ================= -->
+    <div class="hh-actions" id="hh-actions">
+      <a class="hh-btn hh-btn--primary" data-href="whatsapp" target="_blank" rel="noopener">WhatsApp group
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="hh-btn hh-btn--outline" data-href="itinerary">Itinerary
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+
+    <!-- ================= EMAILS ================= -->
+    <button class="hh-feature" type="button" data-open="hh-emails">
+      <img data-src="emails" alt="">
+      <span class="hh-feature__txt"><b>Emails</b><span>Everything we’ve sent, in one place</span></span>
+      <span class="hh-feature__end">
+        <span class="hh-badge" id="hh-email-badge" hidden></span>
+        <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+    </button>
+
+    <div class="hh-groups">
+
+      <!-- ================= BEFORE YOU GO ================= -->
+      <section class="hh-group" data-cols="1">
+        <span class="hh-eyebrow">Before you go</span>
+        <div class="hh-grid">
+          <button class="hh-tile" type="button" data-open="hh-transfers">
+            <img data-src="transfers" alt="">
+            <span class="hh-tile__txt"><b>Airport transfers</b><span>Book with BRX</span></span>
+          </button>
+          <!-- Checklist: remove aria-disabled and add data-open="hh-checklist" when the panel exists -->
+          <div class="hh-tile" aria-disabled="true">
+            <img data-src="checklist" alt="">
+            <span class="hh-tile__txt"><b>Checklist</b><span>Before you fly</span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= AT THE RESORT ================= -->
+      <section class="hh-group" data-cols="2">
+        <span class="hh-eyebrow">At the resort</span>
+        <div class="hh-grid">
+          <button class="hh-tile" type="button" data-open="hh-maps">
+            <img data-src="maps" alt="">
+            <span class="hh-tile__txt"><b>Maps</b><span>Find your way</span></span>
+          </button>
+          <button class="hh-tile" type="button" data-open="hh-extras">
+            <img data-src="extras" alt="">
+            <span class="hh-tile__txt"><b>Nickelodeon Extras</b><span>Paid add-ons</span></span>
+          </button>
+          <div class="hh-tile" aria-disabled="true">
+            <img data-src="spa" alt="">
+            <span class="hh-tile__txt"><b>Vassa Spa</b><span>Treatments</span></span>
+          </div>
+          <div class="hh-tile" aria-disabled="true">
+            <img data-src="excursions" alt="">
+            <span class="hh-tile__txt"><b>Excursions</b><span>Beyond the resort</span></span>
+          </div>
+          <div class="hh-tile" aria-disabled="true">
+            <img data-src="competitions" alt="">
+            <span class="hh-tile__txt"><b>Competitions &amp; Tournaments</b><span>Sign up to play</span></span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <div style="height:24px;flex:none" aria-hidden="true"></div>
+
+  <!-- ================= STICKY FOOTER ================= -->
+  <footer class="hh-foot">
+    <div class="hh-foot__in">
+      <img data-src="smiley" alt="">
+      <span class="hh-foot__q">Need help?</span>
+      <button class="hh-btn hh-btn--ghost" type="button" data-open="hh-faq">FAQ</button>
+      <button class="hh-btn hh-btn--white" type="button" data-open="hh-contact">Contact</button>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       DIALOGS
+       ============================================================ -->
+
+  <!-- ---------- TRANSFERS (bottom sheet) ---------- -->
+  <dialog class="hh-sheet hh-dlg" id="hh-transfers" aria-labelledby="hh-transfers-t">
+    <div class="hh-sheet__head">
+      <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-transfers-t">Airport transfers</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body hh-stack" style="gap:14px">
+      <p class="hh-lead">Non-stop between PUJ airport and the resort, with BRX. Priced per vehicle, USD.</p>
+      <div class="hh-table" role="table">
+        <div class="hh-th">Vehicle</div><div class="hh-th">One way</div><div class="hh-th">Round trip</div>
+        <div><b>Shared, non-stop</b><small>Up to 4 pax</small></div><div><b>$20</b></div><div><b>$40</b></div>
+        <div><b>Private</b><small>5–6 pax</small></div><div><b>$90</b></div><div><b>$180</b></div>
+        <div><b>Private</b><small>7–11 pax</small></div><div><b>$170</b></div><div><b>$340</b></div>
+      </div>
+      <div class="hh-stack">
+        <a class="hh-btn hh-btn--primary" href="https://husnabrx.com/transfers/" target="_blank" rel="noopener">Book on husnabrx.com
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="hh-btn hh-btn--outline" href="mailto:info@brx-services.com?subject=Husna%20Guest%202026">Email BRX</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ---------- EMAILS (bottom sheet, list rendered from CONFIG.emails) ---------- -->
+  <dialog class="hh-sheet hh-dlg" id="hh-emails" aria-labelledby="hh-emails-t">
+    <div class="hh-sheet__head">
+      <div><h2 id="hh-emails-t">Emails</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body">
+      <div class="hh-emails" id="hh-email-list"></div>
+    </div>
+  </dialog>
+
+  <!-- ---------- CONTACT (bottom sheet) ---------- -->
+  <dialog class="hh-sheet hh-dlg" id="hh-contact" aria-labelledby="hh-contact-t">
+    <div class="hh-sheet__head">
+      <div><span class="hh-eyebrow">Husna guest services</span><h2 id="hh-contact-t">Contact us</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body hh-stack" style="gap:12px">
+      <p class="hh-lead">Sr. Iman and the Husna team are here before and during the trip.</p>
+      <div class="hh-rows">
+        <a href="https://wa.me/17345104886" target="_blank" rel="noopener">
+          <span class="hh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.4A8 8 0 1 1 21 12z"/></svg></span>
+          <span class="hh-row__t"><b>WhatsApp</b><span>Fastest reply · +1 (734) 510-4886</span></span>
+          <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <a href="tel:+17345104886">
+          <span class="hh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <span class="hh-row__t"><b>Call</b><span>+1 (734) 510-4886</span></span>
+          <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <a href="sms:+17345104886">
+          <span class="hh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+          <span class="hh-row__t"><b>Text</b><span>+1 (734) 510-4886</span></span>
+          <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <a href="mailto:info@husna.com">
+          <span class="hh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="hh-row__t"><b>Email</b><span>info@husna.com</span></span>
+          <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ---------- FAQ (full screen) ---------- -->
+  <dialog class="hh-full hh-dlg" id="hh-faq" aria-labelledby="hh-faq-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">Need help</span><h2 id="hh-faq-t">Frequently asked questions</h2></div>
+    </div>
+    <div class="hh-dlg__body hh-faq" style="gap:0">
+      <details name="hh-faq" open><summary>Will the entire resort be exclusive to Husna guests?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes. Only Husna guests and resort staff will be present for December 19–24, 2026.</p></details>
+      <details name="hh-faq"><summary>Do we have to pay for food?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>No. All-you-can-eat halal is included at every restaurant, pop-up, café, buffet and snack bar. Specialty items like lobster, tomahawk, private beach dinners and custom cakes are extra.</p></details>
+      <details name="hh-faq"><summary>Is it always halal or only for these dates?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Only for our dates, December 19–24, 2026. After that the resort returns to normal operations.</p></details>
+      <details name="hh-faq"><summary>Are flights included?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>No. Flights and airport transfers are not included.</p></details>
+      <details name="hh-faq"><summary>Are the rates per night or for the whole stay?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>They cover the entire 5 nights. They are not per-night rates.</p></details>
+      <details name="hh-faq"><summary>What airport should I fly into?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Punta Cana International Airport (PUJ). Recommended arrival on December 19 is between 3:00 PM and 5:00 PM.</p></details>
+      <details name="hh-faq"><summary>Is babysitting available?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes. $25 per hour for one child and $10 per hour for each additional child.</p></details>
+      <details name="hh-faq"><summary>Is it suitable for senior guests?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Absolutely, as long as they are mobile. Husna welcomes seniors every year.</p></details>
+      <details name="hh-faq"><summary>Is there a private pool for sisters?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>There are two main pools; the second is dedicated to sisters. Neither is fully enclosed, so not private enough to remove hijab.</p></details>
+      <details name="hh-faq"><summary>Can we tip in USD?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes. USD tips are preferred and guests are encouraged to tip generously.</p></details>
+    </div>
+  </dialog>
+
+  <!-- ---------- EXTRAS (full screen) ---------- -->
+  <dialog class="hh-full hh-dlg" id="hh-extras" aria-labelledby="hh-extras-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">Not included</span><h2 id="hh-extras-t">Resort extras</h2></div>
+    </div>
+    <div class="hh-dlg__body">
+      <p class="hh-lead">Optional, paid separately. Email the resort to reserve. <a href="http://eepurl.com/BPJ4-0xjDc" target="_blank" rel="noopener" style="color:var(--blue-deep);font-weight:400;white-space:nowrap">See the full email ↗</a></p>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Birthdays</span>
+        <div class="hh-list">
+          <div><span>Birthday cake</span><b>from $35</b></div>
+          <div><span>SpongeBob cake</span><b>from $80</b></div>
+          <div><span>Balloon arrangement</span><b>from $25</b></div>
+          <div><span>Themed birthday package</span><b>from $200</b></div>
+          <div><span>Pajama Jam character breakfast</span><b>$70 adult · $50 child</b></div>
+        </div></div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Anniversaries &amp; curated dining</span>
+        <div class="hh-list">
+          <div><span>Candlelight beach dinner</span><b>$300 / couple</b></div>
+          <div><span>Chef's table experience</span><b>$70 adult · $35 child</b></div>
+        </div></div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Group &amp; family experiences</span>
+        <div class="hh-list">
+          <div><span>TMNT pizza experience</span><b>$40 adult · $35 child</b></div>
+          <div><span>Private sliming (up to 6)</span><b>$59</b></div>
+          <div><span>Family sunset BBQ</span><b>$99 adult · $55 child</b></div>
+          <div><span>Private meet &amp; greet</span><b>from $99</b></div>
+          <div><span>Meet SpongeBob at Pineapple Villa</span><b>$150</b></div>
+        </div></div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Vacation treats</span>
+        <div class="hh-list">
+          <div><span>Floating breakfast</span><b>$25 / adult</b></div>
+          <div><span>Bali beds on the beach</span><b>from $80</b></div>
+          <div><span>Special lobster dinner</span><b>from $59</b></div>
+          <div><span>Premium cuts / tomahawk</span><b>from $70</b></div>
+        </div></div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Babysitting</span>
+        <div class="hh-list"><div><span>On-site, $25 per hour for one child, $10 per hour for each additional child.</span></div></div></div>
+    </div>
+    <div class="hh-full__cta">
+      <a class="hh-btn hh-btn--primary" href="mailto:jesantos@nick-resorts.com?subject=Husna%20Guest%20HS-1XXX%2FD26">Email the resort to book</a>
+      <span>Put your Husna ID (HS-1XXX/D26) in the subject line.</span>
+    </div>
+  </dialog>
+
+  <!-- ---------- MAPS (full screen viewer) ---------- -->
+  <dialog class="hh-full hh-dlg hh-maps" id="hh-maps" aria-labelledby="hh-maps-t">
+    <div class="hh-full__head">
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <h2 id="hh-maps-t">Resort maps</h2>
+      <span style="width:32px"></span>
+    </div>
+    <div class="hh-tabs" role="tablist" id="hh-map-tabs">
+      <button type="button" role="tab" aria-selected="true" data-map="0">Map 1 · Resort</button>
+      <button type="button" role="tab" aria-selected="false" data-map="1">Map 2 · Detail</button>
+    </div>
+    <div class="hh-zoom" id="hh-zoom"><img id="hh-map-img" alt="Resort map" draggable="false"></div>
+    <div class="hh-full__cta">
+      <a class="hh-btn hh-btn--outline" id="hh-map-full" href="#" target="_blank" rel="noopener" data-elementor-open-lightbox="no" data-elementor-lightbox-disable="true">Open full-size image</a>
+      <span>Pinch or scroll to zoom · drag to pan · double-tap to reset</span>
+    </div>
+  </dialog>
+
+</div>
