@@ -1,18 +1,11 @@
-<!-- ============================================================
-     HUSNA VACATIONS · BEACH & BEYOND 10 · GUEST HUB
-     Paste this whole file into one Elementor "HTML" widget
-     on a page that uses the "Elementor Canvas" template.
-     Content lives here; CONFIG (images, emails) lives in hub.js on GitHub.
-     ============================================================ -->
 
-
-<!-- Styles and behaviour are hosted on GitHub Pages. Edit hub.css / hub.js there, not here. -->
+<!-- Styles and behaviour are hosted on warsaai's github -->
 <link rel="stylesheet" href="https://USERNAME.github.io/husna/guest-hub/hub.css">
 <script src="https://USERNAME.github.io/husna/guest-hub/hub.js" defer></script>
 
 <div id="husna-hub">
 
-  <!-- ================= HERO ================= -->
+  <!-- Hero Section -->
   <header class="hh-hero">
     <img class="hh-hero__img" data-src="hero" alt="" fetchpriority="high">
     <div class="hh-hero__shade"></div>
@@ -24,7 +17,7 @@
     </div>
   </header>
 
-  <!-- ================= COUNTDOWN ================= -->
+  <!-- Countdown  -->
   <section class="hh-count" aria-label="Trip dates">
     <div class="hh-count__days">
       <span class="hh-count__num" id="hh-days">–</span>
@@ -38,7 +31,7 @@
 
   <div class="hh-wrap">
 
-    <!-- ================= PRIMARY ACTIONS ================= -->
+    <!-- Primary Actions -->
     <div class="hh-actions" id="hh-actions">
       <a class="hh-btn hh-btn--primary" data-href="whatsapp" target="_blank" rel="noopener">WhatsApp group
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -46,7 +39,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
     </div>
 
-    <!-- ================= EMAILS ================= -->
+    <!-- Emails -->
     <button class="hh-feature" type="button" data-open="hh-emails">
       <img data-src="emails" alt="">
       <span class="hh-feature__txt"><b>Emails</b><span>Everything we’ve sent, in one place</span></span>
@@ -58,7 +51,7 @@
 
     <div class="hh-groups">
 
-      <!-- ================= BEFORE YOU GO ================= -->
+      <!-- Before you go -->
       <section class="hh-group" data-cols="1">
         <span class="hh-eyebrow">Before you go</span>
         <div class="hh-grid">
@@ -74,7 +67,7 @@
         </div>
       </section>
 
-      <!-- ================= AT THE RESORT ================= -->
+      <!-- at the resort  -->
       <section class="hh-group" data-cols="2">
         <span class="hh-eyebrow">At the resort</span>
         <div class="hh-grid">
@@ -105,7 +98,7 @@
   </div>
   <div style="height:24px;flex:none" aria-hidden="true"></div>
 
-  <!-- ================= STICKY FOOTER ================= -->
+  <!-- sticky footer  -->
   <footer class="hh-foot">
     <div class="hh-foot__in">
       <img data-src="smiley" alt="">
@@ -116,11 +109,9 @@
   </footer>
 
 
-  <!-- ============================================================
-       DIALOGS
-       ============================================================ -->
+  <!-- Dialogs -->
 
-  <!-- ---------- TRANSFERS (bottom sheet) ---------- -->
+  <!-- Transfers -->
   <dialog class="hh-sheet hh-dlg" id="hh-transfers" aria-labelledby="hh-transfers-t">
     <div class="hh-sheet__head">
       <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-transfers-t">Airport transfers</h2></div>
@@ -142,7 +133,7 @@
     </div>
   </dialog>
 
-  <!-- ---------- EMAILS (bottom sheet, list rendered from CONFIG.emails) ---------- -->
+  <!-- Emails (bottom sheet, list rendered from CONFIG.emails)-->
   <dialog class="hh-sheet hh-dlg" id="hh-emails" aria-labelledby="hh-emails-t">
     <div class="hh-sheet__head">
       <div><h2 id="hh-emails-t">Emails</h2></div>
@@ -153,7 +144,7 @@
     </div>
   </dialog>
 
-  <!-- ---------- CONTACT (bottom sheet) ---------- -->
+  <!-- Contact -->
   <dialog class="hh-sheet hh-dlg" id="hh-contact" aria-labelledby="hh-contact-t">
     <div class="hh-sheet__head">
       <div><span class="hh-eyebrow">Husna guest services</span><h2 id="hh-contact-t">Contact us</h2></div>
@@ -186,7 +177,7 @@
     </div>
   </dialog>
 
-  <!-- ---------- FAQ (full screen) ---------- -->
+  <!--FAQ (full screen)  -->
   <dialog class="hh-full hh-dlg" id="hh-faq" aria-labelledby="hh-faq-t">
     <div class="hh-full__head">
       <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
@@ -206,7 +197,7 @@
     </div>
   </dialog>
 
-  <!-- ---------- EXTRAS (full screen) ---------- -->
+  <!--Extras (full screen)  -->
   <dialog class="hh-full hh-dlg" id="hh-extras" aria-labelledby="hh-extras-t">
     <div class="hh-full__head">
       <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
@@ -256,7 +247,7 @@
     </div>
   </dialog>
 
-  <!-- ---------- MAPS (full screen viewer) ---------- -->
+  <!-- Maps (full screen viewer)-->
   <dialog class="hh-full hh-dlg hh-maps" id="hh-maps" aria-labelledby="hh-maps-t">
     <div class="hh-full__head">
       <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
