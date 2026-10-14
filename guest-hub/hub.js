@@ -23,6 +23,7 @@
     },
     // Newest first. "added" drives the NEW badge. Optional "until" hides the row after that date.
     emails: [
+      { title: 'HCI fundraising update',          date: 'Oct 8',  added: '2026-10-08', url: 'http://eepurl.com/SNtZZfRH2Z' },
       { title: 'Guest reveal – Amin Davis',       date: 'Sep 27', added: '2026-09-27', url: 'http://eepurl.com/QDy9ZfOyTx' },
       { title: 'Resort add-ons',                  date: 'Sep 24', added: '2026-09-24', url: 'http://eepurl.com/BPJ4-0xjDc' },
       { title: 'Airport transfers',               date: 'Sep 22', added: '2026-09-22', url: 'http://eepurl.com/DIjYnB7aB6' },
