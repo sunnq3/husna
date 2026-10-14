@@ -1,6 +1,11 @@
+/* ============================================================
+   BB10 Guest Hub · hub.css
+   © 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
+   Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
+   ============================================================ */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&family=Kaushan+Script&display=swap");
 
-/* ---------- Elementor breakout: make the widget span the full page width ---------- */
+/* ---------- Elementor breakout: make the widget span the full page width · © 2026 Saaima Saleh ---------- */
 html:has(#husna-hub),body:has(#husna-hub){margin:0;padding:0;background:#29A9DF;min-height:0}
 body:has(#husna-hub) :is(.e-con,.e-con-inner,.elementor-section,.elementor-container,.elementor-column,.elementor-widget-wrap,.elementor-widget-html,.elementor-widget-html > .elementor-widget-container){
   --content-width:100% !important; --width:100% !important;
@@ -10,7 +15,7 @@ body:has(#husna-hub) :is(.e-con,.e-con-inner,.elementor-section,.elementor-conta
 }
 body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
 
-/* ---------- tokens & scope ---------- */
+/* ---------- tokens & scope · © 2026 Saaima Saleh ---------- */
 #husna-hub{
   --blue:#29A9DF; --blue-deep:#04A4CB; --blue-light:#9CD7F6; --blue-pale:#D4EEFA; --blue-mist:#EAF6FC;
   --ink:#231F20; --ink-60:rgba(35,31,32,.6); --ink-50:rgba(35,31,32,.5);
@@ -66,7 +71,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-btn:focus-visible,#husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--blue-light);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){#husna-hub *{transition:none !important;animation:none !important}}
 
-  /* ---------- hero ---------- */
+  /* ---------- hero · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-hero{position:relative;height:216px;overflow:hidden;background:var(--blue)}
   #husna-hub .hh-hero__img{position:absolute;inset:0;width:100% !important;height:100% !important;object-fit:cover;object-position:50% 30%}
   #husna-hub .hh-hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,120,160,.30) 0%,rgba(4,120,160,.10) 40%,rgba(4,120,160,.55) 100%)}
@@ -79,7 +84,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-hero__eyebrow{font-family:var(--font-head);font-size:13px;font-weight:400;letter-spacing:4px;text-transform:uppercase;line-height:1}
   #husna-hub .hh-hero__script{font-family:var(--font-script);font-size:40px;line-height:1;margin-top:6px}
 
-  /* ---------- countdown card ---------- */
+  /* ---------- countdown card · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-count{
     display:flex;align-items:stretch;height:60px;margin:-30px auto 0;position:relative;
     width:calc(100% - 28px);max-width:calc(var(--max) - 28px);
@@ -95,12 +100,12 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-count__date b{font-family:var(--font-head);font-size:15px;font-weight:600}
   #husna-hub .hh-count__date span{font-size:11px;color:var(--ink-60);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-  /* ---------- primary actions ---------- */
+  /* ---------- primary actions · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
   #husna-hub .hh-actions .hh-btn{height:40px;padding:0 14px;font-size:13px;justify-content:space-between}
   #husna-hub .hh-actions svg{width:15px;height:15px;flex:none}
 
-  /* ---------- emails feature card ---------- */
+  /* ---------- emails feature card · © 2026 Saaima Saleh ---------- */
   #husna-hub button.hh-feature,#husna-hub .hh-feature{
     display:flex;align-items:stretch;width:100%;height:70px;margin-top:18px;border-radius:16px;overflow:hidden;
     background:var(--ink);color:var(--white);box-shadow:0 6px 18px rgba(35,31,32,.22);
@@ -114,7 +119,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-badge[hidden]{display:none}
   #husna-hub .hh-chev{width:18px;height:18px;color:var(--blue);flex:none}
 
-  /* ---------- groups & tiles ---------- */
+  /* ---------- groups & tiles · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-group{margin-top:22px}
   #husna-hub .hh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
   #husna-hub .hh-grid > :nth-child(odd):last-child{grid-column:1 / -1}   /* an odd last tile spans the row */
@@ -133,7 +138,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-tile[aria-disabled] img{opacity:.45}
   #husna-hub .hh-tile[aria-disabled] .hh-tile__txt span{color:inherit}
 
-  /* ---------- sticky footer ---------- */
+  /* ---------- sticky footer · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-foot{
     position:sticky;bottom:0;left:0;right:0;z-index:50;margin-top:auto;
     display:flex;align-items:center;gap:12px;

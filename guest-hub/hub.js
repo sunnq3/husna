@@ -1,3 +1,8 @@
+/* ============================================================
+   BB10 Guest Hub · hub.js
+   © 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
+   Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
+   ============================================================ */
 (function(){
   'use strict';
 
@@ -43,11 +48,11 @@
   const $  = (s, c = root) => c.querySelector(s);
   const $$ = (s, c = root) => Array.from(c.querySelectorAll(s));
 
-  /* images & links from CONFIG */
+  /* images & links from CONFIG · © 2026 Saaima Saleh */
   $$('img[data-src]').forEach(el => { const v = CONFIG.img[el.dataset.src]; if (v) el.src = v; });
   $$('a[data-href]').forEach(el => { const v = CONFIG[el.dataset.href]; if (v) el.href = v; });
 
-  /* countdown*/
+  /* countdown · © 2026 Saaima Saleh */
   (function countdown(){
     const num = $('#hh-days'), b = $('#hh-days-b'), s = $('#hh-days-s');
     const today = new Date(); today.setHours(0,0,0,0);
@@ -61,7 +66,7 @@
     else                   { num.textContent = total; b.textContent = 'days'; s.textContent = 'of memories'; }
   })();
 
-  /* emails list + NEW badge  */
+  /* emails list + NEW badge · © 2026 Saaima Saleh */
   (function emails(){
     const list = $('#hh-email-list'), badge = $('#hh-email-badge');
     const LS = 'hh_bb10_last_visit';
@@ -92,7 +97,7 @@
     if (!lastVisit) { try { localStorage.setItem(LS, todayISO); } catch(e){} }
   })();
 
-  /* dialogs: open / close / back button  */
+  /* dialogs: open / close / back button · © 2026 Saaima Saleh */
   const dialogs = $$('dialog');
   let openDlg = null;
 
@@ -137,7 +142,7 @@
   const lock = () => document.documentElement.style.overflow = dialogs.some(d => d.open) ? 'hidden' : '';
   dialogs.forEach(d => { d.addEventListener('close', lock); d.addEventListener('hh:open', lock); });
 
-  /* maps: tabs + pinch / drag / wheel zoom  */
+  /* maps: tabs + pinch / drag / wheel zoom · © 2026 Saaima Saleh */
   (function maps(){
     const maps = [CONFIG.img.map1, CONFIG.img.map2];
     const img = $('#hh-map-img'), stage = $('#hh-zoom'), full = $('#hh-map-full');
@@ -176,7 +181,7 @@
     stage.addEventListener('wheel', e => { e.preventDefault(); const r = stage.getBoundingClientRect(); px = e.clientX - r.left; py = e.clientY - r.top; zoomTo(s * (e.deltaY < 0 ? 1.12 : 0.9)); clamp(); apply(); }, { passive: false });
   })();
 
-  /*  expiry: hide anything with data-until in the past  */
+  /* expiry: hide anything with data-until in the past · © 2026 Saaima Saleh */
   const today = new Date().toISOString().slice(0,10);
   $$('[data-until]').forEach(el => { if (el.dataset.until < today) el.hidden = true; });
 
