@@ -23,11 +23,10 @@
     },
     // Newest first. "added" drives the NEW badge. Optional "until" hides the row after that date.
     emails: [
-      { title: 'Guest reveal – Amin Davis',       date: '', added: '', url: 'http://eepurl.com/QDy9ZfOyTx' },
-      { title: 'Resort add-ons',                  date: '', added: '', url: 'http://eepurl.com/BPJ4-0xjDc' },
-      { title: 'Referral campaign – round two',   date: '', added: '', url: 'http://eepurl.com/dYz9xs1l1Q' },
-      { title: 'Referral campaign – ends Sep 30', date: 'Sep 23', added: '2026-09-23', until: '2026-09-30', url: 'http://eepurl.com/dYz9xs1l1Q' },
+      { title: 'Guest reveal – Amin Davis',       date: 'Sep 27', added: '2026-09-27', url: 'http://eepurl.com/QDy9ZfOyTx' },
+      { title: 'Resort add-ons',                  date: 'Sep 24', added: '2026-09-24', url: 'http://eepurl.com/BPJ4-0xjDc' },
       { title: 'Airport transfers',               date: 'Sep 22', added: '2026-09-22', url: 'http://eepurl.com/DIjYnB7aB6' },
+      { title: 'Referral campaign',               date: 'Sep 20', added: '2026-09-20', url: 'http://eepurl.com/dYz9xs1l1Q' },
       { title: 'Discover Punta Cana',             date: 'Sep 18', added: '2026-09-18', url: 'http://eepurl.com/ih1pmerln1' },
       { title: '4 AI prompts to book your flights', date: 'Sep 17', added: '2026-09-17', url: 'http://eepurl.com/ioq0yVmImQ' },
       { title: 'Travel insurance',                date: 'Sep 17', added: '2026-09-17', url: 'http://eepurl.com/ICnFLOV5R8' },
