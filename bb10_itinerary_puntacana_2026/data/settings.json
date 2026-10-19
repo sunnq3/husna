@@ -27,7 +27,7 @@
       "text": "Email to book",
       "email": "jesantos@nick-resorts.com",
       "subject": "Husna Guest",
-      "body": "Assalamu alaikum,\n\nI'm a Husna guest and would like to book {title} on {day} at {time}.\n\nName:\nRoom number:\nNumber of guests:\n"
+      "body": "Hi,\n\nI'm a Husna guest and would like to book {title} on {day} at {time}.\n\nName:\nRoom number:\nNumber of guests:\n"
     }
   }
 }

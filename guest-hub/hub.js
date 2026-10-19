@@ -10,7 +10,7 @@
     tripStart: '2026-12-19',          // first day (local)
     tripEnd:   '2026-12-24',          // last day (local)
     whatsapp:  'https://chat.whatsapp.com/ILGjPYSuBoB8Q4hQZzDvs9',
-    itinerary: '#',                   // put the itinerary page URL here when it exists
+    itinerary: 'https://husna.com/itinerary-beach-beyond-punta-cana-2026',
     img: {                           
       hero:       'https://husna.com/wp-content/uploads/2026/09/hero.jpg',
       wordmark:   'https://husna.com/wp-content/uploads/2026/09/wordmark-white.png',
