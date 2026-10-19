@@ -1,0 +1,33 @@
+{
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. Page-wide settings: links, categories, wording.",
+
+  "hubUrl": "",
+  "wordmark": "https://husna.com/wp-content/uploads/2026/09/wordmark-white.png",
+  "timezoneOffset": "-04:00",
+
+  "disclaimer": "Times and locations may change because of weather or resort scheduling. We update this page as soon as we know, and post same-day changes in the WhatsApp group.",
+  "tbcLabel": "To be confirmed",
+
+  "categories": [
+    { "id": "husna",   "label": "Husna",       "color": "#29A9DF", "text": "#0F8BBF", "tint": "#EAF6FC" },
+    { "id": "nick",    "label": "Nickelodeon", "color": "#EB9E51", "text": "#B9650F", "tint": "#FDF1E5" },
+    { "id": "food",    "label": "Food",        "color": "#8B71C9", "text": "#7558B8", "tint": "#F2EEFA" },
+    { "id": "women",   "label": "Women",       "color": "#D674CC", "text": "#B8489F", "tint": "#FBEFF9" },
+    { "id": "sliming", "label": "Sliming",     "color": "#529630", "text": "#3F7A22", "tint": "#EDF5E8" },
+    { "id": "hours",   "label": "Open Hours",  "color": "#4963A3", "text": "#4963A3", "tint": "#ECEFF6" }
+  ],
+
+  "links": {
+    "excursions": { "text": "Book with BRX",          "url": "https://husnabrx.com/excursions/" },
+    "brx":        { "text": "Book with BRX",          "url": "https://husnabrx.com/" },
+    "waiver":     { "text": "Sign the waiver",        "url": "https://forms.gle/zLJ5QVQtbrGdwwiH7" },
+    "spa":        { "text": "How to book the spa",    "url": "" },
+    "dinnerApp":  { "text": "Book on the resort app", "url": "" },
+    "nickEmail":  {
+      "text": "Email to book",
+      "email": "jesantos@nick-resorts.com",
+      "subject": "Husna Guest",
+      "body": "Assalamu alaikum,\n\nI'm a Husna guest and would like to book {title} on {day} at {time}.\n\nName:\nRoom number:\nNumber of guests:\n"
+    }
+  }
+}

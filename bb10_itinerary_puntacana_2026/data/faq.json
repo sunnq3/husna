@@ -1,0 +1,68 @@
+{
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. FAQ. topic must match one of topics. Each answer is a list of paragraphs; lines starting with '- ' become bullet points. Web addresses and emails become links automatically.",
+
+  "topics": ["Booking", "Food", "Resort", "Kids"],
+
+  "questions": [
+    { "topic": "Booking", "q": "Is the itinerary final?",
+      "a": ["Times and locations can change because of weather or resort scheduling. Items marked with a red star are still being confirmed.",
+            "We update this page as soon as we know, and post same-day changes in the WhatsApp group."] },
+
+    { "topic": "Food", "q": "How do I book dinner?",
+      "a": ["The à la carte restaurants (Wok Wok, Verdello, Brgrs.Ph and Space Walker) open at 5:30 PM and need a reservation, made on the resort app. The daily booking window is 9 AM – 3 PM.",
+            "The Explorer's Table buffet (6 – 10 PM) needs no reservation.",
+            "On Saturday, December 19, no reservations are needed."] },
+
+    { "topic": "Food", "q": "Where can I eat during the day?",
+      "a": ["- Breakfast buffet: Explorer's Table, 7 – 11 AM",
+            "- Sweetery: Gourmet Village, 7 AM – 11 PM",
+            "- Aqua Bites: Aqua Nick, 10 AM – 5 PM",
+            "- Fresco: behind Building 2, 11 AM – 5 PM",
+            "- Nick Bistro: in front of Building 1 on the beach, 12:30 – 3 PM",
+            "- Lunch buffet: Explorer's Table, 12:30 – 3 PM",
+            "- Room service: 24 hours"] },
+
+    { "topic": "Food", "q": "Are there dairy-free or gluten-free treats?",
+      "a": ["The popcorn cart is dairy-free and gluten-free. Sweetery has sorbet as a dairy-free, gluten-free option."] },
+
+    { "topic": "Resort", "q": "When are the pools and towel bar open?",
+      "a": ["Pools are open until 7 PM. The towel bar is staffed 8 AM – 5 PM; towels are still available after that, but no staff will be there."] },
+
+    { "topic": "Resort", "q": "When can I use the golf carts?",
+      "a": ["Golf carts run from 8 AM."] },
+
+    { "topic": "Resort", "q": "Which buildings have elevators?",
+      "a": ["Every building except Building 1."] },
+
+    { "topic": "Resort", "q": "Where can I play table tennis?",
+      "a": ["There are two open table tennis stations every day between Buildings 8 and 9, and one next to the Show Lounge."] },
+
+    { "topic": "Kids", "q": "Is there a kids' club or babysitting?",
+      "a": ["The kids' club at Nickelodeon Place is for ages 4 and up, for activities rather than babysitting.",
+            "There's no babysitting area, but in-room babysitting can be requested for a fee."] },
+
+    { "topic": "Kids", "q": "What costs extra?",
+      "a": ["- Cotton candy at Sweetery: $7",
+            "- Cars in Kids' Corner: $7 for 5 minutes",
+            "- Personal Sliming, It's Pizza Time, the Character Breakfast and the Ninja Turtle Power Dinner: reservation and payment required",
+            "- Spa treatments"] },
+
+    { "topic": "Booking", "q": "How do I book Personal Sliming or other paid Nickelodeon activities?",
+      "a": ["Email jesantos@nick-resorts.com with the subject \"Husna Guest\". The Email to book link on each activity fills this in for you."] },
+
+    { "topic": "Booking", "q": "How do I book excursions?",
+      "a": ["Book online at https://husnabrx.com/excursions/ or visit the BRX table in the lobby. Husna-exclusive excursions:",
+            "- Catamaran + Cenote Experience: Sun, Dec 20 and Tue, Dec 22 at 7:45 AM",
+            "- Dolphin Encounter, Swim Adventure & Royal Swim: Sun, Dec 20 at 1:30 PM",
+            "- Eco Park: Mon, Dec 21 at 8:40 AM and 12:40 PM",
+            "- Golf with Brother Asif: Mon, Dec 21 at 11:50 AM",
+            "- Beach Horse Excursion with Sr. Sadaf: Mon, Dec 21 at 4 PM"] },
+
+    { "topic": "Booking", "q": "How do I book the spa?",
+      "a": ["Spa reservations are required. Booking details were sent by email.",
+            "Some spa times are reserved for women only, men only (male therapist available) or mother & daughter. Check each day's itinerary."] },
+
+    { "topic": "Booking", "q": "Who can help with non-inclusive bookings and special requests?",
+      "a": ["The Gazebo concierge, in front of each building, 8 AM – 5 PM."] }
+  ]
+}

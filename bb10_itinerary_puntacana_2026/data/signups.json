@@ -1,0 +1,23 @@
+{
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. Competitions on the Sign-ups page. group: open | men | women | kids. kids: girls and/or boys. Paste sign-up URLs into link.url. Set full: true to grey one out.",
+
+  "title": "Husna competitions",
+  "intro": "Spots are limited. Sign up before the day; walk-ups only if space is left.",
+
+  "competitions": [
+    { "id": "sand-castle",        "group": "open",  "title": "Sand Castle Competition",             "day": "sun", "start": "11:00 AM", "end": "12:45 PM", "location": "Beach",            "ages": "Families",                 "link": { "text": "Sign up", "url": "" } },
+    { "id": "three-point",        "group": "open",  "title": "3 Point Shoot Out Contest",           "day": "sun", "start": "4:00 PM",  "end": "6:00 PM",  "location": "Basketball Court", "ages": "Ages 13+ · open to all",   "link": { "text": "Sign up", "url": "" } },
+
+    { "id": "mens-table-tennis",  "group": "men",   "title": "Men's Table Tennis Tournament",       "day": "sun", "start": "10:15 PM", "end": "12:00 AM", "location": "Show Lounge",      "ages": "Ages 15+", "note": "Semis & finals Mon, Dec 21 at 10:15 PM", "link": { "text": "Sign up", "url": "" } },
+    { "id": "mens-swim",          "group": "men",   "title": "Men's Fastest Swimmer Contest",       "day": "mon", "start": "3:00 PM",  "end": "4:00 PM",  "location": "Infinity Pool",    "ages": "Ages 13+", "tbc": true, "link": { "text": "Sign up", "url": "" } },
+    { "id": "mens-volleyball",    "group": "men",   "title": "Men's Volleyball Tournament",         "day": "tue", "start": "4:00 PM",                     "location": "Beach",            "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
+
+    { "id": "womens-swim",        "group": "women", "title": "Women's Fastest Swimmer Contest",     "day": "sun", "start": "4:30 PM",                     "location": "Women's Pool",     "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
+    { "id": "womens-table-tennis","group": "women", "title": "Women's Table Tennis Tournament",     "day": "tue", "start": "10:15 PM", "end": "12:00 AM", "location": "Show Lounge",      "ages": "Ages 15+", "link": { "text": "Sign up", "url": "" } },
+    { "id": "womens-volleyball",  "group": "women", "title": "Women's Volleyball Tournament",       "day": "wed", "start": "1:00 PM",                     "location": "Beach",            "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
+
+    { "id": "junior-basketball",  "group": "kids", "kids": ["girls", "boys"], "title": "Junior Basketball: 3 Point Shoot Out", "day": "mon", "start": "11:30 AM", "end": "1:30 PM", "location": "Basketball Court", "ages": "Ages 12 & under", "link": { "text": "Sign up", "url": "" } },
+    { "id": "kids-swim",          "group": "kids", "kids": ["girls", "boys"], "title": "Kids' Fastest Swimmer Contest",        "day": "mon", "start": "4:00 PM",                    "location": "Infinity Pool",    "ages": "Ages 12 & under", "note": "Boys & girls race separately", "link": { "text": "Sign up", "url": "" } },
+    { "id": "kids-table-tennis",  "group": "kids", "kids": ["girls", "boys"], "title": "Kids Table Tennis Tournament",         "day": "tue", "start": "12:30 PM",                   "location": "Show Lounge",      "ages": "Ages 14 & under", "tbc": true, "link": { "text": "Sign up", "url": "" } }
+  ]
+}

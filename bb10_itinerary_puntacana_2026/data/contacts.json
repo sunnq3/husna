@@ -1,0 +1,24 @@
+{
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. Contact page. Any of phone / whatsapp / email / url can be left empty and the row still shows. tbc: true adds the red star.",
+
+  "contacts": [
+    { "name": "Husna WhatsApp group", "role": "Announcements and same-day changes",
+      "url": "https://chat.whatsapp.com/ILGjPYSuBoB8Q4hQZzDvs9", "urlText": "Open WhatsApp group" },
+
+    { "name": "Husna team on site", "role": "Questions during the trip",
+      "phone": "", "whatsapp": "", "tbc": true },
+
+    { "name": "Husna Table", "role": "Find the Husna team",
+      "note": "Gourmet Village · evenings, 6 – 11 PM" },
+
+    { "name": "BRX Excursions", "role": "Excursions",
+      "note": "Lobby table · 8 AM – 6 PM",
+      "url": "https://husnabrx.com/excursions/", "urlText": "husnabrx.com" },
+
+    { "name": "Nickelodeon bookings", "role": "Personal Sliming, Pizza Time, character dining",
+      "email": "jesantos@nick-resorts.com", "subject": "Husna Guest" },
+
+    { "name": "Gazebo concierge", "role": "Non-inclusive bookings and special requests",
+      "note": "Front of each building · 8 AM – 5 PM" }
+  ]
+}
