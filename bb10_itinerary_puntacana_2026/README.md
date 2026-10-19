@@ -53,4 +53,4 @@ Wording: "Ladies" → "Women" everywhere (Ladies Only Pool → Women's Pool); "S
 
 Not on any day yet (from ATTN Overview): Ustadh Ubaydullah Evans' spiritual sessions, Under the Stars, Marriage Retreat sessions, Super Hijabi.
 
-Placeholders waiting for links: competition sign-up forms, spa booking, dinner app, on-site team phone / WhatsApp, hub URL (back button uses browser back until set).
+Placeholders waiting for links: competition sign-up forms, spa booking, dinner app, on-site team phone / WhatsApp, (hub link set to https://husna.com/beach-beyond-punta-cana-2026-dashboard/).

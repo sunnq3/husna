@@ -56,11 +56,16 @@ body:has(#husna-itin) .elementor-widget-html{margin-bottom:0 !important}
 
 /* header */
 #husna-itin .bi-head{background:var(--blue);color:var(--white)}
-#husna-itin .bi-head .bi-col{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 6px}
-#husna-itin .bi-back{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:var(--white)}
-#husna-itin .bi-back:hover{background:rgba(255,255,255,.14)}
-#husna-itin .bi-back svg{width:22px;height:22px}
-#husna-itin .bi-head__title{font-family:var(--font-head);font-size:15px;font-weight:600}
+#husna-itin .bi-head .bi-col{height:48px;display:flex;align-items:center;justify-content:space-between}
+#husna-itin .bi-head .bi-col{position:relative;padding:0 14px 0 10px}
+#husna-itin .bi-hub{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:3px;height:30px;padding:0 12px 0 7px;border-radius:999px;
+  background:rgba(255,255,255,.18);color:var(--white) !important;font-family:var(--font-head);font-size:12px;font-weight:600;white-space:nowrap;
+  transition:background .12s ease;
+}
+#husna-itin .bi-hub:hover,#husna-itin .bi-hub:focus-visible{background:rgba(255,255,255,.3);color:var(--white) !important}
+#husna-itin .bi-hub svg{width:15px;height:15px}
+#husna-itin .bi-head__title{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-head);font-size:15px;font-weight:600;pointer-events:none}
 #husna-itin .bi-head__logo{height:22px !important;width:auto !important;max-width:120px;overflow:hidden;color:transparent;font-size:0}
 
 /* white toolbar under the header */

@@ -132,7 +132,9 @@
     const titles = { itinerary: 'Itinerary', signups: 'Sign-ups', faq: 'FAQ', contact: 'Contact' };
     const head = `
       <header class="bi-head"><div class="bi-col">
-        <button class="bi-back" type="button" data-act="back" aria-label="${S.view === 'itinerary' ? 'Back to the guest hub' : 'Back to the itinerary'}">${svg('back')}</button>
+        ${D.settings.hubUrl
+          ? `<a class="bi-hub" href="${esc(D.settings.hubUrl)}" data-elementor-open-lightbox="no">${svg('back', 2.4)}Guest hub</a>`
+          : `<button class="bi-hub" type="button" data-act="back">${svg('back', 2.4)}Back</button>`}
         <span class="bi-head__title">${titles[S.view]}</span>
         ${D.settings.wordmark ? `<img class="bi-head__logo" src="${esc(D.settings.wordmark)}" alt="Husna Vacations">` : '<span></span>'}
       </div></header>`;
