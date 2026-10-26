@@ -209,29 +209,52 @@
     } else if (tile) { tile.removeAttribute('aria-disabled'); tile.dataset.open = 'hh-excursions'; }
   })();
 
-  /* dialogs: open / close / back button · © 2026 Saaima Saleh */
+  /* dialogs: open / close / back button · © 2026 Saaima Saleh
+     Driven by the URL hash (#faq, #excursions, #ex-horses …), so the phone's back button,
+     the ‹ arrow and the X all agree. A sheet marked data-over opens on top of a panel. */
   const dialogs = $$('dialog');
   let openDlg = null;
+  const stack = [];                                   // open dialogs, bottom to top
+  const slug = d => d.id.replace(/^hh-/, '');
+  const byHash = () => { const id = 'hh-' + location.hash.slice(1); return location.hash.length > 1 ? document.getElementById(id) : null; };
+  let ignorePop = 0;
 
-  const stack = [];          // open dialogs, bottom to top (a sheet can sit over a panel)
-  let skipPop = false;
-  function openDialog(id){
-    const d = document.getElementById(id);
-    if (!d || d.open) return;
-    if (!('over' in d.dataset)) while (stack.length) closeDialog(stack[stack.length - 1], true);
+  function show(d){
+    if (d.open) return;
+    if (!('over' in d.dataset)) while (stack.length) hide(stack[stack.length - 1]);
     stack.push(d); openDlg = d;
     d.showModal();
     d.dispatchEvent(new Event('hh:open'));
     d.querySelector('.hh-dlg__body')?.scrollTo(0,0);
-    history.pushState({ hh: id }, '', '#' + id.replace('hh-',''));
   }
-  function closeDialog(d, silent){
-    if (!d || !d.open) return;
+  function hide(d){
+    if (!d.open) return;
     d.close();
     const i = stack.indexOf(d); if (i > -1) stack.splice(i, 1);
     openDlg = stack[stack.length - 1] || null;
-    if (!silent && history.state && history.state.hh === d.id) { skipPop = true; history.back(); }
   }
+  function openDialog(id){
+    const d = document.getElementById(id);
+    if (!d || d.open) return;
+    show(d);
+    if (location.hash !== '#' + slug(d)) history.pushState({ hh: id }, '', '#' + slug(d));
+  }
+  function closeDialog(d){
+    if (!d || !d.open) return;
+    hide(d);
+    // we put this dialog's hash in the URL: step back so the URL matches what's on screen
+    if (location.hash === '#' + slug(d)) { ignorePop++; history.back(); }
+  }
+  // make what's open match the URL (back / forward / swipe)
+  function sync(){
+    const want = byHash();
+    if (want && want.open) { while (stack[stack.length - 1] !== want) hide(stack[stack.length - 1]); return; }
+    if (want) { show(want); return; }
+    while (stack.length) hide(stack[stack.length - 1]);
+  }
+  window.addEventListener('popstate', () => { if (ignorePop > 0) { ignorePop--; sync(); return; } sync(); });
+  window.addEventListener('hashchange', sync);
+
   root.addEventListener('click', e => {
     const o = e.target.closest('[data-open]');
     if (o) { e.preventDefault(); openDialog(o.dataset.open); return; }
@@ -239,21 +262,11 @@
     if (c) { e.preventDefault(); closeDialog(c.closest('dialog')); return; }
   });
   dialogs.forEach(d => {
-    // click on backdrop closes
-    d.addEventListener('click', e => { if (e.target === d) closeDialog(d); });
-    // Escape (native) → keep history in sync
-    d.addEventListener('cancel', e => { e.preventDefault(); closeDialog(d); });
+    d.addEventListener('click', e => { if (e.target === d) closeDialog(d); });            // backdrop
+    d.addEventListener('cancel', e => { e.preventDefault(); closeDialog(d); });           // Escape
   });
-  window.addEventListener('popstate', () => {
-    if (skipPop) { skipPop = false; return; }
-    if (stack.length) { const top = stack.pop(); top.close(); openDlg = stack[stack.length - 1] || null; }
-    else if (history.state && history.state.hh) openDialog(history.state.hh);
-  });
-  // deep link: /guest-hub#faq
-  if (location.hash) {
-    const id = 'hh-' + location.hash.slice(1);
-    if (document.getElementById(id)) { history.replaceState(null, '', location.pathname); openDialog(id); }
-  }
+  // deep link: /guest-hub#faq, #excursions, #ex-horses
+  if (byHash()) { const d = byHash(); history.replaceState(null, '', location.pathname + location.search); openDialog(d.id); }
   // lock page scroll while a dialog is open
   const lock = () => document.documentElement.style.overflow = dialogs.some(d => d.open) ? 'hidden' : '';
   dialogs.forEach(d => { d.addEventListener('close', lock); d.addEventListener('hh:open', lock); });
