@@ -35,13 +35,12 @@ The Beach & Beyond 10 guest itinerary (Nickelodeon Punta Cana, Dec 19 – 24, 20
 
 Email links (`nickEmail`) open the guest's mail app with the address, subject "Husna Guest" and a short message (event, day, time) filled in.
 
-## Decisions made when converting the Excel (Oct 19, 2026)
+## Decisions made when converting the Excel (Oct 19, 2026; updated Oct 26 from the commented copy)
 
 Left off the guest page: "Notes for Nick" and "Task" columns, dark-blue and red rows (volunteer meetings, booth shifts, set-up, show run-sheet), the Friday Dec 18 team tab, Team Info, ATTN Overview, Sheet4.
 
 Red star (to be confirmed):
-- Pre-Show Nasheeds with Ilyas Mao & Amin Davis (sheet says CHANGE NAME)
-- What it Means to be Holistically Muslim (yellow; sheet says 10:45 start but "Q&A after 10:30")
+- Sunday 10:45 Morning Session (sheet says TBC for the title). Holistically Muslim stays Tue & Wed; removed from Mon (red row). The three pre-show slots are now named (Harmony & Noor / Kids Game Show / Nasheed Karaoke) and no longer starred
 - Baba's Village, Illusion Show, Up Close & Personal (teen program), Kids Table Tennis Tournament (yellow)
 - The Husna Night Show: Newlywed Show (Sun) and Grand Finale (Wed, time in red)
 - BRX Excursions Table (cells say 8 AM – 6 PM, text says 7 AM – 7 PM)
@@ -49,7 +48,7 @@ Red star (to be confirmed):
 - It's Pizza Time (Sun) and Meet & Greet Santiago of the Seas (sheet: confirm)
 - Isha · Second Jama'ah (Sat) and Husna Table (Thu): location TBD
 
-Wording: "Ladies" → "Women" everywhere (Ladies Only Pool → Women's Pool); "Sisters' Move N Improve" kept (business name). Club Nick → Nickelodeon Place. Sweetery filed under Food. Night show titles from the Night Shows tab.
+Wording: "Ladies" → "Women" everywhere (Ladies Only Pool → Women's Pool); "Sisters' Move N Improve" kept (business name). Club Nick → Nickelodeon Place. Sweetery filed under Food. Night show titles from the Night Shows tab, then from the Oct 26 sheet (Mon: Giveback Night with HCI; Tue: Theatrical Night). Sunday's Sunshine Cruise kept at 7:45 AM (the sheet blanked the time; the Oct 23 email says 7:45). Sisters' Move N Improve removed on Mon (red row); still Sun, Tue, Wed.
 
 Not on any day yet (from ATTN Overview): Ustadh Ubaydullah Evans' spiritual sessions, Under the Stars, Marriage Retreat sessions, Super Hijabi.
 

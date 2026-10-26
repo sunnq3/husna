@@ -53,7 +53,7 @@
           line: 'Cenote swim, catamaran & snorkel', price: 'From $95',
           desc: 'Swim in Hoyo Azul, a cenote at the foot of a cliff, then sail the Cap Cana coast by catamaran, snorkel the reef and relax in a natural pool.',
           facts: 'Adults $129 · Kids 3–11 $95 · Under 3 free',
-          when: [ ['2026-12-20', 'Pickup 7:45 AM · Resort lobby'], ['2026-12-22', 'Pickup 7:45 AM · Resort lobby'] ],
+          when: [ ['2026-12-20', 'Pickup 7:45 AM · Resort lobby'], ['2026-12-22', 'Pickup 7:45 AM · Resort lobby'], ['2026-12-22', 'Pickup 12:30 PM · Resort lobby'] ],
           url: 'https://husnabrx.com/product/wild-on-lagoon-exclusive-to-husna-guests/' },
         { id: 'dolphins', title: 'Dolphin Swims', img: 'ex-dolphins.jpg', pos: '60% 40%',
           line: 'Three ways to swim with dolphins', price: '3 options',
