@@ -41,7 +41,44 @@
       { title: 'Who is coming with you to Punta Cana?', date: 'Sep 11', added: '2026-09-11', url: 'http://eepurl.com/wOC62d9CQ_' },
       { title: 'Early arrival & late departure',  date: 'Sep 4',  added: '2026-09-04', url: 'http://eepurl.com/Hf8EmHG_Ps' },
       { title: 'Welcome to Beach & Beyond 10',    date: 'Aug 20', added: '2026-08-20', url: 'http://eepurl.com/g_yoOcaoBU' }
-    ]
+    ],
+
+    // Excursions panel (Excursions tile). Photos live in guest-hub/img/. Edit here; no WordPress change needed.
+    excursions: {
+      book:     'https://husnabrx.com/excursions/',
+      whatsapp: 'https://wa.me/18095011178',
+      intro:    'Pickup from the resort lobby. Tap one for dates and times.',
+      items: [
+        { id: 'cruise', title: 'Sunshine Cruise + Blue Hole', img: 'ex-cruise.jpg',
+          line: 'Cenote swim, catamaran & snorkel', price: 'From $95',
+          desc: 'Swim in Hoyo Azul, a cenote at the foot of a cliff, then sail the Cap Cana coast by catamaran, snorkel the reef and relax in a natural pool.',
+          facts: 'Adults $129 · Kids 3–11 $95 · Under 3 free',
+          when: [ ['2026-12-20', 'Pickup 7:45 AM · Resort lobby'], ['2026-12-22', 'Pickup 7:45 AM · Resort lobby'] ],
+          url: 'https://husnabrx.com/product/wild-on-lagoon-exclusive-to-husna-guests/' },
+        { id: 'dolphins', title: 'Dolphin Swims', img: 'ex-dolphins.jpg', pos: '60% 40%',
+          line: 'Three ways to swim with dolphins', price: '3 options',
+          desc: 'From a gentle first encounter for little ones to a full hour with two dolphins. Kids swim with a paying adult.',
+          facts: 'Watching is $30, paid on-site',
+          when: [ ['2026-12-20', 'Pickup 1:30 PM · Resort lobby'] ],
+          options: [
+            { title: 'Dolphin Funtastic',  meta: '40 min · All ages',            url: 'https://husnabrx.com/product/dolphin-discovery-encounter-exclusive-to-husna-guests/' },
+            { title: 'Dolphin Explorer',   meta: '50 min · Min. height 1.20 m',  url: 'https://husnabrx.com/product/dolphin-discovery-swim-adventure-exclusive-to-husna-guests/' },
+            { title: 'Royal S Excellence', meta: '1 hour · Min. height 1.20 m',  url: 'https://husnabrx.com/product/dolphin-discovery-royal-swim-exclusive-to-husna-guests/' }
+          ] },
+        { id: 'ecopark', title: 'Eco Park', img: 'ex-ecopark.jpg',
+          line: 'Animals, horse rides & rafting', price: 'Kids $45',
+          desc: 'A full day for the little ones: feeding animals, milking cows, horse and donkey rides, kayaking, bamboo rafting and a visit to a traditional Dominican home.',
+          facts: '5 hours · Kids 3–12 $45 · Under 2 free',
+          when: [ ['2026-12-21', 'Pickup from 8:40 AM · Resort lobby'] ],
+          url: 'https://husnabrx.com/product/mr-eco-park-exclusive-to-husna-guests/' },
+        { id: 'horses', title: 'Beach Horses with Sister Sadaf', img: 'ex-horses.jpg', pos: '30% 25%',
+          line: 'Beach ride at Rancho Caribeño', price: 'Ages 6+',
+          desc: 'Ride along Punta Cana’s beaches with Sister Sadaf at Rancho Caribeño, a short drive from the resort, as the afternoon light settles over the water.',
+          facts: '3 hours · Ages 6+ · Safety gear, guides & refreshments',
+          when: [ ['2026-12-21', 'Pickup 4:00 PM · Resort lobby'] ],
+          url: 'https://husnabrx.com/product/beach-horses/' }
+      ]
+    }
   };
 
 
@@ -99,15 +136,90 @@
     if (!lastVisit) { try { localStorage.setItem(LS, todayISO); } catch(e){} }
   })();
 
+  /* excursions: panel + one sheet per excursion, built from CONFIG.excursions · © 2026 Saaima Saleh */
+  (function excursions(){
+    const X = CONFIG.excursions; if (!X || !X.items || !X.items.length) return;
+    const IMG = (document.currentScript && document.currentScript.src || 'https://sunnq3.github.io/husna/guest-hub/hub.js').replace(/[^/]*$/, '') + 'img/';
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const ico = {
+      x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+      back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+      chev: '<svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
+      out: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+    };
+    const DAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    const day = iso => { const d = new Date(iso + 'T12:00:00'); return { dow: DAYS[d.getDay()], n: d.getDate(),
+      full: d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) }; };
+    const ext = 'target="_blank" rel="noopener" data-elementor-open-lightbox="no"';
+
+    const panel = `
+    <dialog class="hh-full hh-dlg" id="hh-excursions" aria-labelledby="hh-excursions-t">
+      <div class="hh-full__head">
+        <button class="hh-back" type="button" data-close aria-label="Back">${ico.back}</button>
+        <div><span class="hh-eyebrow">Husna exclusive</span><h2 id="hh-excursions-t">Excursions</h2></div>
+      </div>
+      <div class="hh-dlg__body">
+        <p class="hh-lead">${esc(X.intro)}</p>
+        <div class="hh-exlist">${X.items.map(it => `
+          <button class="hh-exc" type="button" data-open="hh-ex-${it.id}">
+            <img src="${IMG + it.img}" alt="" loading="lazy" style="object-position:${it.pos || '50% 50%'}">
+            <span class="hh-exc__t"><b>${esc(it.title)}</b><span>${esc(it.line)}</span><em>${esc(it.price)}</em></span>
+            ${ico.chev}
+          </button>`).join('')}
+        </div>
+        <p class="hh-exhelp">Questions? <a href="${X.whatsapp}" ${ext}>WhatsApp BRX</a></p>
+      </div>
+      <div class="hh-full__cta">
+        <a class="hh-btn hh-btn--primary" href="${X.book}" ${ext}>Book on husnabrx.com ${ico.out}</a>
+      </div>
+    </dialog>`;
+
+    const sheet = it => `
+    <dialog class="hh-sheet hh-dlg hh-exs" id="hh-ex-${it.id}" data-over aria-labelledby="hh-ex-${it.id}-t">
+      <div class="hh-exs__photo">
+        <img src="${IMG + it.img}" alt="" loading="lazy" style="object-position:${it.pos || '50% 50%'}">
+        <button class="hh-x" type="button" data-close aria-label="Close">${ico.x}</button>
+      </div>
+      <div class="hh-dlg__body">
+        <h2 id="hh-ex-${it.id}-t">${esc(it.title)}</h2>
+        <p class="hh-lead">${esc(it.desc)}</p>
+        <p class="hh-exs__facts">${esc(it.facts)}</p>
+        <span class="hh-eyebrow">When</span>
+        <div class="hh-exbox">${it.when.map(([iso, t]) => { const d = day(iso); return `
+          <div class="hh-when"><span class="hh-cal"><span>${d.dow}</span><b>${d.n}</b></span><span class="hh-when__t"><b>${d.full}</b><span>${esc(t)}</span></span></div>`; }).join('')}
+        </div>
+        ${it.options ? `
+        <span class="hh-eyebrow">Choose a swim</span>
+        <div class="hh-exbox">${it.options.map(o => `
+          <a class="hh-slot" href="${o.url}" ${ext}><span><b>${esc(o.title)}</b><span>${esc(o.meta)}</span></span><em>Book ↗</em></a>`).join('')}
+        </div>` : `
+        <a class="hh-btn hh-btn--primary" href="${it.url}" ${ext}>View &amp; book ${ico.out}</a>`}
+      </div>
+    </dialog>`;
+
+    root.insertAdjacentHTML('beforeend', panel + X.items.map(sheet).join(''));
+
+    // switch on the Excursions tile (the WordPress markup has it disabled)
+    const img = root.querySelector('.hh-tile img[data-src="excursions"]');
+    const tile = img && img.closest('.hh-tile');
+    if (tile && tile.tagName !== 'BUTTON') {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = tile.className; b.dataset.open = 'hh-excursions';
+      b.innerHTML = tile.innerHTML; tile.replaceWith(b);
+    } else if (tile) { tile.removeAttribute('aria-disabled'); tile.dataset.open = 'hh-excursions'; }
+  })();
+
   /* dialogs: open / close / back button · © 2026 Saaima Saleh */
   const dialogs = $$('dialog');
   let openDlg = null;
 
+  const stack = [];          // open dialogs, bottom to top (a sheet can sit over a panel)
+  let skipPop = false;
   function openDialog(id){
     const d = document.getElementById(id);
     if (!d || d.open) return;
-    if (openDlg) closeDialog(openDlg, true);
-    openDlg = d;
+    if (!('over' in d.dataset)) while (stack.length) closeDialog(stack[stack.length - 1], true);
+    stack.push(d); openDlg = d;
     d.showModal();
     d.dispatchEvent(new Event('hh:open'));
     d.querySelector('.hh-dlg__body')?.scrollTo(0,0);
@@ -116,8 +228,9 @@
   function closeDialog(d, silent){
     if (!d || !d.open) return;
     d.close();
-    if (d === openDlg) openDlg = null;
-    if (!silent && history.state && history.state.hh === d.id) history.back();
+    const i = stack.indexOf(d); if (i > -1) stack.splice(i, 1);
+    openDlg = stack[stack.length - 1] || null;
+    if (!silent && history.state && history.state.hh === d.id) { skipPop = true; history.back(); }
   }
   root.addEventListener('click', e => {
     const o = e.target.closest('[data-open]');
@@ -132,7 +245,8 @@
     d.addEventListener('cancel', e => { e.preventDefault(); closeDialog(d); });
   });
   window.addEventListener('popstate', () => {
-    if (openDlg) { openDlg.close(); openDlg = null; }
+    if (skipPop) { skipPop = false; return; }
+    if (stack.length) { const top = stack.pop(); top.close(); openDlg = stack[stack.length - 1] || null; }
     else if (history.state && history.state.hh) openDialog(history.state.hh);
   });
   // deep link: /guest-hub#faq
