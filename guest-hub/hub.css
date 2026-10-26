@@ -331,7 +331,9 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-exs__photo{position:relative;height:180px;flex:none}
   #husna-hub .hh-exs__photo img{width:100% !important;height:100% !important;object-fit:cover}
   #husna-hub .hh-exs__photo .hh-x{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.92)}
-  #husna-hub .hh-exs .hh-dlg__body{padding:18px 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px}
+  #husna-hub .hh-exs .hh-dlg__body{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:18px 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px}
+  #husna-hub .hh-exs .hh-dlg__body > *{flex:none}
+  @media (max-height:700px){#husna-hub .hh-exs__photo{height:140px}}
   #husna-hub .hh-exs h2{font-family:var(--font-head);font-size:19px;font-weight:600;line-height:1.2;letter-spacing:-.2px}
   #husna-hub .hh-exs__facts{font-size:13px;font-weight:600;margin-bottom:8px}
   #husna-hub .hh-exs .hh-eyebrow{margin-top:4px}
