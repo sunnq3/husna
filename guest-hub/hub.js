@@ -91,6 +91,10 @@
   const unfocus = () => { const a = document.activeElement; if (a && a !== document.body && root.contains(a)) a.blur(); };
   window.addEventListener('pageshow', unfocus); unfocus();
   root.addEventListener('click', e => { const a = e.target.closest('a.hh-btn'); if (a) setTimeout(() => a.blur(), 0); });
+  let kb = false;
+  window.addEventListener('keydown', e => { if (e.key === 'Tab') kb = true; });
+  window.addEventListener('pointerdown', () => { kb = false; });
+  root.addEventListener('focusin', e => { if (!kb && e.target.closest && e.target.closest('a.hh-btn')) e.target.blur(); });
 
   /* images & links from CONFIG · © 2026 Saaima Saleh */
   $$('img[data-src]').forEach(el => { const v = CONFIG.img[el.dataset.src]; if (v) el.src = v; });

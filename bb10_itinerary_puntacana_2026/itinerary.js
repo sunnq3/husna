@@ -81,7 +81,7 @@
   const SMILEY = 'https://husna.com/wp-content/uploads/2026/09/smiley.png';
   root.innerHTML = '<style>@keyframes bi-spin{to{transform:rotate(360deg)}}</style>'
     + '<div class="bi-loading" aria-label="Loading" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#29A9DF">'
-    + '<img src="' + SMILEY + '" alt="" style="width:64px;height:64px;animation:bi-spin 1.6s linear infinite"></div>';
+    + '<img src="' + SMILEY + '" alt="" style="width:76px;height:auto;animation:bi-spin 1.6s linear infinite"></div>';
   const files = ['settings', 'itinerary', 'signups', 'faq', 'contacts'];
   // the stylesheet is loaded separately; don't paint the page until it has applied (max 4s)
   const cssReady = new Promise(res => {

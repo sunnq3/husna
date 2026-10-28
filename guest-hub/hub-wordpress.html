@@ -11,7 +11,7 @@
 <!-- Loading screen: shown until hub.css has arrived, so nothing unstyled ever flashes · © 2026 Saaima Saleh -->
 <style>.hh-boot{visibility:hidden}
 .hh-boot-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#29A9DF;visibility:visible}
-.hh-boot-screen img{width:64px;height:64px;animation:hh-spin 1.6s linear infinite}
+.hh-boot-screen img{width:76px !important;height:auto !important;max-width:none;animation:hh-spin 1.6s linear infinite}
 @keyframes hh-spin{to{transform:rotate(360deg)}}</style>
 <script>setTimeout(function(){var h=document.getElementById('husna-hub');if(h)h.classList.remove('hh-boot');},6000);</script>
 
