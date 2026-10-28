@@ -60,10 +60,25 @@
   };
   const svg = (n, sw = 2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
   const STAR = '<span class="bi-star" aria-label="to be confirmed" title="To be confirmed">*</span>';
-  const FLAGS = {
-    ps: '<svg class="bi-flag" viewBox="0 0 24 16" role="img" aria-label="Palestinian flag"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.33" fill="#000"/><rect y="10.67" width="24" height="5.33" fill="#007A3D"/><path d="M0 0l10 8-10 8z" fill="#CE1126"/></svg>'
+  const ICONS = {
+    'flag-ps': '<svg class="bi-flag" viewBox="0 0 24 16" role="img" aria-label="Palestinian flag"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.33" fill="#000"/><rect y="10.67" width="24" height="5.33" fill="#007A3D"/><path d="M0 0l10 8-10 8z" fill="#CE1126"/></svg>',
+    trophy: '<path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 14v3M9 20h6M9 17h6"/>',
+    palm:   '<path d="M12 21V9M12 9c-3-1-5-4-5-7 3 0 5 2 5 7zM12 9c3-1 5-4 5-7-3 0-5 2-5 7zM12 10c-4 0-7 1-9 3 3 0 6 1 9 4M12 10c4 0 7 1 9 3-3 0-6 1-9 4"/>',
+    masks:  '<path d="M4 5c3 2 5 2 8 0 3 2 5 2 8 0v7a8 8 0 0 1-16 0z"/><path d="M8 11c.5-1 1.5-1 2 0M14 11c.5-1 1.5-1 2 0M9 15c1.5 1.5 4.5 1.5 6 0"/>',
+    heart:  '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+    star:   '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'
   };
-  const flag = it => it.flag && FLAGS[it.flag] ? FLAGS[it.flag] : '';
+  const icon = it => {
+    const k = it.icon || (it.flag ? 'flag-' + it.flag : ''); const v = ICONS[k];
+    if (!v) return '';
+    return v.startsWith('<svg') ? v : `<svg class="bi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${v}</svg>`;
+  };
+  const flag = icon;
+  const SHOW = /^The Husna Night Show:\s*/i;
+  // title split for night shows: small label + the show name on its own line
+  const titleHtml = it => SHOW.test(it.title)
+    ? `<span class="bi-show__lbl">The Husna Night Show</span><span class="bi-show__name">${icon(it)}${esc(it.title.replace(SHOW, ''))}${it.tbc ? STAR : ''}</span>`
+    : `${icon(it)}${esc(it.title)}${it.tbc ? STAR : ''}`;
   // hand-drawn style flourish for the night show cards (brand blue, very light)
   const ORNAMENT = '<svg class="bi-orn" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">'
     + '<path d="M4 44c14-10 22-10 34-2s22 8 36-2 24-10 42-2"/><path d="M14 54c12-8 20-8 30-1s20 7 32-1 22-9 40-1" opacity=".55"/>'
@@ -241,7 +256,7 @@
     return `<article class="bi-item${show ? ' bi-item--show' : ''}" tabindex="0" data-item="${it.id}" style="--c:${c.color};--t:${c.text};--tint:${c.tint}" aria-label="${esc(timeText(it) + ', ' + it.title)}">
       ${show ? ORNAMENT : ''}
       ${it.start ? `<span class="bi-chip">${esc(timeText(it))}</span>` : ''}
-      <span class="bi-item__title">${flag(it)}${esc(it.title)}${it.tbc ? STAR : ''}</span>
+      <span class="bi-item__title">${titleHtml(it)}</span>
       ${meta ? `<span class="bi-item__meta">${esc(meta)}</span>` : ''}
       ${it.note ? `<span class="bi-item__note">${esc(it.note)}</span>` : ''}
       ${L ? linkTag(L, 'bi-linkrow', `<span>${esc(L.text)}</span>${svg(L.icon, 2.2)}`) : ''}
@@ -283,7 +298,7 @@
         <span style="display:flex;align-items:center"><span class="bi-sheet__cat"><i></i>${esc(c.label)}</span>
         <button class="bi-close" type="button" data-act="close" aria-label="Close">${svg('x', 2.4)}</button></span>
       </div>
-      <h2 id="bi-sheet-title">${flag(it)}${esc(it.title)}</h2>
+      <h2 id="bi-sheet-title">${titleHtml(it)}</h2>
       ${it.tbc ? `<span class="bi-tbc">${STAR.replace('bi-star', 'bi-star')} ${esc(D.settings.tbcLabel)}</span>` : ''}
       <ul class="bi-meta">
         <li>${svg('cal')}${esc(it.day.label)}${it.start ? ' · ' + esc(timeText(it)) : ''}</li>
