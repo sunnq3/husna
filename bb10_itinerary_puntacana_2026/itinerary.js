@@ -64,6 +64,12 @@
     ps: '<svg class="bi-flag" viewBox="0 0 24 16" role="img" aria-label="Palestinian flag"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.33" fill="#000"/><rect y="10.67" width="24" height="5.33" fill="#007A3D"/><path d="M0 0l10 8-10 8z" fill="#CE1126"/></svg>'
   };
   const flag = it => it.flag && FLAGS[it.flag] ? FLAGS[it.flag] : '';
+  // hand-drawn style flourish for the night show cards (brand blue, very light)
+  const ORNAMENT = '<svg class="bi-orn" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">'
+    + '<path d="M4 44c14-10 22-10 34-2s22 8 36-2 24-10 42-2"/><path d="M14 54c12-8 20-8 30-1s20 7 32-1 22-9 40-1" opacity=".55"/>'
+    + '<path d="M96 10l1.6 4.4 4.4 1.6-4.4 1.6L96 22l-1.6-4.4L90 16l4.4-1.6z" fill="currentColor" stroke="none" opacity=".9"/>'
+    + '<path d="M78 24l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1z" fill="currentColor" stroke="none" opacity=".6"/>'
+    + '<path d="M110 30l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="currentColor" stroke="none" opacity=".5"/></svg>';
 
   /* ---------- state · © 2026 Saaima Saleh ---------- */
   let D = {};                 // loaded data
@@ -71,9 +77,15 @@
   const S = { view: 'itinerary', day: null, filters: store.get('filters', []), seg: 'men', topic: 'All', q: '' };
 
   /* ---------- load data · © 2026 Saaima Saleh ---------- */
-  root.innerHTML = '<div class="bi-loading">Loading itinerary…</div>';
+  // styled inline so it looks right even before the stylesheet arrives
+  root.innerHTML = '<div class="bi-loading" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F4F7FA;font:600 13px/1 system-ui,sans-serif;color:#29A9DF;letter-spacing:.5px">Loading itinerary…</div>';
   const files = ['settings', 'itinerary', 'signups', 'faq', 'contacts'];
-  Promise.all(files.map(f => fetch(`${BASE}data/${f}.json?v=${STAMP}`).then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
+  // the stylesheet is loaded separately; don't paint the page until it has applied (max 4s)
+  const cssReady = new Promise(res => {
+    const t0 = Date.now();
+    (function poll(){ if (getComputedStyle(root).getPropertyValue('--bi-css').trim() === '1' || Date.now() - t0 > 4000) res(); else setTimeout(poll, 40); })();
+  });
+  Promise.all(files.map(f => fetch(`${BASE}data/${f}.json?v=${STAMP}`).then(r => { if (!r.ok) throw new Error(f); return r.json(); })).concat(cssReady))
     .then(res => { files.forEach((f, i) => D[f] = res[i]); init(); })
     .catch(() => { root.innerHTML = '<div class="bi-loading">The itinerary couldn’t load. Please refresh the page.</div>'; });
 
@@ -149,6 +161,7 @@
     if (S.view === 'contact') main = mainContact();
     $('#bi-top').innerHTML = top;
     $('#bi-main').innerHTML = main;
+    watchShows();
     window.scrollTo(0, Math.min(window.scrollY, root.offsetTop));
   }
 
@@ -186,6 +199,12 @@
   }
 
   /* itinerary: list · © 2026 Saaima Saleh */
+  // night show cards glow once as they scroll into view
+  const glow = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-lit'); glow.unobserve(e.target); }
+  }), { threshold: 0.6 }) : null;
+  function watchShows(){ $$('.bi-item--show').forEach(el => glow ? glow.observe(el) : el.classList.add('is-lit')); }
+
   function mainItinerary() {
     const day = D.days.find(d => d.id === S.day);
     const on = S.filters.length > 0;
@@ -215,7 +234,9 @@
     const c = CAT[it.cat] || CAT.husna;
     const meta = [it.location, it.ages].filter(Boolean).join(' · ');
     const L = itemLink(it);
-    return `<article class="bi-item" tabindex="0" data-item="${it.id}" style="--c:${c.color};--t:${c.text};--tint:${c.tint}" aria-label="${esc(timeText(it) + ', ' + it.title)}">
+    const show = it.highlight || /^The Husna Night Show/i.test(it.title);
+    return `<article class="bi-item${show ? ' bi-item--show' : ''}" tabindex="0" data-item="${it.id}" style="--c:${c.color};--t:${c.text};--tint:${c.tint}" aria-label="${esc(timeText(it) + ', ' + it.title)}">
+      ${show ? ORNAMENT : ''}
       ${it.start ? `<span class="bi-chip">${esc(timeText(it))}</span>` : ''}
       <span class="bi-item__title">${flag(it)}${esc(it.title)}${it.tbc ? STAR : ''}</span>
       ${meta ? `<span class="bi-item__meta">${esc(meta)}</span>` : ''}

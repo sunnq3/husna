@@ -63,11 +63,18 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     font-family:var(--font-head);font-size:14px;font-weight:600;white-space:nowrap;
     transition:transform .12s ease, filter .12s ease;
   }
-  #husna-hub .hh-btn:active{transform:translateY(1px)}
+  #husna-hub .hh-btn{-webkit-tap-highlight-color:transparent;transition:background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .1s ease}
+  #husna-hub .hh-btn:active{transform:scale(.98)}
   #husna-hub .hh-btn--primary{background:var(--blue);color:var(--white);box-shadow:0 4px 12px rgba(41,169,223,.3)}
-  #husna-hub .hh-btn--primary:hover,#husna-hub .hh-btn--primary:focus-visible{background:var(--blue-deep);color:var(--white)}
   #husna-hub .hh-btn--outline{background:var(--white);color:var(--blue);border:2px solid var(--blue)}
-  #husna-hub .hh-btn--outline:hover,#husna-hub .hh-btn--outline:focus-visible{background:var(--blue-mist);color:var(--blue-deep);border-color:var(--blue-deep)}
+  /* hover colours only on devices that actually hover; on touch the colour used to stick after a tap */
+  @media (hover:hover){
+    #husna-hub .hh-btn--primary:hover{background:var(--blue-deep);color:var(--white)}
+    #husna-hub .hh-btn--outline:hover{background:var(--blue-mist);color:var(--blue-deep);border-color:var(--blue-deep)}
+  }
+  #husna-hub .hh-btn--primary:focus-visible{background:var(--blue-deep);color:var(--white)}
+  #husna-hub .hh-btn--outline:focus-visible{background:var(--blue-mist);color:var(--blue-deep);border-color:var(--blue-deep)}
+  #husna-hub .hh-btn:focus:not(:focus-visible){outline:0}
   #husna-hub .hh-btn:focus-visible,#husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--blue-light);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){#husna-hub *{transition:none !important;animation:none !important}}
 
@@ -128,7 +135,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     background:var(--white);border:1px solid var(--blue-pale);box-shadow:var(--shadow);color:var(--ink);
     transition:transform .12s ease, box-shadow .12s ease;
   }
-  #husna-hub .hh-tile:not([aria-disabled]):hover{box-shadow:0 6px 16px rgba(41,169,223,.18)}
+  @media (hover:hover){#husna-hub .hh-tile:not([aria-disabled]):hover{box-shadow:0 6px 16px rgba(41,169,223,.18)}}
   #husna-hub .hh-tile:not([aria-disabled]):active{transform:scale(.985)}
   #husna-hub .hh-tile img{width:58px !important;height:100% !important;object-fit:cover;flex:none}
   #husna-hub .hh-tile__txt{display:flex;flex-direction:column;justify-content:center;padding:0 12px;line-height:1.1;min-width:0}
