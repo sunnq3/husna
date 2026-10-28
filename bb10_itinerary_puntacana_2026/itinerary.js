@@ -67,9 +67,9 @@
   // hand-drawn style flourish for the night show cards (brand blue, very light)
   const ORNAMENT = '<svg class="bi-orn" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">'
     + '<path d="M4 44c14-10 22-10 34-2s22 8 36-2 24-10 42-2"/><path d="M14 54c12-8 20-8 30-1s20 7 32-1 22-9 40-1" opacity=".55"/>'
-    + '<path d="M96 10l1.6 4.4 4.4 1.6-4.4 1.6L96 22l-1.6-4.4L90 16l4.4-1.6z" fill="currentColor" stroke="none" opacity=".9"/>'
-    + '<path d="M78 24l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1z" fill="currentColor" stroke="none" opacity=".6"/>'
-    + '<path d="M110 30l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="currentColor" stroke="none" opacity=".5"/></svg>';
+    + '<path class="bi-star1" d="M96 10l1.6 4.4 4.4 1.6-4.4 1.6L96 22l-1.6-4.4L90 16l4.4-1.6z" fill="currentColor" stroke="none"/>'
+    + '<path class="bi-star2" d="M78 24l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1z" fill="currentColor" stroke="none"/>'
+    + '<path class="bi-star3" d="M110 30l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="currentColor" stroke="none"/></svg>';
 
   /* ---------- state · © 2026 Saaima Saleh ---------- */
   let D = {};                 // loaded data
