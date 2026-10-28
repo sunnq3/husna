@@ -113,6 +113,9 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   /* ---------- primary actions · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
   #husna-hub .hh-actions .hh-btn{height:40px;padding:0 14px;font-size:13px;justify-content:space-between}
+  /* both top buttons solid and raised; the white outline one looked pressed in */
+  #husna-hub .hh-actions .hh-btn--outline{background:var(--blue);color:var(--white);border:0;box-shadow:0 4px 12px rgba(41,169,223,.3)}
+  @media (hover:hover){#husna-hub .hh-actions .hh-btn--outline:hover{background:var(--blue-deep);color:var(--white)}}
   #husna-hub .hh-actions svg{width:15px;height:15px;flex:none}
 
   /* ---------- emails feature card · © 2026 Saaima Saleh ---------- */
@@ -289,9 +292,9 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     #husna-hub .hh-actions{position:absolute;left:max(40px,calc((100% - var(--max)) / 2 + 40px));top:214px;display:flex;gap:10px;margin:0}
     #husna-hub .hh-actions .hh-btn{height:40px;padding:0 20px;font-size:13px}
     #husna-hub .hh-actions .hh-btn--primary{background:var(--white);color:var(--blue-deep);box-shadow:none}
-    #husna-hub .hh-actions .hh-btn--outline{background:transparent;border-color:var(--white);color:var(--white)}
+    #husna-hub .hh-actions .hh-btn--outline{background:var(--white);color:var(--blue-deep);border:0;box-shadow:none}
     #husna-hub .hh-actions .hh-btn--primary:hover{background:var(--blue-pale);color:var(--blue-deep)}
-    #husna-hub .hh-actions .hh-btn--outline:hover{background:rgba(255,255,255,.18);border-color:var(--white);color:var(--white)}
+    #husna-hub .hh-actions .hh-btn--outline:hover{background:var(--blue-pale);color:var(--blue-deep)}
     #husna-hub .hh-actions svg{display:none}
     #husna-hub .hh-feature{height:80px;margin-top:28px;border-radius:18px}
     #husna-hub .hh-feature img{width:96px !important}
