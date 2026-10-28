@@ -51,7 +51,7 @@
       {"start": "10:15 PM", "end": "11:00 PM", "title": "Night Volleyball", "cat": "husna", "location": "Beach", "note": "Open to all"}
     ]},
     {"id": "sun", "date": "2026-12-20", "label": "Sunday, December 20", "short": "Sun, Dec 20", "items": [
-      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 AM – 10 PM · Women only 10 AM – 2 PM · Men only 10 – 11 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -67,6 +67,7 @@
       {"start": "9:00 AM", "end": "9:30 AM", "title": "Women's Fitness: Pilates", "cat": "women", "location": "Prestige Welcome Lounge"},
       {"start": "9:00 AM", "title": "Abs Fitness", "cat": "nick", "location": "Wellness Platform", "ages": "Men 15+", "note": "Limited spots"},
       {"start": "9:00 AM", "end": "5:00 PM", "title": "Nickelodeon Place", "cat": "hours", "ages": "Ages 4–12", "note": "Ready to Play kids’ club"},
+      {"start": "9:00 AM", "title": "BRX Info Presentation", "cat": "husna", "location": "", "note": "Time and place to be confirmed", "tbc": true, "link": "excursions"},
       {"start": "10:00 AM", "end": "5:00 PM", "title": "Aqua Nick", "cat": "hours"},
       {"start": "10:00 AM", "title": "Spanish Lessons", "cat": "nick", "location": "Mango's Bar"},
       {"start": "10:00 AM", "title": "Making SquarePants Selfies", "cat": "nick", "location": "Nickelodeon Place", "ages": "Ages 4–12"},
@@ -118,13 +119,13 @@
       {"start": "7:00 PM", "end": "9:00 PM", "title": "Nickelodeon Place", "cat": "hours", "ages": "Ages 4–12", "note": "Ready to Play kids’ club"},
       {"start": "7:30 PM", "title": "Isha · Second Jama'ah", "cat": "husna", "note": "Make your own jama'ah"},
       {"start": "8:30 PM", "end": "9:00 PM", "title": "Harmony & Noor with Ilyas Mao & Amin Davis", "cat": "husna", "location": "Gourmet Village"},
-      {"start": "9:00 PM", "title": "The Husna Night Show: Newlywed Show", "cat": "husna", "location": "Gourmet Village", "tbc": true, "icon": "heart"},
+      {"start": "9:00 PM", "title": "The Husna Night Show: Newlywed Show", "cat": "husna", "location": "Gourmet Village", "icon": "heart"},
       {"start": "10:15 PM", "end": "11:00 PM", "title": "Night Volleyball", "cat": "husna", "location": "Beach", "note": "Open to all"},
       {"start": "10:15 PM", "end": "12:00 AM", "title": "Men's Table Tennis Tournament", "cat": "husna", "location": "Show Lounge", "ages": "Ages 15+", "signup": "mens-table-tennis"},
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "mon", "date": "2026-12-21", "label": "Monday, December 21", "short": "Mon, Dec 21", "items": [
-      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 AM – 10 PM · Women only 10 AM – 2 PM · Men only 10 – 11 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -134,6 +135,7 @@
       {"start": "8:00 AM", "end": "5:00 PM", "title": "Gazebo Concierge", "cat": "hours", "location": "Front of each building", "note": "Help with booking non-inclusive activities and special requests"},
       {"start": "8:00 AM", "end": "6:00 PM", "title": "BRX Excursions Table", "cat": "husna", "location": "Lobby", "note": "Book excursions with BRX", "tbc": true, "link": "excursions"},
       {"start": "8:00 AM", "end": "7:00 PM", "title": "Mom & Daughter Spa Time", "cat": "women", "location": "Vassa Spa (Gourmet Village)", "note": "Women & girls · under 18 with an adult · reservations required", "link": "spa"},
+      {"start": "8:00 AM", "end": "9:00 AM", "title": "Sisters' Move N Improve", "cat": "women", "location": "Prestige Welcome Lounge", "note": "Mind-body & breath-centred sessions", "link": "waiver"},
       {"start": "8:40 AM", "title": "Eco Park", "cat": "husna", "location": "Pick up in the Lobby", "note": "Exclusive to Husna guests", "link": "excursions"},
       {"start": "9:00 AM", "end": "9:30 AM", "title": "Women's Fitness: TRX", "cat": "women", "location": "Prestige Welcome Lounge"},
       {"start": "9:00 AM", "title": "TRX Fitness", "cat": "nick", "location": "Wellness Platform", "ages": "Men 15+", "note": "Limited spots"},
@@ -194,7 +196,7 @@
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "tue", "date": "2026-12-22", "label": "Tuesday, December 22", "short": "Tue, Dec 22", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 AM – 10 PM · Women only 10 AM – 2 PM · Men only 10 – 11 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -265,7 +267,7 @@
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "wed", "date": "2026-12-23", "label": "Wednesday, December 23", "short": "Wed, Dec 23", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 AM – 10 PM · Women only 10 AM – 2 PM · Men only 10 – 11 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
