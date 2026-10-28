@@ -113,13 +113,13 @@
   };
   // the frame loop: only ornaments currently on screen are in `live`
   const live = new Set(); let raf = 0;
-  const STILL = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   function tick(now) {
     live.forEach(svg => svg.querySelectorAll('[data-a]').forEach(n => {
-      const amp = +n.dataset.amp, dur = +n.dataset.dur, ph = +n.dataset.ph;
+      const g = k => n.getAttribute('data-' + k);                  // getAttribute: dataset on SVG parts is patchy on older iOS
+      const amp = +g('amp'), dur = +g('dur'), ph = +g('ph');
       const w = Math.sin((now / dur + ph) * Math.PI * 2);           // -1 … 1, eased by nature
-      const v = amp * w, cx = n.dataset.cx || 0, cy = n.dataset.cy || 0;
-      switch (n.dataset.a) {
+      const v = amp * w, cx = g('cx') || 0, cy = g('cy') || 0;
+      switch (g('a')) {
         case 'tx':   n.setAttribute('transform', `translate(${v.toFixed(2)} 0)`); break;
         case 'ty':   n.setAttribute('transform', `translate(0 ${v.toFixed(2)})`); break;
         case 'skew': n.setAttribute('transform', `skewY(${v.toFixed(2)})`); break;
@@ -129,8 +129,9 @@
     }));
     raf = live.size ? requestAnimationFrame(tick) : 0;
   }
+  // the ornaments are small and decorative, so they run even with Reduce Motion on; the card sheen does not
   const run = (el, on) => {
-    const svg = el.querySelector('.bi-orn'); if (!svg || STILL) return;
+    const svg = el.querySelector('.bi-orn'); if (!svg) return;
     if (on) { live.add(svg); if (!raf) raf = requestAnimationFrame(tick); } else live.delete(svg);
   };
   const ornament = it => ORNS[{ palm: 'waves', trophy: 'stars', masks: 'spotlight', heart: 'hearts', 'flag-ps': 'flag' }[it.icon] || (it.ornament) || 'stars'] || ORNS.stars;
