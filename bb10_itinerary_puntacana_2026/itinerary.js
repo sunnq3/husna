@@ -79,12 +79,32 @@
   const titleHtml = it => SHOW.test(it.title)
     ? `<span class="bi-show__lbl">The Husna Night Show</span><span class="bi-show__name">${icon(it)}${esc(it.title.replace(SHOW, ''))}${it.tbc ? STAR : ''}</span>`
     : `${icon(it)}${esc(it.title)}${it.tbc ? STAR : ''}`;
-  // hand-drawn style flourish for the night show cards (brand blue, very light)
-  const ORNAMENT = '<svg class="bi-orn" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">'
-    + '<path d="M4 44c14-10 22-10 34-2s22 8 36-2 24-10 42-2"/><path d="M14 54c12-8 20-8 30-1s20 7 32-1 22-9 40-1" opacity=".55"/>'
-    + '<path class="bi-star1" d="M96 10l1.6 4.4 4.4 1.6-4.4 1.6L96 22l-1.6-4.4L90 16l4.4-1.6z" fill="currentColor" stroke="none"/>'
-    + '<path class="bi-star2" d="M78 24l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1z" fill="currentColor" stroke="none"/>'
-    + '<path class="bi-star3" d="M110 30l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="currentColor" stroke="none"/></svg>';
+  // themed ornaments for the night show cards (bottom-right, light brand blue, move while on screen)
+  const SVG = (cls, inner) => `<svg class="bi-orn bi-orn--${cls}" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
+  const STAR_P = (x, y, r) => `M${x} ${y - r}l${r * .33} ${r * .67}L${x + r} ${y}l-${r * .67} ${r * .33}L${x} ${y + r}l-${r * .33}-${r * .67}L${x - r} ${y}l${r * .67}-${r * .33}z`;
+  const ORNS = {
+    waves: SVG('waves',
+      '<path class="w1" d="M-10 30c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2"/>'
+      + '<path class="w2" d="M-10 42c12-8 20-8 30-1s20 7 32-1 22-9 40-1 20 7 32-1" opacity=".6"/>'
+      + '<path class="w3" d="M-10 54c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" opacity=".35"/>'),
+    stars: SVG('stars',
+      `<path class="s1" d="${STAR_P(96, 16, 7)}" fill="currentColor" stroke="none"/><path class="s2" d="${STAR_P(74, 30, 4)}" fill="currentColor" stroke="none"/>`
+      + `<path class="s3" d="${STAR_P(110, 36, 3)}" fill="currentColor" stroke="none"/><path class="s4" d="${STAR_P(56, 14, 2.5)}" fill="currentColor" stroke="none"/>`
+      + `<path class="s5" d="${STAR_P(92, 48, 2.2)}" fill="currentColor" stroke="none"/>`),
+    spotlight: SVG('spotlight',
+      '<path class="b1" d="M70 0L52 58h34z" fill="currentColor" stroke="none" opacity=".14"/>'
+      + '<path class="b2" d="M112 0L80 58h36z" fill="currentColor" stroke="none" opacity=".14"/>'
+      + '<path d="M40 58h78" opacity=".5"/><circle cx="70" cy="2" r="2.2" fill="currentColor" stroke="none"/><circle cx="112" cy="2" r="2.2" fill="currentColor" stroke="none"/>'),
+    hearts: SVG('hearts',
+      '<path class="h1" d="M96 44s-9-5.6-9-12.4a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.8-9 12.4-9 12.4z"/>'
+      + '<path class="h2" d="M72 36s-6-3.8-6-8.4a3.4 3.4 0 0 1 6-2 3.4 3.4 0 0 1 6 2c0 4.6-6 8.4-6 8.4z" opacity=".7"/>'
+      + '<path class="h3" d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55"/>'),
+    flag: SVG('flag',
+      '<path d="M70 58V6" opacity=".7"/><circle cx="70" cy="4" r="2" fill="currentColor" stroke="none"/>'
+      + '<path class="f1" d="M70 8c10-5 18 4 28 0s18-4 20 0v22c-2-4-10 0-20 4s-18-5-28 0z"/>'
+      + '<path class="f1" d="M70 16c10-5 18 4 28 0s18-4 20 0M70 24c10-5 18 4 28 0s18-4 20 0" opacity=".45"/>')
+  };
+  const ornament = it => ORNS[{ palm: 'waves', trophy: 'stars', masks: 'spotlight', heart: 'hearts', 'flag-ps': 'flag' }[it.icon] || (it.ornament) || 'stars'] || ORNS.stars;
 
   /* ---------- state · © 2026 Saaima Saleh ---------- */
   let D = {};                 // loaded data
@@ -217,11 +237,12 @@
   }
 
   /* itinerary: list · © 2026 Saaima Saleh */
-  // night show cards glow once as they scroll into view
+  // night show cards glow once as they scroll into view, and their ornaments move only while on screen
   const glow = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('is-lit'); glow.unobserve(e.target); }
-  }), { threshold: 0.6 }) : null;
-  function watchShows(){ $$('.bi-item--show').forEach(el => glow ? glow.observe(el) : el.classList.add('is-lit')); }
+    e.target.classList.toggle('is-view', e.isIntersecting);
+    if (e.isIntersecting) e.target.classList.add('is-lit');
+  }), { threshold: 0.5 }) : null;
+  function watchShows(){ $$('.bi-item--show').forEach(el => glow ? glow.observe(el) : el.classList.add('is-lit', 'is-view')); }
 
   function mainItinerary() {
     const day = D.days.find(d => d.id === S.day);
@@ -254,7 +275,7 @@
     const L = itemLink(it);
     const show = it.highlight || /^The Husna Night Show/i.test(it.title);
     return `<article class="bi-item${show ? ' bi-item--show' : ''}" tabindex="0" data-item="${it.id}" style="--c:${c.color};--t:${c.text};--tint:${c.tint}" aria-label="${esc(timeText(it) + ', ' + it.title)}">
-      ${show ? ORNAMENT : ''}
+      ${show ? ornament(it) : ''}
       ${it.start ? `<span class="bi-chip">${esc(timeText(it))}</span>` : ''}
       <span class="bi-item__title">${titleHtml(it)}</span>
       ${meta ? `<span class="bi-item__meta">${esc(meta)}</span>` : ''}
