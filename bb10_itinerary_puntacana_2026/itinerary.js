@@ -86,24 +86,24 @@
   const SVG = (cls, inner) => `<svg class="bi-orn bi-orn--${cls}" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
   const STAR_P = (x, y, r) => `M${x} ${y - r}l${r * .33} ${r * .67}L${x + r} ${y}l-${r * .67} ${r * .33}L${x} ${y + r}l-${r * .33}-${r * .67}L${x - r} ${y}l${r * .67}-${r * .33}z`;
   const A = (a, amp, dur, ph = 0, extra = '') => `data-a="${a}" data-amp="${amp}" data-dur="${dur}" data-ph="${ph}" ${extra}`;
-  const star = (x, y, r, dur, ph) => `<path d="${STAR_P(x, y, r)}" fill="currentColor" stroke="none" ${A('rot', 14, dur, ph, `data-cx="${x}" data-cy="${y}"`)}/>`;
+  const star = (x, y, r, dur, ph) => `<path d="${STAR_P(x, y, r)}" fill="currentColor" stroke="none" ${A('rot', 24, dur, ph, `data-cx="${x}" data-cy="${y}"`)}/>`;
   const ORNS = {
     waves: SVG('waves',
-      `<path d="M-10 30c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" ${A('tx', 6, 5000, 0)}/>`
-      + `<path d="M-10 42c12-8 20-8 30-1s20 7 32-1 22-9 40-1 20 7 32-1" opacity=".6" ${A('tx', 6, 6500, .5)}/>`
-      + `<path d="M-10 54c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" opacity=".35" ${A('tx', 6, 8000, .25)}/>`),
-    stars: SVG('stars', star(96, 16, 7, 3200, 0) + star(74, 30, 4, 4100, .3) + star(110, 36, 3, 3600, .6) + star(56, 14, 2.5, 4600, .2) + star(92, 48, 2.2, 3900, .75)),
+      `<path d="M-10 30c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" ${A('tx', 14, 3600, 0)}/>`
+      + `<path d="M-10 42c12-8 20-8 30-1s20 7 32-1 22-9 40-1 20 7 32-1" opacity=".6" ${A('tx', 14, 4600, .5)}/>`
+      + `<path d="M-10 54c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" opacity=".35" ${A('tx', 14, 5600, .25)}/>`),
+    stars: SVG('stars', star(96, 16, 7, 2200, 0) + star(74, 30, 4, 2900, .3) + star(110, 36, 3, 2500, .6) + star(56, 14, 2.5, 3200, .2) + star(92, 48, 2.2, 2700, .75)),
     spotlight: SVG('spotlight',
-      `<path d="M70 0L52 58h34z" fill="currentColor" stroke="none" ${A('beam', 10, 5000, 0, 'data-cx="70" data-cy="0"')}/>`
-      + `<path d="M112 0L80 58h36z" fill="currentColor" stroke="none" ${A('beam', -10, 6000, .5, 'data-cx="112" data-cy="0"')}/>`
+      `<path d="M70 0L52 58h34z" fill="currentColor" stroke="none" ${A('beam', 18, 3600, 0, 'data-cx="70" data-cy="0"')}/>`
+      + `<path d="M112 0L80 58h36z" fill="currentColor" stroke="none" ${A('beam', -18, 4400, .5, 'data-cx="112" data-cy="0"')}/>`
       + '<path d="M40 58h78" opacity=".5"/><circle cx="70" cy="2" r="2.2" fill="currentColor" stroke="none"/><circle cx="112" cy="2" r="2.2" fill="currentColor" stroke="none"/>'),
     hearts: SVG('hearts',
-      `<path d="M96 44s-9-5.6-9-12.4a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.8-9 12.4-9 12.4z" ${A('ty', 2.5, 4200, 0)}/>`
-      + `<path d="M72 36s-6-3.8-6-8.4a3.4 3.4 0 0 1 6-2 3.4 3.4 0 0 1 6 2c0 4.6-6 8.4-6 8.4z" opacity=".7" ${A('ty', 2.5, 5000, .4)}/>`
-      + `<path d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55" ${A('ty', 2.5, 4600, .7)}/>`),
+      `<path d="M96 44s-9-5.6-9-12.4a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.8-9 12.4-9 12.4z" ${A('ty', 6, 3000, 0)}/>`
+      + `<path d="M72 36s-6-3.8-6-8.4a3.4 3.4 0 0 1 6-2 3.4 3.4 0 0 1 6 2c0 4.6-6 8.4-6 8.4z" opacity=".7" ${A('ty', 6, 3600, .4)}/>`
+      + `<path d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55" ${A('ty', 6, 3300, .7)}/>`),
     flag: SVG('flag',
       '<path d="M70 58V6" opacity=".7"/><circle cx="70" cy="4" r="2" fill="currentColor" stroke="none"/>'
-      + `<g ${A('skew', 1.5, 3400, 0)}>`
+      + `<g ${A('skew', 4, 2400, 0)}>`
       + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v22c-4-4-12 0-20 4s-18-5-28 0z" fill="#fff" stroke="none"/>'
       + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v7.3c-4-4-12 0-20 4s-18-5-28 0z" fill="#231F20" stroke="none" opacity=".75"/>'
       + '<path d="M70 22.7c10-5 18 4 28 0s16-4 20 0V30c-4-4-12 0-20 4s-18-5-28 0z" fill="#007A3D" stroke="none" opacity=".8"/>'
@@ -123,8 +123,8 @@
         case 'tx':   n.setAttribute('transform', `translate(${v.toFixed(2)} 0)`); break;
         case 'ty':   n.setAttribute('transform', `translate(0 ${v.toFixed(2)})`); break;
         case 'skew': n.setAttribute('transform', `skewY(${v.toFixed(2)})`); break;
-        case 'rot':  n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.65 + 0.35 * w).toFixed(2)); break;
-        case 'beam': n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.16 + 0.06 * w).toFixed(3)); break;
+        case 'rot':  n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.55 + 0.45 * w).toFixed(2)); break;
+        case 'beam': n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.18 + 0.1 * w).toFixed(3)); break;
       }
     }));
     raf = live.size ? requestAnimationFrame(tick) : 0;

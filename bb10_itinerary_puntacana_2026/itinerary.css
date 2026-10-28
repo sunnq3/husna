@@ -177,7 +177,7 @@ body:has(#husna-itin) .elementor-widget-html{margin-bottom:0 !important}
   transform:translateX(-120%);
 }
 #husna-itin .bi-item--show.is-lit{border-color:var(--blue);box-shadow:0 6px 22px rgba(41,169,223,.18)}
-#husna-itin .bi-item--show.is-lit .bi-orn{opacity:.55;transform:none}
+#husna-itin .bi-item--show.is-lit .bi-orn{opacity:.8;transform:none}
 #husna-itin .bi-item--show.is-lit::after{animation:bi-sheen 1.1s ease-out .1s 1}
 @keyframes bi-sheen{to{transform:translateX(120%)}}
 /* night show title: small label + show name · © 2026 Saaima Saleh */
