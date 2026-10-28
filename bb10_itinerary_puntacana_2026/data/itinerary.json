@@ -1,5 +1,5 @@
 {
-  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. One line per item, in the order shown. cat: husna | nick | food | women | sliming | hours. tbc: true adds the red star. link: a key from settings.json links. signup: an id from signups.json. {\"heading\": \"Lunch\"} starts a meal group; the food items right after it sit inside that group.",
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. One line per item, in the order shown. cat: husna | nick | food | women | sliming | hours. tbc: true adds the red star. link: a key from settings.json links. signup: an id from signups.json. {\"heading\": \"Lunch\"} starts a meal group; the food items right after it sit inside that group. flag: \"ps\" shows a small Palestinian flag next to the title.",
   "days": [
     {"id": "sat", "date": "2026-12-19", "label": "Saturday, December 19", "short": "Sat, Dec 19", "title": "Arrival day", "note": "Take the day to settle in and explore the resort. Rooms will be ready after 4 PM, in shā’ Allāh.", "items": [
       {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village"},
@@ -134,7 +134,6 @@
       {"start": "8:00 AM", "end": "5:00 PM", "title": "Gazebo Concierge", "cat": "hours", "location": "Front of each building", "note": "Help with booking non-inclusive activities and special requests"},
       {"start": "8:00 AM", "end": "6:00 PM", "title": "BRX Excursions Table", "cat": "husna", "location": "Lobby", "note": "Book excursions with BRX", "tbc": true, "link": "excursions"},
       {"start": "8:00 AM", "end": "7:00 PM", "title": "Mom & Daughter Spa Time", "cat": "women", "location": "Vassa Spa (Gourmet Village)", "note": "Women & girls · under 18 with an adult · reservations required", "link": "spa"},
-      {"start": "8:40 AM", "title": "Eco Park", "cat": "husna", "location": "Pick up in the Lobby", "note": "Exclusive to Husna guests", "link": "excursions"},
       {"start": "9:00 AM", "end": "9:30 AM", "title": "Women's Fitness: TRX", "cat": "women", "location": "Prestige Welcome Lounge"},
       {"start": "9:00 AM", "title": "TRX Fitness", "cat": "nick", "location": "Wellness Platform", "ages": "Men 15+", "note": "Limited spots"},
       {"start": "9:00 AM", "end": "5:30 PM", "title": "Aqua Nick", "cat": "hours"},
@@ -156,7 +155,6 @@
       {"start": "12:00 PM", "end": "1:00 AM", "title": "Snick Lounge", "cat": "hours", "location": "Across Lobby"},
       {"start": "12:00 PM", "title": "Open Beach Volleyball", "cat": "husna", "location": "Beach"},
       {"start": "12:00 PM", "end": "2:00 PM", "title": "Family Open Play", "cat": "hours", "location": "Nickelodeon Place"},
-      {"start": "12:40 PM", "title": "Eco Park", "cat": "husna", "location": "Pick up in the Lobby", "note": "Exclusive to Husna guests", "link": "excursions"},
       {"start": "1:00 PM", "title": "Family Beach Scavenger Hunt", "cat": "nick", "location": "Beach"},
       {"start": "2:00 PM", "title": "Sort It Up With Rocky & Zuma", "cat": "nick", "location": "Nickelodeon Place", "ages": "Ages 4–12"},
       {"start": "2:00 PM", "title": "Merengue Dance Lesson", "cat": "women", "location": "Prestige Welcome Lounge", "note": "Women only · limited spots"},
@@ -260,7 +258,7 @@
       {"start": "7:00 PM", "title": "Illusion Show", "cat": "husna", "location": "Show Lounge", "tbc": true},
       {"start": "7:30 PM", "title": "Isha · Second Jama'ah", "cat": "husna", "note": "Make your own jama'ah"},
       {"start": "8:30 PM", "end": "9:00 PM", "title": "Nasheed Karaoke with Ilyas Mao & Amin Davis", "cat": "husna", "location": "Gourmet Village"},
-      {"start": "9:00 PM", "title": "The Husna Night Show: Palestine Night", "cat": "husna", "location": "Gourmet Village"},
+      {"start": "9:00 PM", "title": "The Husna Night Show: Palestine in Our Hearts", "cat": "husna", "location": "Gourmet Village", "flag": "ps"},
       {"start": "10:15 PM", "end": "11:00 PM", "title": "Night Volleyball", "cat": "husna", "location": "Beach", "note": "Open to all"},
       {"start": "10:15 PM", "end": "12:00 AM", "title": "Women's Table Tennis Tournament", "cat": "women", "location": "Show Lounge", "ages": "Ages 15+", "signup": "womens-table-tennis"},
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}

@@ -65,7 +65,7 @@
             { title: 'Dolphin Explorer',   meta: '50 min · Min. height 1.20 m',  url: 'https://husnabrx.com/product/dolphin-discovery-swim-adventure-exclusive-to-husna-guests/' },
             { title: 'Royal S Excellence', meta: '1 hour · Min. height 1.20 m',  url: 'https://husnabrx.com/product/dolphin-discovery-royal-swim-exclusive-to-husna-guests/' }
           ] },
-        { id: 'ecopark', title: 'Eco Park', img: 'ex-ecopark.jpg',
+        { id: 'ecopark', title: 'Eco Park', img: 'ex-ecopark.jpg', hidden: true,   // hidden for now; remove `hidden` to show again
           line: 'Animals, horse rides & rafting', price: 'Kids $45',
           desc: 'A full day for the little ones: feeding animals, milking cows, horse and donkey rides, kayaking, bamboo rafting and a visit to a traditional Dominican home.',
           facts: '5 hours · Kids 3–12 $45 · Under 2 free',
@@ -138,7 +138,8 @@
 
   /* excursions: panel + one sheet per excursion, built from CONFIG.excursions · © 2026 Saaima Saleh */
   (function excursions(){
-    const X = CONFIG.excursions; if (!X || !X.items || !X.items.length) return;
+    const X = CONFIG.excursions; if (!X || !X.items) return;
+    X.items = X.items.filter(it => !it.hidden); if (!X.items.length) return;
     const IMG = (document.currentScript && document.currentScript.src || 'https://sunnq3.github.io/husna/guest-hub/hub.js').replace(/[^/]*$/, '') + 'img/';
     const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const ico = {

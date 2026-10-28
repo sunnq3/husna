@@ -60,6 +60,10 @@
   };
   const svg = (n, sw = 2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
   const STAR = '<span class="bi-star" aria-label="to be confirmed" title="To be confirmed">*</span>';
+  const FLAGS = {
+    ps: '<svg class="bi-flag" viewBox="0 0 24 16" role="img" aria-label="Palestinian flag"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.33" fill="#000"/><rect y="10.67" width="24" height="5.33" fill="#007A3D"/><path d="M0 0l10 8-10 8z" fill="#CE1126"/></svg>'
+  };
+  const flag = it => it.flag && FLAGS[it.flag] ? FLAGS[it.flag] : '';
 
   /* ---------- state · © 2026 Saaima Saleh ---------- */
   let D = {};                 // loaded data
@@ -213,7 +217,7 @@
     const L = itemLink(it);
     return `<article class="bi-item" tabindex="0" data-item="${it.id}" style="--c:${c.color};--t:${c.text};--tint:${c.tint}" aria-label="${esc(timeText(it) + ', ' + it.title)}">
       ${it.start ? `<span class="bi-chip">${esc(timeText(it))}</span>` : ''}
-      <span class="bi-item__title">${esc(it.title)}${it.tbc ? STAR : ''}</span>
+      <span class="bi-item__title">${flag(it)}${esc(it.title)}${it.tbc ? STAR : ''}</span>
       ${meta ? `<span class="bi-item__meta">${esc(meta)}</span>` : ''}
       ${it.note ? `<span class="bi-item__note">${esc(it.note)}</span>` : ''}
       ${L ? linkTag(L, 'bi-linkrow', `<span>${esc(L.text)}</span>${svg(L.icon, 2.2)}`) : ''}
@@ -255,7 +259,7 @@
         <span style="display:flex;align-items:center"><span class="bi-sheet__cat"><i></i>${esc(c.label)}</span>
         <button class="bi-close" type="button" data-act="close" aria-label="Close">${svg('x', 2.4)}</button></span>
       </div>
-      <h2 id="bi-sheet-title">${esc(it.title)}</h2>
+      <h2 id="bi-sheet-title">${flag(it)}${esc(it.title)}</h2>
       ${it.tbc ? `<span class="bi-tbc">${STAR.replace('bi-star', 'bi-star')} ${esc(D.settings.tbcLabel)}</span>` : ''}
       <ul class="bi-meta">
         <li>${svg('cal')}${esc(it.day.label)}${it.start ? ' · ' + esc(timeText(it)) : ''}</li>
