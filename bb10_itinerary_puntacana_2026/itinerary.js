@@ -101,8 +101,13 @@
       + '<path class="h3" d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55"/>'),
     flag: SVG('flag',
       '<path d="M70 58V6" opacity=".7"/><circle cx="70" cy="4" r="2" fill="currentColor" stroke="none"/>'
-      + '<path class="f1" d="M70 8c10-5 18 4 28 0s18-4 20 0v22c-2-4-10 0-20 4s-18-5-28 0z"/>'
-      + '<path class="f1" d="M70 16c10-5 18 4 28 0s18-4 20 0M70 24c10-5 18 4 28 0s18-4 20 0" opacity=".45"/>')
+      + '<g class="f1">'
+      + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v22c-4-4-12 0-20 4s-18-5-28 0z" fill="#fff" stroke="none"/>'
+      + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v7.3c-4-4-12 0-20 4s-18-5-28 0z" fill="#231F20" stroke="none" opacity=".75"/>'
+      + '<path d="M70 22.7c10-5 18 4 28 0s16-4 20 0V30c-4-4-12 0-20 4s-18-5-28 0z" fill="#007A3D" stroke="none" opacity=".8"/>'
+      + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v22c-4-4-12 0-20 4s-18-5-28 0z"/>'
+      + '<path d="M70 8l20 11-20 11z" fill="#CE1126" stroke="none"/>'
+      + '</g>')
   };
   const ornament = it => ORNS[{ palm: 'waves', trophy: 'stars', masks: 'spotlight', heart: 'hearts', 'flag-ps': 'flag' }[it.icon] || (it.ornament) || 'stars'] || ORNS.stars;
 
