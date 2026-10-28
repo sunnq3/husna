@@ -134,6 +134,7 @@
       {"start": "8:00 AM", "end": "5:00 PM", "title": "Gazebo Concierge", "cat": "hours", "location": "Front of each building", "note": "Help with booking non-inclusive activities and special requests"},
       {"start": "8:00 AM", "end": "6:00 PM", "title": "BRX Excursions Table", "cat": "husna", "location": "Lobby", "note": "Book excursions with BRX", "tbc": true, "link": "excursions"},
       {"start": "8:00 AM", "end": "7:00 PM", "title": "Mom & Daughter Spa Time", "cat": "women", "location": "Vassa Spa (Gourmet Village)", "note": "Women & girls · under 18 with an adult · reservations required", "link": "spa"},
+      {"start": "8:40 AM", "title": "Eco Park", "cat": "husna", "location": "Pick up in the Lobby", "note": "Exclusive to Husna guests", "link": "excursions"},
       {"start": "9:00 AM", "end": "9:30 AM", "title": "Women's Fitness: TRX", "cat": "women", "location": "Prestige Welcome Lounge"},
       {"start": "9:00 AM", "title": "TRX Fitness", "cat": "nick", "location": "Wellness Platform", "ages": "Men 15+", "note": "Limited spots"},
       {"start": "9:00 AM", "end": "5:30 PM", "title": "Aqua Nick", "cat": "hours"},
