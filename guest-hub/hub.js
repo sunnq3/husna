@@ -87,6 +87,11 @@
   const $  = (s, c = root) => c.querySelector(s);
   const $$ = (s, c = root) => Array.from(c.querySelectorAll(s));
 
+  /* coming back from another page: browsers re-focus the link you tapped, which left it looking pressed */
+  const unfocus = () => { const a = document.activeElement; if (a && a !== document.body && root.contains(a)) a.blur(); };
+  window.addEventListener('pageshow', unfocus); unfocus();
+  root.addEventListener('click', e => { const a = e.target.closest('a.hh-btn'); if (a) setTimeout(() => a.blur(), 0); });
+
   /* images & links from CONFIG · © 2026 Saaima Saleh */
   $$('img[data-src]').forEach(el => { const v = CONFIG.img[el.dataset.src]; if (v) el.src = v; });
   $$('a[data-href]').forEach(el => { const v = CONFIG[el.dataset.href]; if (v) el.href = v; });

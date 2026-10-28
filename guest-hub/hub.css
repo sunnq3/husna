@@ -15,6 +15,10 @@ body:has(#husna-hub) :is(.e-con,.e-con-inner,.elementor-section,.elementor-conta
 }
 body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
 
+/* ---------- boot: the snippet hides the page until this file applies · © 2026 Saaima Saleh ---------- */
+#husna-hub.hh-boot{visibility:visible}
+#husna-hub .hh-boot-screen{display:none}
+
 /* ---------- tokens & scope · © 2026 Saaima Saleh ---------- */
 #husna-hub{
   --blue:#29A9DF; --blue-deep:#04A4CB; --blue-light:#9CD7F6; --blue-pale:#D4EEFA; --blue-mist:#EAF6FC;
@@ -72,10 +76,9 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     #husna-hub .hh-btn--primary:hover{background:var(--blue-deep);color:var(--white)}
     #husna-hub .hh-btn--outline:hover{background:var(--blue-mist);color:var(--blue-deep);border-color:var(--blue-deep)}
   }
-  #husna-hub .hh-btn--primary:focus-visible{background:var(--blue-deep);color:var(--white)}
-  #husna-hub .hh-btn--outline:focus-visible{background:var(--blue-mist);color:var(--blue-deep);border-color:var(--blue-deep)}
-  #husna-hub .hh-btn:focus:not(:focus-visible){outline:0}
-  #husna-hub .hh-btn:focus-visible,#husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--blue-light);outline-offset:2px}
+  #husna-hub .hh-btn:focus{outline:0}
+  #husna-hub .hh-btn:focus-visible{outline:3px solid var(--blue-light);outline-offset:2px}
+  #husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--blue-light);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){#husna-hub *{transition:none !important;animation:none !important}}
 
   /* ---------- hero · © 2026 Saaima Saleh ---------- */

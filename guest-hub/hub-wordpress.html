@@ -4,11 +4,19 @@
      Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
      ============================================================ · © 2026 Saaima Saleh -->
 
-<!-- Styles and behaviour are hosted on warsaai's github -->
+<!-- Styles and behaviour are hosted on GitHub -->
 <link rel="stylesheet" href="https://sunnq3.github.io/husna/guest-hub/hub.css">
 <script src="https://sunnq3.github.io/husna/guest-hub/hub.js" defer></script>
 
-<div id="husna-hub" data-author="Saaima Saleh" data-copyright="© 2026 Saaima Saleh">
+<!-- Loading screen: shown until hub.css has arrived, so nothing unstyled ever flashes · © 2026 Saaima Saleh -->
+<style>.hh-boot{visibility:hidden}
+.hh-boot-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#29A9DF;visibility:visible}
+.hh-boot-screen img{width:64px;height:64px;animation:hh-spin 1.6s linear infinite}
+@keyframes hh-spin{to{transform:rotate(360deg)}}</style>
+<script>setTimeout(function(){var h=document.getElementById('husna-hub');if(h)h.classList.remove('hh-boot');},6000);</script>
+
+<div id="husna-hub" class="hh-boot" data-author="Saaima Saleh" data-copyright="© 2026 Saaima Saleh">
+  <div class="hh-boot-screen" aria-label="Loading"><img src="https://husna.com/wp-content/uploads/2026/09/smiley.png" alt=""></div>
 
   <!-- Hero Section · © 2026 Saaima Saleh -->
   <header class="hh-hero">

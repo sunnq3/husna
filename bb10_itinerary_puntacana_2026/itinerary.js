@@ -78,7 +78,10 @@
 
   /* ---------- load data · © 2026 Saaima Saleh ---------- */
   // styled inline so it looks right even before the stylesheet arrives
-  root.innerHTML = '<div class="bi-loading" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F4F7FA;font:600 13px/1 system-ui,sans-serif;color:#29A9DF;letter-spacing:.5px">Loading itinerary…</div>';
+  const SMILEY = 'https://husna.com/wp-content/uploads/2026/09/smiley.png';
+  root.innerHTML = '<style>@keyframes bi-spin{to{transform:rotate(360deg)}}</style>'
+    + '<div class="bi-loading" aria-label="Loading" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#29A9DF">'
+    + '<img src="' + SMILEY + '" alt="" style="width:64px;height:64px;animation:bi-spin 1.6s linear infinite"></div>';
   const files = ['settings', 'itinerary', 'signups', 'faq', 'contacts'];
   // the stylesheet is loaded separately; don't paint the page until it has applied (max 4s)
   const cssReady = new Promise(res => {
@@ -87,7 +90,7 @@
   });
   Promise.all(files.map(f => fetch(`${BASE}data/${f}.json?v=${STAMP}`).then(r => { if (!r.ok) throw new Error(f); return r.json(); })).concat(cssReady))
     .then(res => { files.forEach((f, i) => D[f] = res[i]); init(); })
-    .catch(() => { root.innerHTML = '<div class="bi-loading">The itinerary couldn’t load. Please refresh the page.</div>'; });
+    .catch(() => { root.innerHTML = '<div class="bi-loading" style="min-height:100vh;display:flex;align-items:center;justify-content:center;color:#5B6770;font:14px system-ui,sans-serif">The itinerary couldn’t load. Please refresh the page.</div>'; });
 
   function init() {
     D.settings.categories.forEach(c => CAT[c.id] = c);
