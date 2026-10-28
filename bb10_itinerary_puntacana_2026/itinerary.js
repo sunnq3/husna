@@ -80,36 +80,58 @@
     ? `<span class="bi-show__lbl">The Husna Night Show</span><span class="bi-show__name">${icon(it)}${esc(it.title.replace(SHOW, ''))}${it.tbc ? STAR : ''}</span>`
     : `${icon(it)}${esc(it.title)}${it.tbc ? STAR : ''}`;
   // themed ornaments for the night show cards (bottom-right, light brand blue).
-  // Motion is SMIL inside the SVG (Safari on iPhone doesn't reliably run CSS animations on SVG parts);
-  // the observer below pauses them off screen.
+  // Motion is driven by JavaScript (requestAnimationFrame) on data-a nodes: iPhones in Low Power Mode and
+  // some Safari versions stop CSS/SVG-native animation, but a frame loop keeps running.
+  //   data-a: tx | ty | rot | skew | beam   data-amp: amplitude   data-dur: ms   data-ph: phase 0-1   data-cx/cy: pivot
   const SVG = (cls, inner) => `<svg class="bi-orn bi-orn--${cls}" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
   const STAR_P = (x, y, r) => `M${x} ${y - r}l${r * .33} ${r * .67}L${x + r} ${y}l-${r * .67} ${r * .33}L${x} ${y + r}l-${r * .33}-${r * .67}L${x - r} ${y}l${r * .67}-${r * .33}z`;
-  const AT = (type, values, dur, begin = 0) => `<animateTransform attributeName="transform" type="${type}" values="${values}" dur="${dur}s" begin="${begin}s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>`;
-  const AO = (values, dur, begin = 0) => `<animate attributeName="opacity" values="${values}" dur="${dur}s" begin="${begin}s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>`;
-  const star = (x, y, r, dur, begin, o = 1) => `<path d="${STAR_P(x, y, r)}" fill="currentColor" stroke="none" opacity="${o}">${AO('.3;1;.3', dur, begin)}${AT('rotate', `0 ${x} ${y};14 ${x} ${y};0 ${x} ${y}`, dur, begin)}</path>`;
+  const A = (a, amp, dur, ph = 0, extra = '') => `data-a="${a}" data-amp="${amp}" data-dur="${dur}" data-ph="${ph}" ${extra}`;
+  const star = (x, y, r, dur, ph) => `<path d="${STAR_P(x, y, r)}" fill="currentColor" stroke="none" ${A('rot', 14, dur, ph, `data-cx="${x}" data-cy="${y}"`)}/>`;
   const ORNS = {
     waves: SVG('waves',
-      `<path d="M-10 30c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2">${AT('translate', '-6 0;6 0;-6 0', 5)}</path>`
-      + `<path d="M-10 42c12-8 20-8 30-1s20 7 32-1 22-9 40-1 20 7 32-1" opacity=".6">${AT('translate', '6 0;-6 0;6 0', 6.5)}</path>`
-      + `<path d="M-10 54c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" opacity=".35">${AT('translate', '-6 0;6 0;-6 0', 8)}</path>`),
-    stars: SVG('stars', star(96, 16, 7, 3.2, 0) + star(74, 30, 4, 4.1, 1.3) + star(110, 36, 3, 3.6, 2.1) + star(56, 14, 2.5, 4.6, .9) + star(92, 48, 2.2, 3.9, 2.8)),
+      `<path d="M-10 30c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" ${A('tx', 6, 5000, 0)}/>`
+      + `<path d="M-10 42c12-8 20-8 30-1s20 7 32-1 22-9 40-1 20 7 32-1" opacity=".6" ${A('tx', 6, 6500, .5)}/>`
+      + `<path d="M-10 54c14-10 22-10 34-2s22 8 36-2 24-10 42-2 22 8 36-2" opacity=".35" ${A('tx', 6, 8000, .25)}/>`),
+    stars: SVG('stars', star(96, 16, 7, 3200, 0) + star(74, 30, 4, 4100, .3) + star(110, 36, 3, 3600, .6) + star(56, 14, 2.5, 4600, .2) + star(92, 48, 2.2, 3900, .75)),
     spotlight: SVG('spotlight',
-      `<path d="M70 0L52 58h34z" fill="currentColor" stroke="none" opacity=".14">${AT('rotate', '-10 70 0;10 70 0;-10 70 0', 5)}${AO('.1;.22;.1', 5)}</path>`
-      + `<path d="M112 0L80 58h36z" fill="currentColor" stroke="none" opacity=".14">${AT('rotate', '10 112 0;-10 112 0;10 112 0', 6)}${AO('.22;.1;.22', 6)}</path>`
+      `<path d="M70 0L52 58h34z" fill="currentColor" stroke="none" ${A('beam', 10, 5000, 0, 'data-cx="70" data-cy="0"')}/>`
+      + `<path d="M112 0L80 58h36z" fill="currentColor" stroke="none" ${A('beam', -10, 6000, .5, 'data-cx="112" data-cy="0"')}/>`
       + '<path d="M40 58h78" opacity=".5"/><circle cx="70" cy="2" r="2.2" fill="currentColor" stroke="none"/><circle cx="112" cy="2" r="2.2" fill="currentColor" stroke="none"/>'),
     hearts: SVG('hearts',
-      `<path d="M96 44s-9-5.6-9-12.4a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.8-9 12.4-9 12.4z">${AT('translate', '0 0;0 -4;0 0', 4.2)}</path>`
-      + `<path d="M72 36s-6-3.8-6-8.4a3.4 3.4 0 0 1 6-2 3.4 3.4 0 0 1 6 2c0 4.6-6 8.4-6 8.4z" opacity=".7">${AT('translate', '0 -2;0 2;0 -2', 5)}</path>`
-      + `<path d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55">${AT('translate', '0 1;0 -3;0 1', 4.6)}</path>`),
+      `<path d="M96 44s-9-5.6-9-12.4a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.8-9 12.4-9 12.4z" ${A('ty', 2.5, 4200, 0)}/>`
+      + `<path d="M72 36s-6-3.8-6-8.4a3.4 3.4 0 0 1 6-2 3.4 3.4 0 0 1 6 2c0 4.6-6 8.4-6 8.4z" opacity=".7" ${A('ty', 2.5, 5000, .4)}/>`
+      + `<path d="M112 24s-4.4-2.8-4.4-6.2a2.5 2.5 0 0 1 4.4-1.5 2.5 2.5 0 0 1 4.4 1.5c0 3.4-4.4 6.2-4.4 6.2z" opacity=".55" ${A('ty', 2.5, 4600, .7)}/>`),
     flag: SVG('flag',
       '<path d="M70 58V6" opacity=".7"/><circle cx="70" cy="4" r="2" fill="currentColor" stroke="none"/>'
-      + `<g>${AT('skewY', '-1.5;1.5;-1.5', 3.4)}`
+      + `<g ${A('skew', 1.5, 3400, 0)}>`
       + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v22c-4-4-12 0-20 4s-18-5-28 0z" fill="#fff" stroke="none"/>'
       + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v7.3c-4-4-12 0-20 4s-18-5-28 0z" fill="#231F20" stroke="none" opacity=".75"/>'
       + '<path d="M70 22.7c10-5 18 4 28 0s16-4 20 0V30c-4-4-12 0-20 4s-18-5-28 0z" fill="#007A3D" stroke="none" opacity=".8"/>'
       + '<path d="M70 8c10-5 18 4 28 0s16-4 20 0v22c-4-4-12 0-20 4s-18-5-28 0z"/>'
       + '<path d="M70 8l20 11-20 11z" fill="#CE1126" stroke="none"/>'
       + '</g>')
+  };
+  // the frame loop: only ornaments currently on screen are in `live`
+  const live = new Set(); let raf = 0;
+  const STILL = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tick(now) {
+    live.forEach(svg => svg.querySelectorAll('[data-a]').forEach(n => {
+      const amp = +n.dataset.amp, dur = +n.dataset.dur, ph = +n.dataset.ph;
+      const w = Math.sin((now / dur + ph) * Math.PI * 2);           // -1 … 1, eased by nature
+      const v = amp * w, cx = n.dataset.cx || 0, cy = n.dataset.cy || 0;
+      switch (n.dataset.a) {
+        case 'tx':   n.setAttribute('transform', `translate(${v.toFixed(2)} 0)`); break;
+        case 'ty':   n.setAttribute('transform', `translate(0 ${v.toFixed(2)})`); break;
+        case 'skew': n.setAttribute('transform', `skewY(${v.toFixed(2)})`); break;
+        case 'rot':  n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.65 + 0.35 * w).toFixed(2)); break;
+        case 'beam': n.setAttribute('transform', `rotate(${v.toFixed(2)} ${cx} ${cy})`); n.setAttribute('opacity', (0.16 + 0.06 * w).toFixed(3)); break;
+      }
+    }));
+    raf = live.size ? requestAnimationFrame(tick) : 0;
+  }
+  const run = (el, on) => {
+    const svg = el.querySelector('.bi-orn'); if (!svg || STILL) return;
+    if (on) { live.add(svg); if (!raf) raf = requestAnimationFrame(tick); } else live.delete(svg);
   };
   const ornament = it => ORNS[{ palm: 'waves', trophy: 'stars', masks: 'spotlight', heart: 'hearts', 'flag-ps': 'flag' }[it.icon] || (it.ornament) || 'stars'] || ORNS.stars;
 
@@ -244,15 +266,13 @@
   }
 
   /* itinerary: list · © 2026 Saaima Saleh */
-  // night show cards glow once as they scroll into view; their ornaments animate only while on screen
-  const STILL = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const run = (el, on) => { const svg = el.querySelector('.bi-orn'); if (!svg || !svg.pauseAnimations) return; if (on && !STILL) svg.unpauseAnimations(); else svg.pauseAnimations(); };
+  // night show cards glow once as they scroll into view; their ornaments move only while on screen
   const glow = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => {
     e.target.classList.toggle('is-view', e.isIntersecting);
     if (e.isIntersecting) e.target.classList.add('is-lit');
     run(e.target, e.isIntersecting);
   }), { threshold: 0.5 }) : null;
-  function watchShows(){ $$('.bi-item--show').forEach(el => { run(el, false); if (glow) glow.observe(el); else { el.classList.add('is-lit', 'is-view'); run(el, true); } }); }
+  function watchShows(){ live.clear(); $$('.bi-item--show').forEach(el => { if (glow) glow.observe(el); else { el.classList.add('is-lit', 'is-view'); run(el, true); } }); }
 
   function mainItinerary() {
     const day = D.days.find(d => d.id === S.day);
