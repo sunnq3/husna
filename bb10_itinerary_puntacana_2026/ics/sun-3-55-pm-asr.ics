@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-3-55-pm-asr@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T195500Z
+DTEND:20261220T205500Z
+SUMMARY:Asr
+DESCRIPTION:Make your own jama'ah\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-55-pm-asr
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-55-pm-asr
+END:VEVENT
+END:VCALENDAR

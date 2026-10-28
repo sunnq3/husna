@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-4-00-pm-men-s-volleyball-tournament@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T200000Z
+DTEND:20261222T210000Z
+SUMMARY:Men's Volleyball Tournament
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 13+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-4-00-pm-men-s-volleyball-tournament
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-4-00-pm-men-s-volleyball-tournament
+END:VEVENT
+END:VCALENDAR

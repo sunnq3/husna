@@ -352,26 +352,25 @@
   }
 
   /* add to calendar (.ics) · © 2026 Saaima Saleh */
+  /* add to calendar · © 2026 Saaima Saleh
+     iPhone / iPad / Mac: open the hosted .ics for this item (Safari shows the event with an Add button).
+     Everything else: open Google Calendar with the event filled in (opens the app on Android). */
   function ics(it) {
     const off = D.settings.timezoneOffset || '-04:00';
     const sign = off[0] === '-' ? 1 : -1; const [oh, om] = off.slice(1).split(':').map(Number);
     const stamp = d => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
     const utc = m => { const d = new Date(it.day.date + 'T00:00:00Z'); d.setUTCMinutes(m + sign * (oh * 60 + om)); return stamp(d); };
     const s = mins(it.start); let e = it.end ? mins(it.end) : s + 60;
-    if (e <= s) e += 1440;                       // ends after midnight
-    const dtS = utc(s), dtE = utc(e);
-    const clean = v => String(v || '').replace(/([,;\\])/g, '\\$1').replace(/\n/g, '\\n');
+    if (e <= s) e += 1440;
     const url = location.href.split('#')[0] + `#itinerary/${it.day.id}/${it.id}`;
-    const body = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Husna Vacations//BB10 Itinerary//EN', 'BEGIN:VEVENT',
-      `UID:${it.id}@bb10.husna.com`, `DTSTAMP:${stamp(new Date())}`,
-      `DTSTART:${dtS}`, `DTEND:${dtE}`, `SUMMARY:${clean(it.title)}`,
-      it.location ? `LOCATION:${clean(it.location + ', Nickelodeon Punta Cana')}` : '',
-      `DESCRIPTION:${clean([it.note, url].filter(Boolean).join('\n'))}`, `URL:${url}`,
-      'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n');
-    const a = document.createElement('a');
-    a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(body);
-    a.download = slug(it.title) + '.ics';
-    document.body.appendChild(a); a.click(); a.remove();
+    const apple = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && !window.MSStream;
+    if (apple) { location.href = `${BASE}ics/${it.id}.ics`; return; }
+    const q = new URLSearchParams({
+      action: 'TEMPLATE', text: it.title, dates: `${utc(s)}/${utc(e)}`,
+      details: [it.note, it.ages, url].filter(Boolean).join('\n'),
+      location: it.location ? it.location + ', Nickelodeon Punta Cana' : 'Nickelodeon Punta Cana'
+    });
+    window.open('https://calendar.google.com/calendar/render?' + q.toString(), '_blank', 'noopener');
   }
   function share(it) {
     const url = location.href.split('#')[0] + `#itinerary/${it.day.id}/${it.id}`;

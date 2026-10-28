@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-12-00-pm-aqua-fit@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T160000Z
+DTEND:20261221T170000Z
+SUMMARY:Aqua Fit
+LOCATION:Women's Pool\, Nickelodeon Punta Cana
+DESCRIPTION:Women & girls only\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-12-00-pm-aqua-fit
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-12-00-pm-aqua-fit
+END:VEVENT
+END:VCALENDAR

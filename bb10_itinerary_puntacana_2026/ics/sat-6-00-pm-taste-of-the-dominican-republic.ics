@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-6-00-pm-taste-of-the-dominican-republic@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T220000Z
+DTEND:20261220T010000Z
+SUMMARY:Taste of the Dominican Republic
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:Food sampling\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-6-00-pm-taste-of-the-dominican-republic
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-6-00-pm-taste-of-the-dominican-republic
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-8-00-am-spa-time@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T120000Z
+DTEND:20261222T160000Z
+SUMMARY:Spa Time
+LOCATION:Vassa Spa (Gourmet Village)\, Nickelodeon Punta Cana
+DESCRIPTION:Men only · male therapist available · reservations required\nAges 18+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-8-00-am-spa-time
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-8-00-am-spa-time
+END:VEVENT
+END:VCALENDAR

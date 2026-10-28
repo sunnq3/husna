@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-8-30-pm-kids-game-show-with-ilyas-mao-amin-davis@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T003000Z
+DTEND:20261222T010000Z
+SUMMARY:Kids Game Show with Ilyas Mao & Amin Davis
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-30-pm-kids-game-show-with-ilyas-mao-amin-davis
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-30-pm-kids-game-show-with-ilyas-mao-amin-davis
+END:VEVENT
+END:VCALENDAR

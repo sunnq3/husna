@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:thu-6-45-am-fajr-hajj-umrah-in-punta-cana@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261224T104500Z
+DTEND:20261224T112000Z
+SUMMARY:Fajr: Hajj & Umrah in Punta Cana
+LOCATION:Lighthouse Terrace & Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Morning motivation\, remembrance & ishraq prayer\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-6-45-am-fajr-hajj-umrah-in-punta-cana
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-6-45-am-fajr-hajj-umrah-in-punta-cana
+END:VEVENT
+END:VCALENDAR

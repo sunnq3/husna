@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-6-00-am-fitness-center-opens@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T100000Z
+DTEND:20261221T020000Z
+SUMMARY:Fitness Center Opens
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-6-00-am-fitness-center-opens
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-6-00-am-fitness-center-opens
+END:VEVENT
+END:VCALENDAR

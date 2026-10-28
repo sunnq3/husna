@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-6-30-pm-meet-greet-cosmo-wanda@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T223000Z
+DTEND:20261221T233000Z
+SUMMARY:Meet & Greet Cosmo & Wanda
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-30-pm-meet-greet-cosmo-wanda
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-30-pm-meet-greet-cosmo-wanda
+END:VEVENT
+END:VCALENDAR

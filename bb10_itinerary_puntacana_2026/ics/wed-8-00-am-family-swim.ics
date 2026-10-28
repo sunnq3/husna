@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-8-00-am-family-swim@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T120000Z
+DTEND:20261223T230000Z
+SUMMARY:Family Swim
+LOCATION:Infinity Pool\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-8-00-am-family-swim
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-8-00-am-family-swim
+END:VEVENT
+END:VCALENDAR

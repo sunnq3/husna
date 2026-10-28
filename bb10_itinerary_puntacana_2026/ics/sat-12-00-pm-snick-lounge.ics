@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-12-00-pm-snick-lounge@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T160000Z
+DTEND:20261220T050000Z
+SUMMARY:Snick Lounge
+LOCATION:Across Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-12-00-pm-snick-lounge
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-12-00-pm-snick-lounge
+END:VEVENT
+END:VCALENDAR

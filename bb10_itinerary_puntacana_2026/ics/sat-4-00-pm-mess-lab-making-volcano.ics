@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-4-00-pm-mess-lab-making-volcano@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T200000Z
+DTEND:20261219T210000Z
+SUMMARY:Mess Lab: Making Volcano
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-00-pm-mess-lab-making-volcano
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-00-pm-mess-lab-making-volcano
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-7-45-am-sunshine-cruise-blue-hole-at-scape-park@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T114500Z
+DTEND:20261222T124500Z
+SUMMARY:Sunshine Cruise + Blue Hole at Scape Park
+LOCATION:Pick up in the Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:Exclusive to Husna guests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-45-am-sunshine-cruise-blue-hole-at-scape-park
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-45-am-sunshine-cruise-blue-hole-at-scape-park
+END:VEVENT
+END:VCALENDAR

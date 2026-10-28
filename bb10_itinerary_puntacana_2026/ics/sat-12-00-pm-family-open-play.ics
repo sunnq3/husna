@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-12-00-pm-family-open-play@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T160000Z
+DTEND:20261219T180000Z
+SUMMARY:Family Open Play
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-12-00-pm-family-open-play
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-12-00-pm-family-open-play
+END:VEVENT
+END:VCALENDAR

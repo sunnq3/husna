@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-11-00-am-sand-castle-competition@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T150000Z
+DTEND:20261220T164500Z
+SUMMARY:Sand Castle Competition
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Whose family is winning this year?\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-11-00-am-sand-castle-competition
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-11-00-am-sand-castle-competition
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-2-30-pm-meet-greet-blue@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T183000Z
+DTEND:20261222T193000Z
+SUMMARY:Meet & Greet Blue
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-2-30-pm-meet-greet-blue
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-2-30-pm-meet-greet-blue
+END:VEVENT
+END:VCALENDAR

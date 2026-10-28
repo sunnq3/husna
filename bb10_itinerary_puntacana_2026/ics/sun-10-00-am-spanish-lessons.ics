@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-10-00-am-spanish-lessons@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T140000Z
+DTEND:20261220T150000Z
+SUMMARY:Spanish Lessons
+LOCATION:Mango's Bar\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-10-00-am-spanish-lessons
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-10-00-am-spanish-lessons
+END:VEVENT
+END:VCALENDAR

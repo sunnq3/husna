@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-7-00-pm-ninja-turtle-power-dinner@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T230000Z
+DTEND:20261223T000000Z
+SUMMARY:Ninja Turtle Power Dinner
+LOCATION:Nick Bistro\, Nickelodeon Punta Cana
+DESCRIPTION:Reservation & payment required\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-00-pm-ninja-turtle-power-dinner
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-00-pm-ninja-turtle-power-dinner
+END:VEVENT
+END:VCALENDAR

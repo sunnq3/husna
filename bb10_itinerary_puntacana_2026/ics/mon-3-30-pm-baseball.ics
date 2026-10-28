@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-3-30-pm-baseball@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T193000Z
+DTEND:20261221T204500Z
+SUMMARY:Baseball
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-30-pm-baseball
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-30-pm-baseball
+END:VEVENT
+END:VCALENDAR

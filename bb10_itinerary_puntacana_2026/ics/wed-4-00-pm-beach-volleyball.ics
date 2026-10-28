@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-4-00-pm-beach-volleyball@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T200000Z
+DTEND:20261223T210000Z
+SUMMARY:Beach Volleyball
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-4-00-pm-beach-volleyball
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-4-00-pm-beach-volleyball
+END:VEVENT
+END:VCALENDAR

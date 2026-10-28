@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-3-30-pm-plankton-the-party-pooper@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T193000Z
+DTEND:20261220T203000Z
+SUMMARY:Plankton the Party Pooper
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-30-pm-plankton-the-party-pooper
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-30-pm-plankton-the-party-pooper
+END:VEVENT
+END:VCALENDAR

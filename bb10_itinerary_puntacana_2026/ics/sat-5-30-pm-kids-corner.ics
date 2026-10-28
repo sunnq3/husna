@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-5-30-pm-kids-corner@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T213000Z
+DTEND:20261220T003000Z
+SUMMARY:Kids' Corner
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-5-30-pm-kids-corner
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-5-30-pm-kids-corner
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-4-30-pm-women-s-fastest-swimmer-contest@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T203000Z
+DTEND:20261220T213000Z
+SUMMARY:Women's Fastest Swimmer Contest
+LOCATION:Women's Pool\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 13+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-30-pm-women-s-fastest-swimmer-contest
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-30-pm-women-s-fastest-swimmer-contest
+END:VEVENT
+END:VCALENDAR

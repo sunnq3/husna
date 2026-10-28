@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-2-00-pm-zumba@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T180000Z
+DTEND:20261222T190000Z
+SUMMARY:Zumba
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Women only\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-2-00-pm-zumba
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-2-00-pm-zumba
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-7-00-pm-character-pop-up-surprise@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T230000Z
+DTEND:20261220T000000Z
+SUMMARY:Character Pop-Up Surprise
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:With Nick characters\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-7-00-pm-character-pop-up-surprise
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-7-00-pm-character-pop-up-surprise
+END:VEVENT
+END:VCALENDAR

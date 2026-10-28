@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-10-15-pm-women-s-table-tennis-tournament@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T021500Z
+DTEND:20261223T040000Z
+SUMMARY:Women's Table Tennis Tournament
+LOCATION:Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 15+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-10-15-pm-women-s-table-tennis-tournament
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-10-15-pm-women-s-table-tennis-tournament
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-4-30-pm-character-pop-up-surprise@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T203000Z
+DTEND:20261221T213000Z
+SUMMARY:Character Pop-Up Surprise
+LOCATION:Nick Bistro\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-4-30-pm-character-pop-up-surprise
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-4-30-pm-character-pop-up-surprise
+END:VEVENT
+END:VCALENDAR

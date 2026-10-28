@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-9-00-am-cardio-abs@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T130000Z
+DTEND:20261222T140000Z
+SUMMARY:Cardio & Abs
+LOCATION:Wellness Platform\, Nickelodeon Punta Cana
+DESCRIPTION:Men 15+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-9-00-am-cardio-abs
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-9-00-am-cardio-abs
+END:VEVENT
+END:VCALENDAR

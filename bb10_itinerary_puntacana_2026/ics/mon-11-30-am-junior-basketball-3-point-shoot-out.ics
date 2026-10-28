@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-11-30-am-junior-basketball-3-point-shoot-out@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T153000Z
+DTEND:20261221T173000Z
+SUMMARY:Junior Basketball: 3 Point Shoot Out
+LOCATION:Basketball Court\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 12 & under\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-30-am-junior-basketball-3-point-shoot-out
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-30-am-junior-basketball-3-point-shoot-out
+END:VEVENT
+END:VCALENDAR

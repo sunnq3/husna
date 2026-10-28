@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-2-00-pm-sort-it-up-with-rocky-zuma@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T180000Z
+DTEND:20261221T190000Z
+SUMMARY:Sort It Up With Rocky & Zuma
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-00-pm-sort-it-up-with-rocky-zuma
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-00-pm-sort-it-up-with-rocky-zuma
+END:VEVENT
+END:VCALENDAR

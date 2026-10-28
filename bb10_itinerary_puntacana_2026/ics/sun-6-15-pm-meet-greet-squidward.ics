@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-6-15-pm-meet-greet-squidward@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T221500Z
+DTEND:20261220T231500Z
+SUMMARY:Meet & Greet Squidward
+LOCATION:Between Building 1 & 9\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-6-15-pm-meet-greet-squidward
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-6-15-pm-meet-greet-squidward
+END:VEVENT
+END:VCALENDAR

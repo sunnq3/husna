@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-3-00-pm-cooking-class-rubble-s-rocky-candy@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T190000Z
+DTEND:20261221T200000Z
+SUMMARY:Cooking Class: Rubble's Rocky Candy
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-00-pm-cooking-class-rubble-s-rocky-candy
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-00-pm-cooking-class-rubble-s-rocky-candy
+END:VEVENT
+END:VCALENDAR

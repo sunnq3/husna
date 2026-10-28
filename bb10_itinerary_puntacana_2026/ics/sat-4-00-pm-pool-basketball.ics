@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-4-00-pm-pool-basketball@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T200000Z
+DTEND:20261219T210000Z
+SUMMARY:Pool Basketball
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Men 15+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-00-pm-pool-basketball
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-00-pm-pool-basketball
+END:VEVENT
+END:VCALENDAR

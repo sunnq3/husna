@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-7-30-pm-isha-second-jama-ah@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T233000Z
+DTEND:20261223T003000Z
+SUMMARY:Isha · Second Jama'ah
+DESCRIPTION:Make your own jama'ah\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-30-pm-isha-second-jama-ah
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-30-pm-isha-second-jama-ah
+END:VEVENT
+END:VCALENDAR

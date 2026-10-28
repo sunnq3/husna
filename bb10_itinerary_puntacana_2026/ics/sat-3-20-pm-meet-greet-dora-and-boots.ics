@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-3-20-pm-meet-greet-dora-and-boots@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T192000Z
+DTEND:20261219T202000Z
+SUMMARY:Meet & Greet Dora and Boots
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-3-20-pm-meet-greet-dora-and-boots
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-3-20-pm-meet-greet-dora-and-boots
+END:VEVENT
+END:VCALENDAR

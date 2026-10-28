@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-8-00-am-mom-daughter-spa-time@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T120000Z
+DTEND:20261221T230000Z
+SUMMARY:Mom & Daughter Spa Time
+LOCATION:Vassa Spa (Gourmet Village)\, Nickelodeon Punta Cana
+DESCRIPTION:Women & girls · under 18 with an adult · reservations required\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-00-am-mom-daughter-spa-time
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-00-am-mom-daughter-spa-time
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-4-00-pm-kids-fastest-swimmer-contest@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T200000Z
+DTEND:20261221T210000Z
+SUMMARY:Kids' Fastest Swimmer Contest
+LOCATION:Infinity Pool\, Nickelodeon Punta Cana
+DESCRIPTION:Boys & girls race separately\nAges 12 & under\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-4-00-pm-kids-fastest-swimmer-contest
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-4-00-pm-kids-fastest-swimmer-contest
+END:VEVENT
+END:VCALENDAR

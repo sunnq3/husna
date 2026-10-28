@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-2-30-pm-family-soccer-game@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T183000Z
+DTEND:20261220T193000Z
+SUMMARY:Family Soccer Game
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-2-30-pm-family-soccer-game
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-2-30-pm-family-soccer-game
+END:VEVENT
+END:VCALENDAR

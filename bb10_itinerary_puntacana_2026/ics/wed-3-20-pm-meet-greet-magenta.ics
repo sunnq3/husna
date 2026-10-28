@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-3-20-pm-meet-greet-magenta@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T192000Z
+DTEND:20261223T202000Z
+SUMMARY:Meet & Greet Magenta
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:With Nick characters\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-20-pm-meet-greet-magenta
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-20-pm-meet-greet-magenta
+END:VEVENT
+END:VCALENDAR

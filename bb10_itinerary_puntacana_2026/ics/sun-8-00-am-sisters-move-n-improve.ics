@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-8-00-am-sisters-move-n-improve@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T120000Z
+DTEND:20261220T130000Z
+SUMMARY:Sisters' Move N Improve
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Mind-body & breath-centred sessions\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-8-00-am-sisters-move-n-improve
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-8-00-am-sisters-move-n-improve
+END:VEVENT
+END:VCALENDAR

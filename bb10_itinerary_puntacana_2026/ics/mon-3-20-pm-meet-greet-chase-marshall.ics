@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-3-20-pm-meet-greet-chase-marshall@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T192000Z
+DTEND:20261221T202000Z
+SUMMARY:Meet & Greet Chase & Marshall
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-20-pm-meet-greet-chase-marshall
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-20-pm-meet-greet-chase-marshall
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-10-30-am-human-crane@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T143000Z
+DTEND:20261223T153000Z
+SUMMARY:Human Crane
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-10-30-am-human-crane
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-10-30-am-human-crane
+END:VEVENT
+END:VCALENDAR

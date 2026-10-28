@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-4-00-pm-personal-sliming@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T200000Z
+DTEND:20261220T210000Z
+SUMMARY:Personal Sliming
+LOCATION:Aqua Nick\, Nickelodeon Punta Cana
+DESCRIPTION:Reservation & payment required\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-00-pm-personal-sliming
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-00-pm-personal-sliming
+END:VEVENT
+END:VCALENDAR

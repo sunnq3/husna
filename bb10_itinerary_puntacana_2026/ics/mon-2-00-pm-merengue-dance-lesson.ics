@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-2-00-pm-merengue-dance-lesson@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T180000Z
+DTEND:20261221T190000Z
+SUMMARY:Merengue Dance Lesson
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Women only · limited spots\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-00-pm-merengue-dance-lesson
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-00-pm-merengue-dance-lesson
+END:VEVENT
+END:VCALENDAR

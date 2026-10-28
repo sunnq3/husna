@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-4-10-pm-meet-greet-spongebob-patrick@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T201000Z
+DTEND:20261220T211000Z
+SUMMARY:Meet & Greet SpongeBob & Patrick
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-10-pm-meet-greet-spongebob-patrick
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-10-pm-meet-greet-spongebob-patrick
+END:VEVENT
+END:VCALENDAR

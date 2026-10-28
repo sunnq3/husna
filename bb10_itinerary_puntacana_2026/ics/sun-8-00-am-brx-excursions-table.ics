@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-8-00-am-brx-excursions-table@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T120000Z
+DTEND:20261220T220000Z
+SUMMARY:BRX Excursions Table
+LOCATION:Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:Book excursions with BRX\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-8-00-am-brx-excursions-table
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-8-00-am-brx-excursions-table
+END:VEVENT
+END:VCALENDAR

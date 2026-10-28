@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-3-30-pm-everest-s-snowball-fight@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T193000Z
+DTEND:20261221T203000Z
+SUMMARY:Everest's Snowball Fight
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-30-pm-everest-s-snowball-fight
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-3-30-pm-everest-s-snowball-fight
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-12-00-pm-spa-time@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T160000Z
+DTEND:20261223T230000Z
+SUMMARY:Spa Time
+LOCATION:Vassa Spa (Gourmet Village)\, Nickelodeon Punta Cana
+DESCRIPTION:Open to all · reservations required\nAges 18+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-12-00-pm-spa-time
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-12-00-pm-spa-time
+END:VEVENT
+END:VCALENDAR

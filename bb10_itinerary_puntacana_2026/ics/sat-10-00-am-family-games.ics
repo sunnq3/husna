@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-10-00-am-family-games@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T140000Z
+DTEND:20261219T150000Z
+SUMMARY:Family Games
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-family-games
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-family-games
+END:VEVENT
+END:VCALENDAR

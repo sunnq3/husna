@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-3-00-pm-super-sliming@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T190000Z
+DTEND:20261223T200000Z
+SUMMARY:Super Sliming
+LOCATION:Aqua Nick\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-00-pm-super-sliming
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-00-pm-super-sliming
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-6-45-pm-super-sliming-sunset-edition@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T224500Z
+DTEND:20261222T234500Z
+SUMMARY:Super Sliming: Sunset Edition
+LOCATION:Aqua Nick\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-6-45-pm-super-sliming-sunset-edition
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-6-45-pm-super-sliming-sunset-edition
+END:VEVENT
+END:VCALENDAR

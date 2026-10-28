@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-2-30-pm-arts-crafts-build-it-up-with-rubble@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T183000Z
+DTEND:20261221T193000Z
+SUMMARY:Arts & Crafts: Build It Up with Rubble
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-30-pm-arts-crafts-build-it-up-with-rubble
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-2-30-pm-arts-crafts-build-it-up-with-rubble
+END:VEVENT
+END:VCALENDAR

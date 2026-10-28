@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:thu-12-00-pm-check-out@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261224T160000Z
+DTEND:20261224T170000Z
+SUMMARY:Check-Out
+LOCATION:Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-12-00-pm-check-out
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-12-00-pm-check-out
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-8-00-pm-the-husna-night-show-welcome-to-dominican-tropical-beach-party@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T000000Z
+DTEND:20261220T010000Z
+SUMMARY:The Husna Night Show: Welcome to Dominican Tropical Beach Party
+LOCATION:Beach (weather permitting)\, Nickelodeon Punta Cana
+DESCRIPTION:Enjoy and meet fellow guests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-8-00-pm-the-husna-night-show-welcome-to-dominican-tropical-beach-party
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-8-00-pm-the-husna-night-show-welcome-to-dominican-tropical-beach-party
+END:VEVENT
+END:VCALENDAR

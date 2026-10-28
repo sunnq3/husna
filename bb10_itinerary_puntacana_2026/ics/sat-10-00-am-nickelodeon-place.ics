@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-10-00-am-nickelodeon-place@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T140000Z
+DTEND:20261219T210000Z
+SUMMARY:Nickelodeon Place
+DESCRIPTION:Ready to Play kids’ club\nAges 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-nickelodeon-place
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-nickelodeon-place
+END:VEVENT
+END:VCALENDAR

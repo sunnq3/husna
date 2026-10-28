@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-2-30-pm-surprise-activities@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T183000Z
+DTEND:20261219T193000Z
+SUMMARY:Surprise Activities
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-2-30-pm-surprise-activities
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-2-30-pm-surprise-activities
+END:VEVENT
+END:VCALENDAR

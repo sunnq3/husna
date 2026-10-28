@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-9-00-am-women-s-fitness-cardio@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261222T130000Z
+DTEND:20261222T133000Z
+SUMMARY:Women's Fitness: Cardio
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-9-00-am-women-s-fitness-cardio
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-9-00-am-women-s-fitness-cardio
+END:VEVENT
+END:VCALENDAR

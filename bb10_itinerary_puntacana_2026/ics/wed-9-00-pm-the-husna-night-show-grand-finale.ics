@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-9-00-pm-the-husna-night-show-grand-finale@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261224T010000Z
+DTEND:20261224T020000Z
+SUMMARY:The Husna Night Show: Grand Finale
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:Grand giveaway + prizes\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-9-00-pm-the-husna-night-show-grand-finale
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-9-00-pm-the-husna-night-show-grand-finale
+END:VEVENT
+END:VCALENDAR

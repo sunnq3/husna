@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-6-00-pm-dinner-buffet@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T220000Z
+DTEND:20261222T020000Z
+SUMMARY:Dinner Buffet
+LOCATION:Explorer's Table\, Nickelodeon Punta Cana
+DESCRIPTION:No reservations needed\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-00-pm-dinner-buffet
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-00-pm-dinner-buffet
+END:VEVENT
+END:VCALENDAR

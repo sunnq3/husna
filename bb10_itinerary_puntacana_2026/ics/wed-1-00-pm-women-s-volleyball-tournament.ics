@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-1-00-pm-women-s-volleyball-tournament@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T170000Z
+DTEND:20261223T180000Z
+SUMMARY:Women's Volleyball Tournament
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 13+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-1-00-pm-women-s-volleyball-tournament
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-1-00-pm-women-s-volleyball-tournament
+END:VEVENT
+END:VCALENDAR

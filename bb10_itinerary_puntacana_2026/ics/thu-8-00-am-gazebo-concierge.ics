@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:thu-8-00-am-gazebo-concierge@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261224T120000Z
+DTEND:20261224T210000Z
+SUMMARY:Gazebo Concierge
+LOCATION:Front of each building\, Nickelodeon Punta Cana
+DESCRIPTION:Help with booking non-inclusive activities and special requests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-8-00-am-gazebo-concierge
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/thu/thu-8-00-am-gazebo-concierge
+END:VEVENT
+END:VCALENDAR

@@ -11,6 +11,7 @@ The Beach & Beyond 10 guest itinerary (Nickelodeon Punta Cana, Dec 19 – 24, 20
 | `data/contacts.json` | The Contact page. |
 | `data/settings.json` | Category names and colours, shared links (BRX, waiver, spa, booking email), disclaimer, hub link, logo. |
 | `itinerary.css` / `itinerary.js` | Look and behaviour. No content in here. |
+| `ics/` | One calendar file per item, for Add to calendar on iPhone. Generated: after editing `data/itinerary.json`, run `python3 tools/build-ics.py`. |
 
 ### Itinerary item fields
 

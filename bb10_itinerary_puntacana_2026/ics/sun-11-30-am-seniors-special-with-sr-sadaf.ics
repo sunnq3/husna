@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-11-30-am-seniors-special-with-sr-sadaf@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T153000Z
+DTEND:20261220T163000Z
+SUMMARY:Seniors' Special with Sr. Sadaf
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Curated activities for our beloved seniors\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-11-30-am-seniors-special-with-sr-sadaf
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-11-30-am-seniors-special-with-sr-sadaf
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-9-00-am-trx-fitness@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T130000Z
+DTEND:20261221T140000Z
+SUMMARY:TRX Fitness
+LOCATION:Wellness Platform\, Nickelodeon Punta Cana
+DESCRIPTION:Limited spots\nMen 15+\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-9-00-am-trx-fitness
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-9-00-am-trx-fitness
+END:VEVENT
+END:VCALENDAR

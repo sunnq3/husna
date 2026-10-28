@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-11-50-am-golf-with-brother-asif@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T155000Z
+DTEND:20261221T165000Z
+SUMMARY:Golf with Brother Asif
+LOCATION:Pick up in the Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:Exclusive to Husna guests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-50-am-golf-with-brother-asif
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-50-am-golf-with-brother-asif
+END:VEVENT
+END:VCALENDAR

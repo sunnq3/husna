@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-7-00-am-breakfast-buffet@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T110000Z
+DTEND:20261220T150000Z
+SUMMARY:Breakfast Buffet
+LOCATION:Explorer's Table\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-7-00-am-breakfast-buffet
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-7-00-am-breakfast-buffet
+END:VEVENT
+END:VCALENDAR

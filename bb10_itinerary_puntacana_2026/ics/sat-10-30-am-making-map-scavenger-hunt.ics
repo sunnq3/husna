@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-10-30-am-making-map-scavenger-hunt@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T143000Z
+DTEND:20261219T153000Z
+SUMMARY:Making Map Scavenger Hunt
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-30-am-making-map-scavenger-hunt
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-30-am-making-map-scavenger-hunt
+END:VEVENT
+END:VCALENDAR

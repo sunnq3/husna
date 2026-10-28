@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-11-30-am-making-dora-s-pennant-flags@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T153000Z
+DTEND:20261219T163000Z
+SUMMARY:Making Dora's Pennant Flags
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-11-30-am-making-dora-s-pennant-flags
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-11-30-am-making-dora-s-pennant-flags
+END:VEVENT
+END:VCALENDAR

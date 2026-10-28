@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-9-00-am-women-s-fitness-pilates@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T130000Z
+DTEND:20261223T133000Z
+SUMMARY:Women's Fitness: Pilates
+LOCATION:Prestige Welcome Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-9-00-am-women-s-fitness-pilates
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-9-00-am-women-s-fitness-pilates
+END:VEVENT
+END:VCALENDAR

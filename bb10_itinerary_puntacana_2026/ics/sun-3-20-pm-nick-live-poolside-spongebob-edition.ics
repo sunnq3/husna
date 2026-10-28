@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-3-20-pm-nick-live-poolside-spongebob-edition@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T192000Z
+DTEND:20261220T202000Z
+SUMMARY:Nick Live Poolside: SpongeBob Edition
+LOCATION:Aqua Nick\, Nickelodeon Punta Cana
+DESCRIPTION:With Nick characters\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-20-pm-nick-live-poolside-spongebob-edition
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-3-20-pm-nick-live-poolside-spongebob-edition
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-10-45-am-morning-session@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T144500Z
+DTEND:20261220T153000Z
+SUMMARY:Morning Session
+LOCATION:Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Topic to be confirmed · begins with morning supplications\, followed by Q&A\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-10-45-am-morning-session
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-10-45-am-morning-session
+END:VEVENT
+END:VCALENDAR

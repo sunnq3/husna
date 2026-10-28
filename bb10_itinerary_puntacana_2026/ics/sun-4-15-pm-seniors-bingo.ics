@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-4-15-pm-seniors-bingo@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T201500Z
+DTEND:20261220T211500Z
+SUMMARY:Seniors' Bingo
+LOCATION:Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-15-pm-seniors-bingo
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-4-15-pm-seniors-bingo
+END:VEVENT
+END:VCALENDAR

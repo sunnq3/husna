@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-8-40-am-eco-park@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261221T124000Z
+DTEND:20261221T134000Z
+SUMMARY:Eco Park
+LOCATION:Pick up in the Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:Exclusive to Husna guests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-40-am-eco-park
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-8-40-am-eco-park
+END:VEVENT
+END:VCALENDAR

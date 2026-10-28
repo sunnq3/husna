@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-4-10-pm-meet-greet-marshall@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261219T201000Z
+DTEND:20261219T211000Z
+SUMMARY:Meet & Greet Marshall
+LOCATION:Character Central\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-10-pm-meet-greet-marshall
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-4-10-pm-meet-greet-marshall
+END:VEVENT
+END:VCALENDAR

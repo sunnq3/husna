@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-3-00-pm-cooking-class-slime-smoothies@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261223T190000Z
+DTEND:20261223T200000Z
+SUMMARY:Cooking Class: Slime Smoothies
+LOCATION:Nickelodeon Place\, Nickelodeon Punta Cana
+DESCRIPTION:Ages 4–12\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-00-pm-cooking-class-slime-smoothies
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-3-00-pm-cooking-class-slime-smoothies
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-1-30-pm-dolphin-encounter-swim-adventure-royal-swim@bb10.husna.com
+DTSTAMP:20261028T170603Z
+DTSTART:20261220T173000Z
+DTEND:20261220T183000Z
+SUMMARY:Dolphin Encounter\, Swim Adventure & Royal Swim
+LOCATION:Pick up in the Lobby\, Nickelodeon Punta Cana
+DESCRIPTION:Exclusive to Husna guests\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-1-30-pm-dolphin-encounter-swim-adventure-royal-swim
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-1-30-pm-dolphin-encounter-swim-adventure-royal-swim
+END:VEVENT
+END:VCALENDAR
