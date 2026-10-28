@@ -1,16 +1,9 @@
 # BB10 Itinerary · Punta Cana 2026
 
-© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
+© 2026 Saaima Saleh. All other rights reserved.
 
 The Beach & Beyond 10 guest itinerary (Nickelodeon Punta Cana, Dec 19 – 24, 2026).
 
-- **Live files:** https://sunnq3.github.io/husna/bb10_itinerary_puntacana_2026/
-- **WordPress:** paste `itinerary-wordpress.html` into one Elementor HTML widget on an Elementor Canvas page. That's the only time WordPress is touched.
-- **Updates:** edit the files in `data/` and push. Data changes show on the page within about a minute; style or script changes within about 5–10 minutes.
-
-## Where things live
-
-| File | What it controls |
 |---|---|
 | `data/itinerary.json` | Every day and every item, in the order shown. One item per line. |
 | `data/signups.json` | The Sign-ups page: competitions grouped Open / Men / Women / Kids (Girls, Boys), with sign-up links. |
