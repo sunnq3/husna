@@ -2,7 +2,7 @@
   "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. One line per item, in the order shown. cat: husna | nick | food | women | sliming | hours. tbc: true adds the red star. link: a key from settings.json links. signup: an id from signups.json. {\"heading\": \"Lunch\"} starts a meal group; the food items right after it sit inside that group.",
   "days": [
     {"id": "sat", "date": "2026-12-19", "label": "Saturday, December 19", "short": "Sat, Dec 19", "title": "Arrival day", "note": "Take the day to settle in and explore the resort. Rooms will be ready after 4 PM, in shā’ Allāh.", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
       {"start": "7:00 AM", "end": "11:00 AM", "title": "Breakfast Buffet", "cat": "food", "location": "Explorer's Table"},
@@ -51,7 +51,7 @@
       {"start": "10:15 PM", "end": "11:00 PM", "title": "Night Volleyball", "cat": "husna", "location": "Beach", "note": "Open to all"}
     ]},
     {"id": "sun", "date": "2026-12-20", "label": "Sunday, December 20", "short": "Sun, Dec 20", "items": [
-      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
+      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -124,7 +124,7 @@
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "mon", "date": "2026-12-21", "label": "Monday, December 21", "short": "Mon, Dec 21", "items": [
-      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
+      {"start": "6:00 AM", "end": "10:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM · Women only 8 AM – 7 PM · Men only 7 – 10 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -195,7 +195,7 @@
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "tue", "date": "2026-12-22", "label": "Tuesday, December 22", "short": "Tue, Dec 22", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -266,7 +266,7 @@
       {"start": "10:15 PM", "end": "11:30 PM", "title": "Baba's Village", "cat": "husna", "location": "Kids' Corner (Gourmet Village)", "ages": "Ages 18+", "tbc": true}
     ]},
     {"id": "wed", "date": "2026-12-23", "label": "Wednesday, December 23", "short": "Wed, Dec 23", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village", "note": "Open to all 6 – 8 AM & 7 – 11 PM · Men only 8 AM – 12 PM · Women only 1 – 7 PM"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
@@ -328,7 +328,7 @@
       {"start": "11:30 PM", "title": "Night Volleyball", "cat": "husna", "location": "Beach", "note": "Open to all"}
     ]},
     {"id": "thu", "date": "2026-12-24", "label": "Thursday, December 24", "short": "Thu, Dec 24", "title": "Check-out day", "items": [
-      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center", "cat": "hours", "location": "Gourmet Village"},
+      {"start": "6:00 AM", "end": "11:00 PM", "title": "Fitness Center Opens", "cat": "hours", "location": "Gourmet Village"},
       {"start": "6:45 AM", "end": "7:20 AM", "title": "Fajr: Hajj & Umrah in Punta Cana", "cat": "husna", "location": "Lighthouse Terrace & Beach", "note": "Morning motivation, remembrance & ishraq prayer"},
       {"start": "7:00 AM", "end": "11:00 PM", "title": "Sweetery", "cat": "food", "location": "Gourmet Village"},
       {"heading": "Breakfast"},
