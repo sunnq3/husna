@@ -17,7 +17,7 @@ The Beach & Beyond 10 guest itinerary (Nickelodeon Punta Cana, Dec 19 – 24, 20
 
 ```json
 {"start": "4:00 PM", "end": "6:00 PM", "title": "3 Point Shoot Out Contest", "cat": "husna",
- "location": "Basketball Court", "ages": "Ages 13+", "note": "…", "link": "excursions", "signup": "three-point", "tbc": true}
+ "location": "Basketball Court", "ages": "Ages 13+", "note": "…", "link": "excursions", "signup": "three-point", "tbc": true, "desc": "Longer text shown only in the detail sheet"}
 ```
 
 - `cat`: `husna`, `nick`, `food`, `women`, `sliming`, `hours` (Open Hours)
@@ -46,4 +46,6 @@ Wording: "Ladies" → "Women" everywhere (Ladies Only Pool → Women's Pool); "S
 
 Not on any day yet (from ATTN Overview): Ustadh Ubaydullah Evans' spiritual sessions, Under the Stars, Marriage Retreat sessions, Super Hijabi.
 
-Placeholders waiting for links: competition sign-up forms, spa booking, dinner app, on-site team phone / WhatsApp, (hub link set to https://husna.com/beach-beyond-punta-cana-2026-dashboard/).
+Oct 30 edits doc: Beach Walk with Dr. Saira (Sun, Tue) → Tides & Tadabbur with Dr. Saira, with a session line on the card and a longer `desc` in the detail sheet only; Contact page rebuilt as who-to-contact-for-what (Sr. Iman, Husna bookings, BRX, Nickelodeon, Spa, Husna programming) and mirrored on the hub; spa link now emails madrian@nick-resorts.com.
+
+Placeholders waiting for links: competition sign-up forms, dinner app, (hub link set to https://husna.com/beach-beyond-punta-cana-2026-dashboard/).

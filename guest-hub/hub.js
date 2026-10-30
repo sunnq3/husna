@@ -43,6 +43,34 @@
       { title: 'Welcome to Beach & Beyond 10',    date: 'Aug 20', added: '2026-08-20', url: 'http://eepurl.com/g_yoOcaoBU' }
     ],
 
+    // Contact panel (Contact button): who to contact for what. Built by JS; no WordPress change needed.
+    contacts: {
+      intro: 'Sr. Iman and the Husna team are here before and during the trip. For everything else, here is who to ask.',
+      groups: [
+        { name: 'Sr. Iman', role: 'Husna guest services', star: true,
+          rows: [ { kind: 'whatsapp', label: 'WhatsApp', sub: 'Fastest reply · +1 (734) 510-4886', to: '17345104886' },
+                  { kind: 'call', label: 'Call', sub: '+1 (734) 510-4886', to: '+17345104886' },
+                  { kind: 'sms', label: 'Text', sub: '+1 (734) 510-4886', to: '+17345104886' } ] },
+        { name: 'Husna bookings', role: 'Your booking',
+          for: ['Room requests', 'Extending your stay', 'Cancellations', 'Rollaways & cribs', 'Baby warmers', 'Adding a person'],
+          rows: [ { kind: 'email', label: 'Email', sub: 'Nabila@husna.com', to: 'Nabila@husna.com', subject: 'Husna Guest – booking' } ] },
+        { name: 'BRX', role: 'Excursions & transfers',
+          for: ['Excursion pickup times', 'Excursion info', 'Airport transfers', 'Specialised transfers'],
+          rows: [ { kind: 'whatsapp', label: 'WhatsApp', sub: '+1 (809) 501-1178', to: '18095011178' },
+                  { kind: 'email', label: 'Email', sub: 'info@brx-services.com', to: 'info@brx-services.com', subject: 'Husna Guest – excursions & transfers' } ] },
+        { name: 'Nickelodeon Resort', role: 'At the hotel',
+          for: ['Babysitting', 'Life jackets', 'Strollers', 'Food & drink allergies', 'When the front desk isn\u2019t getting back to you'],
+          note: 'For anything in your room (keys, A/C, towels), ask the front desk first.',
+          rows: [ { kind: 'email', label: 'Email', sub: 'jesantos@nick-resorts.com', to: 'jesantos@nick-resorts.com', subject: 'Husna Guest' } ] },
+        { name: 'Spa', role: 'Nickelodeon Resort',
+          for: ['All bookings & enquiries'],
+          rows: [ { kind: 'email', label: 'Email', sub: 'madrian@nick-resorts.com', to: 'madrian@nick-resorts.com', subject: 'Husna Guest – spa booking' } ] },
+        { name: 'Husna programming', role: 'Activities & competitions',
+          for: ['How to sign up', 'Prayers', 'Competitions'],
+          rows: [ { kind: 'email', label: 'Email', sub: 'guests@husna.com', to: 'guests@husna.com', subject: 'Husna Guest – programming' } ] }
+      ]
+    },
+
     // Excursions panel (Excursions tile). Photos live in guest-hub/img/. Edit here; no WordPress change needed.
     excursions: {
       book:     'https://husnabrx.com/excursions/',
@@ -217,6 +245,44 @@
       b.type = 'button'; b.className = tile.className; b.dataset.open = 'hh-excursions';
       b.innerHTML = tile.innerHTML; tile.replaceWith(b);
     } else if (tile) { tile.removeAttribute('aria-disabled'); tile.dataset.open = 'hh-excursions'; }
+  })();
+
+  /* contact: who to contact for what, built from CONFIG.contacts (replaces the pasted sheet) · © 2026 Saaima Saleh */
+  (function contacts(){
+    const C = CONFIG.contacts, old = document.getElementById('hh-contact');
+    if (!C || !C.groups || !old) return;
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const ico = {
+      back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+      chev: '<svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
+      whatsapp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.4A8 8 0 1 1 21 12z"/></svg>',
+      call: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+      sms: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg>',
+      email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>'
+    };
+    const href = r => r.kind === 'whatsapp' ? 'https://wa.me/' + r.to
+      : r.kind === 'call' ? 'tel:' + r.to : r.kind === 'sms' ? 'sms:' + r.to
+      : 'mailto:' + r.to + (r.subject ? '?subject=' + encodeURIComponent(r.subject) : '');
+    const ext = r => r.kind === 'whatsapp' ? ' target="_blank" rel="noopener" data-elementor-open-lightbox="no"' : '';
+    const row = r => `<a href="${href(r)}"${ext(r)}><span class="hh-ico">${ico[r.kind] || ico.email}</span><span class="hh-row__t"><b>${esc(r.label)}</b><span>${esc(r.sub)}</span></span>${ico.chev}</a>`;
+    const group = g => `
+      <section class="hh-cg${g.star ? ' hh-cg--star' : ''}">
+        <div class="hh-cg__head"><span class="hh-eyebrow">${esc(g.role)}</span><h3>${esc(g.name)}</h3></div>
+        ${g.for ? `<ul class="hh-cg__for">${g.for.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}
+        ${g.note ? `<p class="hh-cg__note">${esc(g.note)}</p>` : ''}
+        <div class="hh-rows">${g.rows.map(row).join('')}</div>
+      </section>`;
+    old.outerHTML = `
+    <dialog class="hh-full hh-dlg hh-contactp" id="hh-contact" aria-labelledby="hh-contact-t">
+      <div class="hh-full__head">
+        <button class="hh-back" type="button" data-close aria-label="Back">${ico.back}</button>
+        <div><span class="hh-eyebrow">Who to contact</span><h2 id="hh-contact-t">Contact</h2></div>
+      </div>
+      <div class="hh-dlg__body">
+        <p class="hh-lead">${esc(C.intro)}</p>
+        ${C.groups.map(group).join('')}
+      </div>
+    </dialog>`;
   })();
 
   /* dialogs: open / close / back button · © 2026 Saaima Saleh

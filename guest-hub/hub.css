@@ -262,6 +262,16 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-faq p{padding:0 0 14px;font-size:15px;line-height:1.45;font-weight:300}
 
   /* maps viewer */
+  /* contact panel: grouped by who answers what · © 2026 Saaima Saleh */
+  #husna-hub .hh-contactp .hh-dlg__body{gap:18px}
+  #husna-hub .hh-cg{display:flex;flex-direction:column;gap:10px}
+  #husna-hub .hh-cg__head h3{font-family:var(--font-head);font-size:18px;font-weight:600;line-height:1.1;letter-spacing:-.2px;margin:2px 0 0}
+  #husna-hub .hh-cg__for{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+  #husna-hub .hh-cg__for li{font-size:12px;line-height:1.2;padding:5px 10px;border-radius:999px;background:var(--blue-mist);color:var(--ink);font-weight:400}
+  #husna-hub .hh-cg__note{font-size:13px;line-height:1.4;font-weight:300;color:var(--ink-60)}
+  #husna-hub .hh-cg--star .hh-rows{border-color:var(--blue-light)}
+  #husna-hub .hh-cg + .hh-cg{padding-top:18px;border-top:1px solid var(--blue-mist)}
+
   #husna-hub .hh-maps{background:var(--ink);color:var(--white)}
   #husna-hub .hh-maps .hh-full__head{background:var(--ink);border-bottom:0;justify-content:space-between}
   #husna-hub .hh-maps .hh-full__head h2{color:var(--white);flex:1;text-align:center;font-size:15px}

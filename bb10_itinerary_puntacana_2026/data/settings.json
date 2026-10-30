@@ -21,7 +21,7 @@
     "excursions": { "text": "Book with BRX",          "url": "https://husnabrx.com/excursions/" },
     "brx":        { "text": "Book with BRX",          "url": "https://husnabrx.com/" },
     "waiver":     { "text": "Sign the waiver",        "url": "https://forms.gle/zLJ5QVQtbrGdwwiH7" },
-    "spa":        { "text": "How to book the spa",    "url": "" },
+    "spa":        { "text": "Email the spa to book",  "email": "madrian@nick-resorts.com", "subject": "Husna Guest – spa booking", "body": "Hi,\n\nI'd like to book a spa treatment during Beach & Beyond ({day}).\n\n" },
     "dinnerApp":  { "text": "Book on the resort app", "url": "" },
     "nickEmail":  {
       "text": "Email to book",

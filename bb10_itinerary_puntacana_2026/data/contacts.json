@@ -1,22 +1,40 @@
 {
-  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. Contact page. Any of phone / whatsapp / email / url can be left empty and the row still shows. tbc: true adds the red star.",
+  "_about": "© 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. Contact page, grouped by who answers what. Each card: name, role, optional for[] (what to ask them about), note, then any of phone / whatsapp / email+subject / url+urlText. An empty value still shows the row. tbc: true adds the red star.",
+
+  "intro": "Sr. Iman and the Husna team are here before and during the trip. For everything else, here is who to ask.",
 
   "contacts": [
     { "name": "Husna WhatsApp group", "role": "Announcements and same-day changes",
       "url": "https://chat.whatsapp.com/ILGjPYSuBoB8Q4hQZzDvs9", "urlText": "Open WhatsApp group" },
 
-    { "name": "Husna team on site", "role": "Questions during the trip",
-      "phone": "", "whatsapp": "", "tbc": true },
+    { "name": "Sr. Iman", "role": "Husna guest services · questions during the trip",
+      "phone": "+1 (734) 510-4886", "whatsapp": "+1 734 510 4886" },
+
+    { "name": "Husna bookings", "role": "Your booking",
+      "for": ["Room requests", "Extending your stay", "Cancellations", "Rollaways & cribs", "Baby warmers", "Adding a person"],
+      "email": "Nabila@husna.com", "subject": "Husna Guest – booking" },
+
+    { "name": "BRX", "role": "Excursions and transfers",
+      "for": ["Excursion pickup times", "Excursion info", "Airport transfers", "Specialised transfers"],
+      "note": "Lobby table · 8 AM – 6 PM",
+      "whatsapp": "+1 809 501 1178", "email": "info@brx-services.com", "subject": "Husna Guest – excursions & transfers",
+      "url": "https://husnabrx.com/excursions/", "urlText": "husnabrx.com" },
+
+    { "name": "Nickelodeon Resort", "role": "At the hotel",
+      "for": ["Babysitting", "Life jackets", "Strollers", "Food & drink allergies", "When the front desk isn’t getting back to you"],
+      "note": "For anything in your room (keys, A/C, towels), ask the front desk first.",
+      "email": "jesantos@nick-resorts.com", "subject": "Husna Guest" },
+
+    { "name": "Spa", "role": "Nickelodeon Resort",
+      "for": ["All bookings and enquiries"],
+      "email": "madrian@nick-resorts.com", "subject": "Husna Guest – spa booking" },
+
+    { "name": "Husna programming", "role": "Activities and competitions",
+      "for": ["How to sign up", "Prayers", "Competitions"],
+      "email": "guests@husna.com", "subject": "Husna Guest – programming" },
 
     { "name": "Husna Table", "role": "Find the Husna team",
       "note": "Gourmet Village · evenings, 6 – 11 PM" },
-
-    { "name": "BRX Excursions", "role": "Excursions",
-      "note": "Lobby table · 8 AM – 6 PM",
-      "url": "https://husnabrx.com/excursions/", "urlText": "husnabrx.com" },
-
-    { "name": "Nickelodeon bookings", "role": "Personal Sliming, Pizza Time, character dining",
-      "email": "jesantos@nick-resorts.com", "subject": "Husna Guest" },
 
     { "name": "Gazebo concierge", "role": "Non-inclusive bookings and special requests",
       "note": "Front of each building · 8 AM – 5 PM" }

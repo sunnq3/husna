@@ -358,6 +358,7 @@
         ${it.ages ? `<li>${svg('people')}${esc(it.ages)}</li>` : ''}
       </ul>
       ${it.note ? `<p class="bi-sheet__note">${esc(it.note)}</p>` : ''}
+      ${it.desc ? `<p class="bi-sheet__desc">${esc(it.desc)}</p>` : ''}
       ${L ? linkTag(L, 'bi-panel', `<span>${svg(L.mail ? 'mail' : 'list')}${esc(L.text)}</span>${svg(L.icon === 'mail' ? 'arrow' : L.icon, 2.2)}`) : ''}
       <div class="bi-sheet__acts">
         ${it.start ? `<button type="button" data-act="ics">${svg('calAdd')}Add to calendar</button>` : '<span></span>'}
@@ -468,14 +469,14 @@
 
   /* ---------- contact · © 2026 Saaima Saleh ---------- */
   function mainContact() {
-    return `<div class="bi-intro"><h1>Contact</h1><p>Find the Husna team, or reach the right desk at the resort.</p></div>
+    return `<div class="bi-intro"><h1>Contact</h1><p>${esc(D.contacts.intro || 'Find the Husna team, or reach the right desk at the resort.')}</p></div>
       <div class="bi-contacts">${D.contacts.contacts.map(c => {
       const rows = [];
       if ('phone' in c) rows.push(linkTag({ text: 'Call', url: c.phone ? 'tel:' + c.phone.replace(/[^\d+]/g, '') : '', mail: true }, 'bi-linkrow', `<span>Call${c.phone ? ' · ' + esc(c.phone) : ''}</span>${svg('phone')}`));
       if ('whatsapp' in c) rows.push(linkTag({ text: 'WhatsApp', url: c.whatsapp ? 'https://wa.me/' + c.whatsapp.replace(/\D/g, '') : '' }, 'bi-linkrow', `<span>WhatsApp</span>${svg('chat')}`));
       if (c.email) rows.push(linkTag({ url: `mailto:${c.email}${c.subject ? '?subject=' + encodeURIComponent(c.subject) : ''}`, mail: true }, 'bi-linkrow', `<span>${esc(c.email)}</span>${svg('mail')}`));
       if ('url' in c) rows.push(linkTag({ url: c.url || '' }, 'bi-linkrow', `<span>${esc(c.urlText || 'Open link')}</span>${svg('arrow', 2.2)}`));
-      return `<div class="bi-contact"><b>${esc(c.name)}${c.tbc ? STAR : ''}</b>${c.role ? `<span>${esc(c.role)}</span>` : ''}${c.note ? `<span>${esc(c.note)}</span>` : ''}${rows.join('')}</div>`;
+      return `<div class="bi-contact"><b>${esc(c.name)}${c.tbc ? STAR : ''}</b>${c.role ? `<span>${esc(c.role)}</span>` : ''}${c.for ? `<ul class="bi-contact__for">${c.for.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}${c.note ? `<span>${esc(c.note)}</span>` : ''}${rows.join('')}</div>`;
     }).join('')}</div>`;
   }
 

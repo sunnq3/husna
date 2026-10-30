@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sun-7-30-am-tides-tadabbur-with-dr-saira@bb10.husna.com
+DTSTAMP:20261030T190811Z
+DTSTART:20261220T113000Z
+DTEND:20261220T120000Z
+SUMMARY:Tides & Tadabbur with Dr. Saira
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Post-Fajr reflections on the beach · Session 1: Catch the Wave\nPresence\, gratitude and being where your feet are. How can we experience a fun\, happy moment Allah has given us\, even when other parts of life aren't perfect?\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-7-30-am-tides-tadabbur-with-dr-saira
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sun/sun-7-30-am-tides-tadabbur-with-dr-saira
+END:VEVENT
+END:VCALENDAR

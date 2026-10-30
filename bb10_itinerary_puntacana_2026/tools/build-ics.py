@@ -58,7 +58,7 @@ for day in data['days']:
                  'BEGIN:VEVENT', f'UID:{iid}@bb10.husna.com', f'DTSTAMP:{now}',
                  f"DTSTART:{utc(day['date'], s)}", f"DTEND:{utc(day['date'], e)}", f'SUMMARY:{clean(title)}']
         if it.get('location'): lines.append(f"LOCATION:{clean(it['location'] + ', Nickelodeon Punta Cana')}")
-        desc = '\n'.join(x for x in [it.get('note'), it.get('ages'), url] if x)
+        desc = '\n'.join(x for x in [it.get('note'), it.get('desc'), it.get('ages'), url] if x)
         lines += [f'DESCRIPTION:{clean(desc)}', f'URL:{url}', 'END:VEVENT', 'END:VCALENDAR']
         with open(os.path.join(out, iid + '.ics'), 'w', newline='') as f:
             f.write('\r\n'.join(lines) + '\r\n')

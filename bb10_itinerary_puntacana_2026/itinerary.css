@@ -227,6 +227,7 @@ body:has(#husna-itin) .elementor-widget-html{margin-bottom:0 !important}
 #husna-itin .bi-meta li{display:flex;align-items:center;gap:9px}
 #husna-itin .bi-meta svg{width:15px;height:15px;color:var(--blue)}
 #husna-itin .bi-sheet__note{margin-top:14px;font-size:13px;line-height:1.5}
+#husna-itin .bi-sheet__desc{margin-top:10px;font-size:14px;line-height:1.5;font-weight:300;color:var(--ink-2)}
 #husna-itin .bi-panel{
   display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding:12px 14px;border-radius:12px;
   background:var(--tint);color:var(--t);font-family:var(--font-head);font-size:13px;font-weight:600;cursor:pointer;
@@ -291,6 +292,8 @@ body:has(#husna-itin) .elementor-widget-html{margin-bottom:0 !important}
 #husna-itin .bi-contact{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
 #husna-itin .bi-contact b{display:block;font-family:var(--font-head);font-size:13.5px;font-weight:600;line-height:1.3}
 #husna-itin .bi-contact > span{display:block;font-size:11.5px;color:var(--ink-2);margin-top:3px;line-height:1.35}
+#husna-itin .bi-contact__for{list-style:none;margin:8px 0 2px;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+#husna-itin .bi-contact__for li{font-size:11.5px;line-height:1.2;padding:4px 9px;border-radius:999px;background:var(--pill);color:var(--ink-2)}
 #husna-itin .bi-contact .bi-linkrow{--t:var(--blue-text)}
 #husna-itin .bi-contact .bi-linkrow + .bi-linkrow{margin-top:0}
 

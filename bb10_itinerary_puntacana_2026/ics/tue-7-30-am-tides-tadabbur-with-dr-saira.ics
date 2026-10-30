@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tue-7-30-am-tides-tadabbur-with-dr-saira@bb10.husna.com
+DTSTAMP:20261030T190811Z
+DTSTART:20261222T113000Z
+DTEND:20261222T114500Z
+SUMMARY:Tides & Tadabbur with Dr. Saira
+LOCATION:Beach\, Nickelodeon Punta Cana
+DESCRIPTION:Post-Fajr reflections on the beach · Session 2: Go With the Flow\nProphetic self-care through a psychiatrist's lens. Exploring Sunnah rhythms of rest\, movement\, nourishment\, connection\, dhikr\, and caring for mind\, body and soul.\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-30-am-tides-tadabbur-with-dr-saira
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/tue/tue-7-30-am-tides-tadabbur-with-dr-saira
+END:VEVENT
+END:VCALENDAR
