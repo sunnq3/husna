@@ -28,6 +28,7 @@
     },
     // Newest first. "added" drives the NEW badge. Optional "until" hides the row after that date.
     emails: [
+      { title: 'The Vassa Spa',                   date: 'Nov 1',  added: '2026-11-01', url: 'http://eepurl.com/JR2M6Ythip' },
       { title: 'Itinerary',                       date: 'Oct 30', added: '2026-10-30', url: 'http://eepurl.com/LSYG02mGRL' },
       { title: 'Excursions',                      date: 'Oct 23', added: '2026-10-23', url: 'http://eepurl.com/E-79xxDOXN' },
       { title: 'Ilyas Mao announcement',          date: 'Oct 15', added: '2026-10-15', url: 'http://eepurl.com/83UH2NaGe5' },
