@@ -44,7 +44,9 @@ Red star (to be confirmed):
 
 Wording: "Ladies" → "Women" everywhere (Ladies Only Pool → Women's Pool); "Sisters' Move N Improve" kept (business name). Club Nick → Nickelodeon Place. Sweetery filed under Food. Night show titles from the Night Shows tab, then from the Oct 26 sheet (Mon: Giveback Night with HCI; Tue: Theatrical Night). Sunday's Sunshine Cruise kept at 7:45 AM (the sheet blanked the time; the Oct 23 email says 7:45). Oct 28 edits doc: Fitness Center hours rewritten (Sun/Mon: all 6–8 AM, women 8 AM–7 PM, men 7–10 PM; Tue/Wed: all 6–8 AM & 7–11 PM, men 8 AM–12 PM, women 1–7 PM) and the separate women-only / men-only fitness slots dropped; Move N Improve now Sunday only; Morning Session (TBC) on Sun, Tue, Wed; night shows Sat Welcome to Dominican Tropical Beach Party, Mon Theatrical Night, Tue Palestine Night (Giveback Night with HCI dropped), Wed Harmony & Noor 8:30 then Grand Finale 9–10 PM; Up Close & Personal removed. Oct 28 sheet comments: Fitness Center confirmed as open to all 6 AM–10 PM, women only 10 AM–2 PM, men only 10–11 PM (Sun–Wed); other uncommented sheet differences (BRX info row, Newlywed colour, Mon Move N Improve) deliberately not applied.
 
-Not on any day yet (from ATTN Overview): Ustadh Ubaydullah Evans' spiritual sessions, Under the Stars, Marriage Retreat sessions, Super Hijabi.
+Nov 6 edits doc: Morning Session (TBC) → Morning Breeze with Ustadh Ubaydullah, 10:00–10:45 AM Show Lounge (Sun, Tue, Wed), star removed; Super Hijabi Movie added Sun 6:30–7:50 PM and Wed 2:00–3:20 PM (Show Lounge); Women's Volleyball Tournament moved to Wed 2:00 PM.
+
+Not on any day yet (from ATTN Overview): Under the Stars, Marriage Retreat sessions.
 
 Oct 30 edits doc: Beach Walk with Dr. Saira (Sun, Tue) → Tides & Tadabbur with Dr. Saira, with a session line on the card and a longer `desc` in the detail sheet only; Contact page rebuilt as who-to-contact-for-what (Sr. Iman, Husna bookings, BRX, Nickelodeon, Spa, Husna programming) and mirrored on the hub; spa link now emails madrian@nick-resorts.com.
 

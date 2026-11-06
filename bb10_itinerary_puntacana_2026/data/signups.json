@@ -14,7 +14,7 @@
 
     { "id": "womens-swim",        "group": "women", "title": "Women's Fastest Swimmer Contest",     "day": "sun", "start": "4:30 PM",                     "location": "Women's Pool",     "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
     { "id": "womens-table-tennis","group": "women", "title": "Women's Table Tennis Tournament",     "day": "tue", "start": "10:15 PM", "end": "12:00 AM", "location": "Show Lounge",      "ages": "Ages 15+", "link": { "text": "Sign up", "url": "" } },
-    { "id": "womens-volleyball",  "group": "women", "title": "Women's Volleyball Tournament",       "day": "wed", "start": "1:00 PM",                     "location": "Beach",            "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
+    { "id": "womens-volleyball",  "group": "women", "title": "Women's Volleyball Tournament",       "day": "wed", "start": "2:00 PM",                     "location": "Beach",            "ages": "Ages 13+", "link": { "text": "Sign up", "url": "" } },
 
     { "id": "junior-basketball",  "group": "kids", "kids": ["girls", "boys"], "title": "Junior Basketball: 3 Point Shoot Out", "day": "mon", "start": "11:30 AM", "end": "1:30 PM", "location": "Basketball Court", "ages": "Ages 12 & under", "link": { "text": "Sign up", "url": "" } },
     { "id": "kids-swim",          "group": "kids", "kids": ["girls", "boys"], "title": "Kids' Fastest Swimmer Contest",        "day": "mon", "start": "4:00 PM",                    "location": "Infinity Pool",    "ages": "Ages 12 & under", "note": "Boys & girls race separately", "link": { "text": "Sign up", "url": "" } },

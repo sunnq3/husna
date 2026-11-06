@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wed-2-00-pm-super-hijabi-movie@bb10.husna.com
+DTSTAMP:20261106T170148Z
+DTSTART:20261223T180000Z
+DTEND:20261223T192000Z
+SUMMARY:Super Hijabi Movie
+LOCATION:Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-2-00-pm-super-hijabi-movie
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-2-00-pm-super-hijabi-movie
+END:VEVENT
+END:VCALENDAR
