@@ -18,8 +18,8 @@
       wordmark:   IMG + 'wordmark-blue.png',
       archMain:   IMG + 'arch-hero.jpg',        // Deerhurst portico & deer in the snow
       smiley:     'https://husna.com/wp-content/uploads/2026/09/smiley.png',
-      emails:     IMG + 'feat-mittens.jpg',     // CANADA mittens
-      packing:    IMG + 'th-packing.jpg',
+      emails:     IMG + 'feat-moon.jpg',        // moon over the snowy pines
+      packing:    IMG + 'th-packing.jpg',       // backpack in the snow
       waiver:     IMG + 'th-waiver.jpg',        // skating trio
       map:        IMG + 'th-map.jpg',           // "To Deerhurst" bear sign
       activities: IMG + 'th-activities.jpg',    // cross-country skiing
