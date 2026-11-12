@@ -16,17 +16,15 @@
     itinerary: '',                    // leave empty until the itinerary page exists; the button disables itself
     img: {
       wordmark:   IMG + 'wordmark-blue.png',
-      archMain:   IMG + 'arch-pavilion.jpg',
-      archL:      IMG + 'arch-snowkid.jpg',
-      archR:      IMG + 'arch-village.jpg',
+      archMain:   IMG + 'arch-hero.jpg',        // Deerhurst portico & deer in the snow
       smiley:     'https://husna.com/wp-content/uploads/2026/09/smiley.png',
-      emails:     IMG + 'feat-moon.jpg',
+      emails:     IMG + 'feat-mittens.jpg',     // CANADA mittens
       packing:    IMG + 'th-packing.jpg',
-      waiver:     IMG + 'th-waiver.jpg',
-      map:        IMG + 'th-map.jpg',
-      activities: IMG + 'th-activities.jpg',
-      dining:     IMG + 'th-dining.jpg',
-      app:        IMG + 'th-app.jpg'
+      waiver:     IMG + 'th-waiver.jpg',        // skating trio
+      map:        IMG + 'th-map.jpg',           // "To Deerhurst" bear sign
+      activities: IMG + 'th-activities.jpg',    // cross-country skiing
+      dining:     IMG + 'th-dining.jpg',        // Maple Pub burger
+      app:        IMG + 'th-app.jpg'            // Deerhurst logo
     },
     // Newest first. "added" drives the NEW badge. Optional "until" hides the row after that date.
     // Fill from the WCG2027 Email Campaign sheet as emails go out:
@@ -130,6 +128,62 @@
     const s = el.querySelector('svg'); if (s) s.remove();
     el.insertAdjacentHTML('beforeend', '<span style="font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;opacity:.7">soon</span>');
   });
+
+  /* falling snow in the hero · © 2026 Saaima Saleh
+     Drawn on a canvas by a requestAnimationFrame loop — same approach as the BB10 itinerary ornaments —
+     because iPhones in Low Power Mode and some Safari versions stop CSS/SVG-native animation, but a frame
+     loop keeps running. With Reduce Motion on, the snow is drawn once and holds still. */
+  (function snow(){
+    const hero = $('.hh-hero'); if (!hero || !('getContext' in document.createElement('canvas'))) return;
+    const cv = document.createElement('canvas');
+    cv.className = 'hh-snow'; cv.setAttribute('aria-hidden', 'true');
+    hero.prepend(cv);
+    const ctx = cv.getContext('2d'); if (!ctx) return;
+    const STILL = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    let W = 0, H = 0, flakes = [], raf = 0, seen = true, last = 0;
+
+    function size(){
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = hero.clientWidth; H = hero.clientHeight;
+      cv.width = Math.max(1, W * dpr); cv.height = Math.max(1, H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    const make = y => ({ x: rnd(0, W), y: y == null ? rnd(-20, H) : y,
+      r: rnd(1, 3), v: rnd(9, 22), a: rnd(.3, .7), p: rnd(0, Math.PI * 2), w: rnd(6, 18), d: rnd(.3, .7) });
+    const fill = () => { flakes = []; const n = Math.round(Math.min(34, Math.max(16, W / 28))); while (flakes.length < n) flakes.push(make()); };
+
+    function paint(dt){
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = '#fff';
+      for (let i = 0; i < flakes.length; i++){
+        const f = flakes[i];
+        if (dt){ f.y += f.v * dt; f.p += f.d * dt; if (f.y - 4 > H) flakes[i] = Object.assign(make(-5), { y: -5 }); }
+        const g = flakes[i];
+        ctx.globalAlpha = g.a;
+        ctx.beginPath(); ctx.arc(g.x + Math.sin(g.p) * g.w, g.y, g.r, 0, 6.3); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    function tick(now){
+      const dt = Math.min((now - (last || now)) / 1000, .05); last = now;
+      paint(dt);
+      raf = seen ? requestAnimationFrame(tick) : 0;
+    }
+    const go = () => { if (!STILL && seen && !raf){ last = 0; raf = requestAnimationFrame(tick); } };
+
+    size(); fill();
+    if (STILL) paint(0); else go();
+    window.addEventListener('resize', () => { size(); fill(); if (STILL) paint(0); });
+    window.addEventListener('load', () => { size(); if (STILL) paint(0); });    // hero height settles once fonts arrive
+    document.addEventListener('visibilitychange', () => { if (document.hidden){ seen = false; } else { seen = true; go(); } });
+    if ('IntersectionObserver' in window){
+      new IntersectionObserver(es => es.forEach(e => {
+        seen = e.isIntersecting && !document.hidden;
+        if (seen) go();
+      })).observe(hero);
+    }
+  })();
 
   /* countdown · © 2026 Saaima Saleh */
   (function countdown(){
