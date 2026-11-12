@@ -1,0 +1,318 @@
+<!-- ============================================================
+     HUSNA VACATIONS · WINTER CLASSIC GETAWAY 2027 · GUEST HUB
+     © 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
+     Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
+     ============================================================ · © 2026 Saaima Saleh -->
+
+<!-- Styles and behaviour are hosted on GitHub -->
+<link rel="stylesheet" href="https://sunnq3.github.io/husna/wcg2027-guest-hub/hub.css">
+<script src="https://sunnq3.github.io/husna/wcg2027-guest-hub/hub.js" defer></script>
+
+<!-- Loading screen: shown until hub.css has arrived, so nothing unstyled ever flashes · © 2026 Saaima Saleh -->
+<style>.hh-boot{visibility:hidden}
+.hh-boot-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#EDF3FA;visibility:visible}
+.hh-boot-screen img{width:76px !important;height:auto !important;max-width:none;animation:hh-spin 1.6s linear infinite}
+@keyframes hh-spin{to{transform:rotate(360deg)}}</style>
+<script>setTimeout(function(){var h=document.getElementById('husna-hub');if(h)h.classList.remove('hh-boot');},6000);</script>
+
+<div id="husna-hub" class="hh-boot" data-author="Saaima Saleh" data-copyright="© 2026 Saaima Saleh">
+  <div class="hh-boot-screen" aria-label="Loading"><img src="https://husna.com/wp-content/uploads/2026/09/smiley.png" alt=""></div>
+
+  <!-- Hero: icy sky, arched photos, indigo title · © 2026 Saaima Saleh -->
+  <header class="hh-hero">
+    <span class="hh-flake hh-flake--a" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17M12 5.4l1.9-1.9M12 5.4l-1.9-1.9M12 18.6l1.9 1.9M12 18.6l-1.9 1.9M5.6 8.3l-2.6-.6M5.6 8.3l.6-2.6M18.4 15.7l2.6.6M18.4 15.7l-.6 2.6M5.6 15.7l-2.6.6M5.6 15.7l.6 2.6M18.4 8.3l2.6-.6M18.4 8.3l-.6-2.6"/></svg></span>
+    <span class="hh-flake hh-flake--b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17M12 5.4l1.9-1.9M12 5.4l-1.9-1.9M12 18.6l1.9 1.9M12 18.6l-1.9 1.9"/></svg></span>
+    <span class="hh-flake hh-flake--c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"/></svg></span>
+    <div class="hh-hero__in">
+      <img class="hh-hero__logo" data-src="wordmark" alt="Husna Vacations">
+      <div class="hh-arches" aria-hidden="true">
+        <span class="hh-arch hh-arch--side hh-arch--l"><img data-src="archL" alt=""></span>
+        <span class="hh-arch hh-arch--main"><img data-src="archMain" alt="" fetchpriority="high"></span>
+        <span class="hh-arch hh-arch--side hh-arch--r"><img data-src="archR" alt=""></span>
+      </div>
+      <div class="hh-hero__title">
+        <span class="hh-hero__sss">slopes&nbsp;&nbsp;|&nbsp;&nbsp;solace&nbsp;&nbsp;|&nbsp;&nbsp;salah</span>
+        <span class="hh-hero__eyebrow">Winter Classic</span>
+        <span class="hh-hero__script">getaway</span>
+        <span class="hh-hero__badge">The Ramadan Edition</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Countdown + primary actions · © 2026 Saaima Saleh -->
+  <div class="hh-bar">
+    <section class="hh-count" aria-label="Trip dates">
+      <div class="hh-count__days">
+        <span class="hh-count__num" id="hh-days">–</span>
+        <span class="hh-count__lbl"><b id="hh-days-b">days</b><span id="hh-days-s">to go</span></span>
+      </div>
+      <div class="hh-count__date">
+        <b>Jan 29 – 31, 2027</b>
+        <span>Fri to Sun · Deerhurst Resort, Muskoka</span>
+      </div>
+    </section>
+
+    <div class="hh-actions" id="hh-actions">
+      <a class="hh-btn hh-btn--primary" data-href="whatsapp" target="_blank" rel="noopener">WhatsApp group
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="hh-btn hh-btn--outline" data-href="itinerary">Itinerary
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+
+  <div class="hh-wrap">
+
+    <!-- Emails · © 2026 Saaima Saleh -->
+    <button class="hh-feature" type="button" data-open="hh-emails">
+      <img data-src="emails" alt="">
+      <span class="hh-feature__txt"><b>Emails</b><span>Everything we&rsquo;ve sent, in one place</span></span>
+      <span class="hh-feature__end">
+        <span class="hh-badge" id="hh-email-badge" hidden></span>
+        <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+    </button>
+
+    <div class="hh-groups">
+
+      <!-- Before you go · © 2026 Saaima Saleh -->
+      <section class="hh-group" data-cols="1">
+        <span class="hh-eyebrow">Before you go</span>
+        <div class="hh-grid">
+          <button class="hh-tile" type="button" data-open="hh-packing">
+            <img data-src="packing" alt="">
+            <span class="hh-tile__txt"><b>Packing guide</b><span>Winter-ready checklist</span></span>
+          </button>
+          <button class="hh-tile" type="button" data-open="hh-waiver">
+            <img data-src="waiver" alt="">
+            <span class="hh-tile__txt"><b>Online waiver</b><span>Sign before you arrive</span></span>
+          </button>
+          <button class="hh-tile" type="button" data-open="hh-map">
+            <img data-src="map" alt="">
+            <span class="hh-tile__txt"><b>Getting there</b><span>Map &amp; directions</span></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- At the resort · © 2026 Saaima Saleh -->
+      <section class="hh-group" data-cols="2">
+        <span class="hh-eyebrow">At the resort</span>
+        <div class="hh-grid">
+          <button class="hh-tile" type="button" data-open="hh-activities">
+            <img data-src="activities" alt="">
+            <span class="hh-tile__txt"><b>Activities &amp; rentals</b><span>The Experience Hub</span></span>
+          </button>
+          <button class="hh-tile" type="button" data-open="hh-dining">
+            <img data-src="dining" alt="">
+            <span class="hh-tile__txt"><b>Dining</b><span>Halal this weekend</span></span>
+          </button>
+          <button class="hh-tile" type="button" data-open="hh-app">
+            <img data-src="app" alt="">
+            <span class="hh-tile__txt"><b>Deerhurst app</b><span>The resort in your pocket</span></span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <div style="height:24px;flex:none" aria-hidden="true"></div>
+
+  <!-- sticky footer · © 2026 Saaima Saleh -->
+  <footer class="hh-foot">
+    <div class="hh-foot__in">
+      <img data-src="smiley" alt="">
+      <span class="hh-foot__q">Need help?</span>
+      <button class="hh-btn hh-btn--ghost" type="button" data-open="hh-faq">FAQ</button>
+      <button class="hh-btn hh-btn--white" type="button" data-open="hh-contact">Contact</button>
+    </div>
+  </footer>
+
+
+  <!-- Dialogs · © 2026 Saaima Saleh -->
+
+  <!-- Emails (bottom sheet, list rendered from CONFIG.emails) · © 2026 Saaima Saleh -->
+  <dialog class="hh-sheet hh-dlg" id="hh-emails" aria-labelledby="hh-emails-t">
+    <div class="hh-sheet__head">
+      <div><h2 id="hh-emails-t">Emails</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body">
+      <div class="hh-emails" id="hh-email-list"></div>
+    </div>
+  </dialog>
+
+  <!-- Online waiver · © 2026 Saaima Saleh -->
+  <dialog class="hh-sheet hh-dlg" id="hh-waiver" aria-labelledby="hh-waiver-t">
+    <div class="hh-sheet__head">
+      <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-waiver-t">Online waiver</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body hh-stack" style="gap:14px">
+      <p class="hh-lead">Doing winter activities at Deerhurst? Sign the resort&rsquo;s waiver online before you arrive &mdash; it takes two minutes and saves you the line at The Experience Hub.</p>
+      <div class="hh-stack">
+        <a class="hh-btn hh-btn--primary" href="https://waiver.smartwaiver.com/w/2f218wx3bff5hk7zeff2br/web/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">Sign the waiver
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="hh-btn hh-btn--outline" href="https://deerhurstresort.com/plan-your-stay/activities/winter-activities/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">See winter activities</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Deerhurst app · © 2026 Saaima Saleh -->
+  <dialog class="hh-sheet hh-dlg" id="hh-app" aria-labelledby="hh-app-t">
+    <div class="hh-sheet__head">
+      <div><span class="hh-eyebrow">At the resort</span><h2 id="hh-app-t">Deerhurst app</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body hh-stack" style="gap:14px">
+      <p class="hh-lead">Resort maps, hours and what&rsquo;s on, all weekend, all in your pocket. Download it before you lose signal on the drive up.</p>
+      <a class="hh-btn hh-btn--primary" href="https://deerhurstresort.com/deerhurst-resort-app/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">Get the app
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </dialog>
+
+  <!-- Getting there (full screen, map loads on open) · © 2026 Saaima Saleh -->
+  <dialog class="hh-full hh-dlg" id="hh-map" aria-labelledby="hh-map-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-map-t">Getting there</h2></div>
+    </div>
+    <div class="hh-dlg__body">
+      <p class="hh-lead"><b style="font-weight:600">Deerhurst Resort</b><br>1235 Deerhurst Drive, Huntsville, ON &middot; about 2&frac12; hours north of the GTA.</p>
+      <div class="hh-map" id="hh-map-embed"></div>
+      <div class="hh-list">
+        <div><span>Check-in</span><b>From 3:00 PM</b></div>
+        <div><span>Check-out</span><b>By 11:00 AM</b></div>
+      </div>
+    </div>
+    <div class="hh-full__cta">
+      <a class="hh-btn hh-btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Deerhurst+Resort,+1235+Deerhurst+Dr,+Huntsville,+ON" target="_blank" rel="noopener" data-elementor-open-lightbox="no">Open in Google Maps</a>
+      <span><a href="https://deerhurstresort.com/directions/" target="_blank" rel="noopener" style="color:var(--ind);font-weight:400">Deerhurst&rsquo;s own directions page &#8599;</a></span>
+    </div>
+  </dialog>
+
+  <!-- Activities & rentals (full screen) · © 2026 Saaima Saleh -->
+  <dialog class="hh-full hh-dlg" id="hh-activities" aria-labelledby="hh-activities-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">At the resort</span><h2 id="hh-activities-t">Activities &amp; rentals</h2></div>
+    </div>
+    <div class="hh-dlg__body">
+      <p class="hh-lead">Winter activities are booked directly at <b style="font-weight:600">The Experience Hub</b>. Snowshoes, ice skates and cross-country skis are included in your package &mdash; pick them up there too.</p>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">The Experience Hub</span>
+        <div class="hh-list">
+          <div><span>Location</span><b style="white-space:normal;text-align:right">Main Pavilion &middot; Lower Level<br><small style="font-weight:300;color:var(--ink-60)">near Maple Pub</small></b></div>
+          <div><span>Friday &amp; Saturday</span><b>9 AM &ndash; 8 PM</b></div>
+          <div><span>Sunday</span><b>9 AM &ndash; 5 PM</b></div>
+          <div><span>Cross-country ski rentals</span><b>9 AM &ndash; 4 PM</b></div>
+          <div><span>Snowshoe rentals</span><b>9 AM &ndash; 4 PM</b></div>
+        </div></div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Worth a look</span>
+        <div class="hh-rows">
+          <a href="https://deerhurstresort.com/plan-your-stay/activities/winter-activities/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">
+            <span class="hh-row__t"><b>All winter activities</b><span>Skating, tubing, trails &amp; more</span></span>
+            <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+          <a href="https://deerhurstresort.com/plan-your-stay/activities/escape-cabins/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">
+            <span class="hh-row__t"><b>Escape Cabins</b><span>Cozy private cabin time</span></span>
+            <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+          <a href="https://deerhurstresort.com/plan-your-stay/activities/winter-activities/yamaha-snowmobile-tours/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">
+            <span class="hh-row__t"><b>Snowmobiling</b><span>Yamaha guided tours</span></span>
+            <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+          <a href="https://deerhurstresort.com/plan-your-stay/activities/winter-activities/winter-activities-fat-bike/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">
+            <span class="hh-row__t"><b>Fat biking</b><span>Wide tires, winter trails</span></span>
+            <svg class="hh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div></div>
+    </div>
+    <div class="hh-full__cta">
+      <a class="hh-btn hh-btn--primary" href="https://waiver.smartwaiver.com/w/2f218wx3bff5hk7zeff2br/web/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">Sign the waiver first</a>
+      <span>One waiver per person covers the weekend&rsquo;s activities.</span>
+    </div>
+  </dialog>
+
+  <!-- Dining (full screen) · © 2026 Saaima Saleh -->
+  <dialog class="hh-full hh-dlg" id="hh-dining" aria-labelledby="hh-dining-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">At the resort</span><h2 id="hh-dining-t">Dining</h2></div>
+    </div>
+    <div class="hh-dlg__body">
+      <p class="hh-lead">We&rsquo;ve arranged <b style="font-weight:600">halal food options at the resort for this weekend only</b>. Browse the menus and plan where to eat before you arrive.</p>
+
+      <div class="hh-hours">
+        <div class="hh-hours__name">Drift Kitchen + Bar</div>
+        <div><b>Breakfast</b><span>Daily &middot; 7:30 AM &ndash; 11 AM</span></div>
+        <div><b>Dinner</b><span>Saturday only &middot; 5:30 PM &ndash; 8:30 PM</span></div>
+      </div>
+      <div class="hh-hours">
+        <div class="hh-hours__name">Compass Grill &amp; Lounge</div>
+        <div><b>Friday &amp; Saturday</b><span>2 PM &ndash; 11 PM</span></div>
+        <div><b>Sunday</b><span>3 PM &ndash; 11 PM</span></div>
+      </div>
+      <div class="hh-hours">
+        <div class="hh-hours__name">Maple Pub &amp; Patio</div>
+        <div><b>Friday &ndash; Sunday</b><span>11 AM &ndash; 9 PM</span></div>
+      </div>
+      <div class="hh-hours">
+        <div class="hh-hours__name">Row &amp; Roast Coffee Co.</div>
+        <div><b>Friday &amp; Saturday</b><span>7:30 AM &ndash; 5 PM</span></div>
+        <div><b>Sunday</b><span>7:30 AM &ndash; 1 PM</span></div>
+      </div>
+
+      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Other options</span>
+        <div class="hh-list">
+          <div><span>Bring easy to cook or assemble meals for 1&ndash;2 meals a day</span></div>
+          <div><span>Head into town (~10 min drive) for food or groceries</span></div>
+          <div><span>DoorDash / UberEats straight to the resort</span></div>
+          <div><span>Snacks &amp; drinks for your room or on the go &mdash; always a good idea</span></div>
+        </div></div>
+    </div>
+    <div class="hh-full__cta">
+      <a class="hh-btn hh-btn--primary" href="https://deerhurstresort.com/dine/" target="_blank" rel="noopener" data-elementor-open-lightbox="no">Browse the menus</a>
+    </div>
+  </dialog>
+
+  <!-- Packing guide (full screen, checklist built by hub.js) · © 2026 Saaima Saleh -->
+  <dialog class="hh-full hh-dlg" id="hh-packing" aria-labelledby="hh-packing-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-packing-t">Packing guide</h2></div>
+    </div>
+    <div class="hh-dlg__body" id="hh-pack-body"></div>
+  </dialog>
+
+  <!-- FAQ (full screen) · seeded from the 2025 brochure, review each season · © 2026 Saaima Saleh -->
+  <dialog class="hh-full hh-dlg" id="hh-faq" aria-labelledby="hh-faq-t">
+    <div class="hh-full__head">
+      <button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div><span class="hh-eyebrow">Need help</span><h2 id="hh-faq-t">Frequently asked questions</h2></div>
+    </div>
+    <div class="hh-dlg__body hh-faq" style="gap:0">
+      <details name="hh-faq" open><summary>Is this for families, or can singles and couples attend?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>It&rsquo;s for everyone! Every year we get a great blend of families, couples and groups of friends that come up and have a great time.</p></details>
+      <details name="hh-faq"><summary>Are meals included?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Meals are not included, but all the restaurants at the resort will have halal options for this weekend only. Most guests split meals between resort restaurants and groceries they bring up.</p></details>
+      <details name="hh-faq"><summary>Will the entire resort be exclusive to Husna guests?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Other guests may be present, but most of the resort will be occupied by Husna guests.</p></details>
+      <details name="hh-faq"><summary>Is the resort always halal, or only for these dates?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Halal options are arranged for our dates only, January 29&ndash;31, 2027. After that the resort returns to normal operations.</p></details>
+      <details name="hh-faq"><summary>Are there stores nearby?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes, there are ample stores within the vicinity of the resort &mdash; downtown Huntsville is about a 10 minute drive.</p></details>
+      <details name="hh-faq"><summary>Is travel included in the rates?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>No, flights and travel are not included in the rates.</p></details>
+      <details name="hh-faq"><summary>Are the rates per person or per room?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Rates for Winter Classic Getaway are per room, not per person.</p></details>
+      <details name="hh-faq"><summary>What airport should I fly into from out of town?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Toronto Pearson International Airport (YYZ).</p></details>
+      <details name="hh-faq"><summary>What is the best time to arrive on Friday?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>The best time to arrive is for jumuah on Friday, January 29.</p></details>
+      <details name="hh-faq"><summary>Do we have to bring our own life jackets?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes, it&rsquo;s better to for more accurate sizing and availability.</p></details>
+      <details name="hh-faq"><summary>Should we bring our own table tennis rackets and sleds?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes, this is recommended.</p></details>
+      <details name="hh-faq"><summary>Is there a dress code?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>Yes. Guests are expected to adhere to Husna&rsquo;s attire guidelines at all times. For brothers: a minimum of a tank top and appropriately lengthened shorts; speedos are not permitted. For sisters: two-piece bikinis and non-Islamic one-piece swimsuits are not permitted, along with shorts, mini skirts, open tops, tank tops and open-back clothing; long dresses are acceptable. Husna reserves the right to ask any guest whose attire detracts from the experience of others to leave, at our discretion.</p></details>
+      <details name="hh-faq"><summary>Is there private pool time for sisters?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>For two hours following the Husna Night show on Saturday night, the pool will be reserved exclusively for sisters.</p></details>
+      <details name="hh-faq"><summary>Is it a good idea to bring my senior parents?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary><p>As long as they are mobile, inshallah they will have a great time. We have plenty of seniors who grace us with their presence every year.</p></details>
+    </div>
+  </dialog>
+
+  <!-- Contact: placeholder, hub.js rebuilds it from CONFIG.contacts · © 2026 Saaima Saleh -->
+  <dialog class="hh-sheet hh-dlg" id="hh-contact" aria-labelledby="hh-contact-t">
+    <div class="hh-sheet__head">
+      <div><span class="hh-eyebrow">Husna guest services</span><h2 id="hh-contact-t">Contact us</h2></div>
+      <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="hh-dlg__body hh-stack" style="gap:12px">
+      <p class="hh-lead">Sr. Iman Khan &middot; info@husna.com &middot; +1 (734) 510-4886</p>
+    </div>
+  </dialog>
+
+</div>

@@ -1,0 +1,405 @@
+/* ============================================================
+   WCG 2027 Guest Hub · hub.css · Winter Classic Getaway, Muskoka
+   © 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
+   Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&family=Great+Vibes&display=swap");
+
+/* ---------- Elementor breakout: make the widget span the full page width · © 2026 Saaima Saleh ---------- */
+html:has(#husna-hub),body:has(#husna-hub){margin:0;padding:0;background:#EDF3FA;min-height:0}
+body:has(#husna-hub) :is(.e-con,.e-con-inner,.elementor-section,.elementor-container,.elementor-column,.elementor-widget-wrap,.elementor-widget-html,.elementor-widget-html > .elementor-widget-container){
+  --content-width:100% !important; --width:100% !important;
+  --padding-top:0 !important; --padding-right:0 !important; --padding-bottom:0 !important; --padding-left:0 !important;
+  --margin-top:0 !important; --margin-bottom:0 !important;
+  max-width:none !important; width:100% !important; padding:0 !important; margin:0 !important;
+}
+body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
+
+/* ---------- boot: the snippet hides the page until this file applies · © 2026 Saaima Saleh ---------- */
+#husna-hub.hh-boot{visibility:visible}
+#husna-hub .hh-boot-screen{display:none}
+
+/* ---------- tokens & scope · winter indigo / ice, sampled from the WCG 2027 art · © 2026 Saaima Saleh ---------- */
+#husna-hub{
+  --ind:#4266AE;        /* title indigo */
+  --ind-deep:#33539E;   /* hover / pressed */
+  --ind-soft:#8FA8D6;   /* light accents */
+  --ice:#C8D8F0;        /* arch strokes, borders */
+  --ice-pale:#DFE9F7;   /* card borders */
+  --ice-mist:#EDF3FA;   /* fills */
+  --night:#0F2238;      /* ramadan night sky */
+  --ink:#212A3A; --ink-60:rgba(33,42,58,.6); --ink-50:rgba(33,42,58,.5);
+  --bg:#F5F8FC; --white:#fff;
+  --shadow:0 2px 8px rgba(66,102,174,.08);
+  --r:14px;
+  --font-head:"halyard-display","Plus Jakarta Sans",system-ui,sans-serif;
+  --font-body:"source-sans-3","Source Sans 3",system-ui,sans-serif;
+  --font-script:"Great Vibes",cursive;    /* "getaway" script · swap for Kaushan Script to match BB10 */
+  --foot-h:60px;
+  --max:520px;            /* mobile column width on tablets */
+}
+@media (min-width:900px){ #husna-hub{ --max:1120px } }   /* unlayered so it beats the tokens above */
+
+
+  #husna-hub, #husna-hub *{box-sizing:border-box}
+  #husna-hub{font-size:16px;line-height:1.3;text-transform:none;letter-spacing:normal}
+  #husna-hub img{display:block;max-width:100%;height:auto;border:0;border-radius:0;box-shadow:none;margin:0}
+  #husna-hub a{text-decoration:none;color:inherit;box-shadow:none;border-bottom:0}
+  #husna-hub a:hover,#husna-hub a:focus{text-decoration:none;box-shadow:none;border-bottom:0}
+  #husna-hub button{
+    all:unset;box-sizing:border-box;font:inherit;color:inherit;cursor:pointer;text-align:left;text-transform:none;letter-spacing:normal;
+  }
+  #husna-hub details,#husna-hub summary{margin:0;padding:0;background:none;border:0}
+  #husna-hub p,#husna-hub h1,#husna-hub h2,#husna-hub h3{margin:0;padding:0}
+  #husna-hub b{font-weight:inherit}
+  #husna-hub h2{font-size:inherit;color:inherit;text-transform:none;letter-spacing:normal}
+  /* Elementor: let sticky/fixed and dialogs behave */
+  .elementor-widget-container:has(#husna-hub){overflow:visible}
+
+  #husna-hub{
+    position:relative;
+    font-family:var(--font-body);color:var(--ink);background:var(--bg);
+    min-height:100lvh;display:flex;flex-direction:column;
+    padding-bottom:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  #husna-hub .hh-eyebrow{
+    font-family:var(--font-head);font-size:10px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--ind);
+  }
+  #husna-hub .hh-wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:14px}
+  #husna-hub .hh-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:44px;padding:0 18px;border-radius:999px;
+    font-family:var(--font-head);font-size:14px;font-weight:600;white-space:nowrap;
+    transition:transform .12s ease, filter .12s ease;
+  }
+  #husna-hub .hh-btn{-webkit-tap-highlight-color:transparent;transition:background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .1s ease}
+  #husna-hub .hh-btn:active{transform:scale(.98)}
+  #husna-hub .hh-btn--primary{background:var(--ind);color:var(--white);box-shadow:0 4px 12px rgba(66,102,174,.32)}
+  #husna-hub .hh-btn--outline{background:var(--white);color:var(--ind);border:2px solid var(--ind)}
+  /* hover colours only on devices that actually hover; on touch the colour used to stick after a tap */
+  @media (hover:hover){
+    #husna-hub .hh-btn--primary:hover{background:var(--ind-deep);color:var(--white)}
+    #husna-hub .hh-btn--outline:hover{background:var(--ice-mist);color:var(--ind-deep);border-color:var(--ind-deep)}
+  }
+  #husna-hub .hh-btn:focus{outline:0}
+  #husna-hub .hh-btn:focus-visible{outline:3px solid var(--ind-soft);outline-offset:2px}
+  #husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--ind-soft);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){#husna-hub *{transition:none !important;animation:none !important}}
+
+  /* ---------- hero: icy sky, arched photos, indigo title — the carousel cover as a webpage · © 2026 Saaima Saleh ---------- */
+  #husna-hub .hh-hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#EAF1FA 0%,#E3EDF9 55%,#D8E5F6 100%);
+    padding:calc(14px + env(safe-area-inset-top,0px)) 16px 44px;
+  }
+  #husna-hub .hh-hero__in{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
+  #husna-hub .hh-hero__logo{height:30px !important;width:auto !important;margin:0 auto}
+  /* countdown + actions row: plain flow on mobile, one bar on desktop · © 2026 Saaima Saleh */
+  #husna-hub .hh-bar{display:contents}
+  /* faint snowflakes · © 2026 Saaima Saleh */
+  #husna-hub .hh-flake{position:absolute;color:var(--ice);opacity:.55;pointer-events:none}
+  #husna-hub .hh-flake svg{width:100%;height:100%}
+  #husna-hub .hh-flake--a{width:68px;height:68px;top:30px;left:-14px;transform:rotate(12deg)}
+  #husna-hub .hh-flake--b{width:46px;height:46px;top:98px;right:-8px;transform:rotate(-18deg)}
+  #husna-hub .hh-flake--c{display:none}
+  /* arch trio · © 2026 Saaima Saleh */
+  #husna-hub .hh-arches{display:flex;align-items:flex-end;justify-content:center;margin-top:16px;position:relative;z-index:1}
+  #husna-hub .hh-arch{
+    flex:none;overflow:hidden;background:var(--ice);
+    border:5px solid var(--white);
+    border-radius:999px 999px 14px 14px;
+    box-shadow:0 10px 26px rgba(66,102,174,.22);
+  }
+  #husna-hub .hh-arch img{width:100% !important;height:100% !important;object-fit:cover}
+  #husna-hub .hh-arch--main{width:168px;height:224px;z-index:2}
+  #husna-hub .hh-arch--side{width:104px;height:150px;opacity:.96}
+  #husna-hub .hh-arch--l{margin-right:-16px;margin-bottom:10px}
+  #husna-hub .hh-arch--r{margin-left:-16px;margin-bottom:10px}
+  #husna-hub .hh-arch--l img{object-position:50% 18%}
+  /* title block · © 2026 Saaima Saleh */
+  #husna-hub .hh-hero__title{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:18px;color:var(--ind);position:relative;z-index:1}
+  #husna-hub .hh-hero__sss{font-family:var(--font-head);font-size:9px;font-weight:500;letter-spacing:3px;text-transform:lowercase;color:var(--ink-60);margin-bottom:7px}
+  #husna-hub .hh-hero__eyebrow{font-family:var(--font-head);font-size:24px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;line-height:1}
+  #husna-hub .hh-hero__script{font-family:var(--font-script);font-size:40px;line-height:.9;margin-top:2px;font-weight:400}
+  #husna-hub .hh-hero__badge{
+    font-family:var(--font-head);font-size:9px;font-weight:600;letter-spacing:2.6px;text-transform:uppercase;
+    margin-top:12px;padding:5px 12px;border:1px solid var(--ind-soft);border-radius:999px;color:var(--ind);
+  }
+
+  /* ---------- countdown card · © 2026 Saaima Saleh ---------- */
+  #husna-hub .hh-count{
+    display:flex;align-items:stretch;height:60px;margin:-30px auto 0;position:relative;z-index:2;
+    width:calc(100% - 28px);max-width:calc(var(--max) - 28px);
+    border-radius:var(--r);background:var(--white);border:1px solid var(--ice-pale);
+    box-shadow:0 6px 18px rgba(51,83,158,.16);overflow:hidden;
+  }
+  #husna-hub .hh-count__days{display:flex;align-items:center;gap:8px;padding:0 14px;border-right:1px solid var(--ice-mist)}
+  #husna-hub .hh-count__num{font-family:var(--font-head);font-size:30px;font-weight:700;line-height:1;color:var(--ind);letter-spacing:-1px;min-width:2ch;text-align:center}
+  #husna-hub .hh-count__lbl{display:flex;flex-direction:column;line-height:1.05}
+  #husna-hub .hh-count__lbl b{font-family:var(--font-head);font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase}
+  #husna-hub .hh-count__lbl span{font-size:11px;color:var(--ink-60)}
+  #husna-hub .hh-count__date{display:flex;flex-direction:column;justify-content:center;padding:0 14px;line-height:1.1;flex:1;min-width:0}
+  #husna-hub .hh-count__date b{font-family:var(--font-head);font-size:15px;font-weight:600}
+  #husna-hub .hh-count__date span{font-size:11px;color:var(--ink-60);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  /* ---------- primary actions · © 2026 Saaima Saleh ---------- */
+  #husna-hub .hh-actions{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px auto 0;
+    width:calc(100% - 28px);max-width:calc(var(--max) - 28px);
+    position:relative;z-index:2;   /* paints above the hero when raised over it on desktop */
+  }
+  #husna-hub .hh-actions .hh-btn{height:40px;padding:0 14px;font-size:13px;justify-content:space-between}
+  /* both top buttons solid and raised; the white outline one looked pressed in */
+  #husna-hub .hh-actions .hh-btn--outline{background:var(--ind);color:var(--white);border:0;box-shadow:0 4px 12px rgba(66,102,174,.32)}
+  @media (hover:hover){#husna-hub .hh-actions .hh-btn--outline:hover{background:var(--ind-deep);color:var(--white)}}
+  #husna-hub .hh-actions svg{width:15px;height:15px;flex:none}
+  /* itinerary before it exists: hub.js adds this when CONFIG.itinerary is empty · © 2026 Saaima Saleh */
+  #husna-hub .hh-actions .hh-btn[aria-disabled]{background:var(--ice-mist);color:var(--ink-50);box-shadow:none;cursor:default;pointer-events:none}
+
+  /* ---------- emails feature card: ramadan night sky · © 2026 Saaima Saleh ---------- */
+  #husna-hub button.hh-feature,#husna-hub .hh-feature{
+    display:flex;align-items:stretch;width:100%;height:70px;margin-top:18px;border-radius:16px;overflow:hidden;
+    background:var(--night);color:var(--white);box-shadow:0 6px 18px rgba(15,34,56,.3);
+  }
+  #husna-hub .hh-feature img{width:70px !important;height:100% !important;object-fit:cover;flex:none}
+  #husna-hub .hh-feature__txt{display:flex;flex-direction:column;justify-content:center;padding:0 14px;line-height:1.15;flex:1;min-width:0}
+  #husna-hub .hh-feature__txt b{font-family:var(--font-head);font-size:14px;font-weight:600}
+  #husna-hub .hh-feature__txt span{font-size:12px;color:rgba(255,255,255,.7);margin-top:4px}
+  #husna-hub .hh-feature__end{display:flex;align-items:center;gap:10px;padding-right:14px}
+  #husna-hub .hh-badge{font-family:var(--font-head);font-size:9px;font-weight:600;letter-spacing:.5px;padding:4px 8px;border-radius:999px;background:var(--ind);color:var(--white);white-space:nowrap}
+  #husna-hub .hh-badge[hidden]{display:none}
+  #husna-hub .hh-chev{width:18px;height:18px;color:var(--ind-soft);flex:none}
+
+  /* ---------- groups & tiles · © 2026 Saaima Saleh ---------- */
+  #husna-hub .hh-group{margin-top:22px}
+  #husna-hub .hh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+  #husna-hub .hh-grid > :nth-child(odd):last-child{grid-column:1 / -1}   /* an odd last tile spans the row */
+  #husna-hub button.hh-tile,#husna-hub .hh-tile{
+    display:flex;align-items:stretch;width:100%;height:66px;border-radius:var(--r);overflow:hidden;
+    background:var(--white);border:1px solid var(--ice-pale);box-shadow:var(--shadow);color:var(--ink);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  @media (hover:hover){#husna-hub .hh-tile:not([aria-disabled]):hover{box-shadow:0 6px 16px rgba(66,102,174,.18)}}
+  #husna-hub .hh-tile:not([aria-disabled]):active{transform:scale(.985)}
+  #husna-hub .hh-tile img{width:58px !important;height:100% !important;object-fit:cover;flex:none}
+  #husna-hub .hh-tile__txt{display:flex;flex-direction:column;justify-content:center;padding:0 12px;line-height:1.1;min-width:0}
+  #husna-hub .hh-tile__txt b{font-family:var(--font-head);font-size:13px;font-weight:500}
+  #husna-hub .hh-tile__txt span{font-size:11px;color:var(--ink-60);margin-top:4px}
+  #husna-hub .hh-tile[aria-disabled]{background:var(--ice-mist);border-color:transparent;box-shadow:none;color:var(--ink-50);cursor:default;pointer-events:none}
+  #husna-hub .hh-tile[aria-disabled] img{opacity:.45}
+  #husna-hub .hh-tile[aria-disabled] .hh-tile__txt span{color:inherit}
+
+  /* ---------- sticky footer · © 2026 Saaima Saleh ---------- */
+  #husna-hub .hh-foot{
+    position:sticky;bottom:0;left:0;right:0;z-index:50;margin-top:auto;
+    display:flex;align-items:center;gap:12px;
+    height:var(--foot-h);
+    padding:0 16px;
+    background:var(--ind);box-shadow:0 -6px 18px rgba(51,83,158,.2);color:var(--white);
+  }
+  #husna-hub .hh-foot__in{display:flex;align-items:center;gap:12px;width:100%;max-width:var(--max);margin-inline:auto}
+  #husna-hub .hh-foot img{width:34px !important;height:auto;flex:none}
+  #husna-hub .hh-foot__q{font-family:var(--font-head);font-size:13px;font-weight:500;flex:1}
+  #husna-hub .hh-foot .hh-btn{height:36px;padding:0 16px;font-size:13px}
+  #husna-hub .hh-btn--ghost{background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.7);color:var(--white)}
+  #husna-hub .hh-btn--ghost:hover,#husna-hub .hh-btn--ghost:focus-visible{background:rgba(255,255,255,.3);border-color:var(--white);color:var(--white)}
+  #husna-hub .hh-btn--white{background:var(--white);color:var(--ind-deep)}
+  #husna-hub .hh-btn--white:hover,#husna-hub .hh-btn--white:focus-visible{background:var(--ice-pale);color:var(--ind-deep)}
+
+  /* shared */
+  #husna-hub dialog{
+    border:0;padding:0;color:var(--ink);background:var(--white);font-family:var(--font-body);
+    max-width:none;max-height:none;overscroll-behavior:contain;
+  }
+  #husna-hub dialog::backdrop{background:rgba(15,34,56,.45)}
+  #husna-hub dialog[open]{display:flex;flex-direction:column}
+  #husna-hub dialog{opacity:0;transition:opacity .18s ease, transform .22s ease, overlay .22s ease allow-discrete, display .22s ease allow-discrete}
+  #husna-hub dialog[open]{opacity:1;transform:none}
+  @starting-style{#husna-hub dialog[open]{opacity:0;transform:translateY(24px)}}
+  #husna-hub dialog::backdrop{opacity:0;transition:opacity .18s ease, overlay .22s ease allow-discrete, display .22s ease allow-discrete}
+  #husna-hub dialog[open]::backdrop{opacity:1}
+  @starting-style{#husna-hub dialog[open]::backdrop{opacity:0}}
+  #husna-hub .hh-x{
+    width:32px;height:32px;border-radius:50%;background:var(--ice-mist);display:flex;align-items:center;justify-content:center;flex:none;color:var(--ink);
+  }
+  #husna-hub .hh-x svg{width:16px;height:16px}
+  #husna-hub .hh-dlg__body{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+  #husna-hub .hh-dlg__body > *{flex:none}   /* children keep their height; the body scrolls instead of squeezing them */
+  #husna-hub .hh-lead{font-size:14px;line-height:1.4;font-weight:300}
+  #husna-hub .hh-list{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden;font-size:13.5px}
+  #husna-hub .hh-list > *{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 14px;border-top:1px solid var(--ice-mist)}
+  #husna-hub .hh-list > *:first-child{border-top:0}
+  #husna-hub .hh-list b{font-weight:500;text-align:right;white-space:nowrap}
+  #husna-hub .hh-dlg .hh-btn{width:100%;height:48px;font-size:15px}
+  #husna-hub .hh-stack{display:flex;flex-direction:column;gap:8px}
+
+  /* bottom sheet */
+  #husna-hub .hh-sheet{
+    margin:auto 0 0;width:100%;max-height:88dvh;border-radius:24px 24px 0 0;
+    padding:10px 20px calc(24px + env(safe-area-inset-bottom,0px));gap:16px;
+    box-shadow:0 -8px 24px rgba(0,0,0,.18);
+  }
+  #husna-hub .hh-sheet::before{content:"";width:40px;height:4px;border-radius:2px;background:var(--ice-pale);margin:0 auto 6px}
+  #husna-hub .hh-sheet__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  #husna-hub .hh-sheet__head h2{font-family:var(--font-head);font-size:22px;font-weight:600;letter-spacing:-.3px;line-height:1.1}
+  #husna-hub .hh-sheet__head .hh-eyebrow{display:block;margin-bottom:2px}
+
+  /* full-screen panel */
+  #husna-hub .hh-full{width:100%;height:100dvh;margin:0;border-radius:0;padding:0}
+  #husna-hub .hh-full__head{
+    display:flex;align-items:center;gap:10px;height:calc(56px + env(safe-area-inset-top,0px));
+    padding:env(safe-area-inset-top,0px) 10px 0;flex:none;border-bottom:1px solid var(--ice-mist);background:var(--white);
+  }
+  #husna-hub .hh-back{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ind);flex:none}
+  #husna-hub .hh-back svg{width:24px;height:24px}
+  #husna-hub .hh-full__head h2{font-family:var(--font-head);font-size:16px;font-weight:600;line-height:1.1;letter-spacing:-.2px}
+  #husna-hub .hh-full .hh-dlg__body{padding:16px 20px 24px;display:flex;flex-direction:column;gap:14px}
+  #husna-hub .hh-full__cta{
+    flex:none;padding:12px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--ice-mist);background:var(--white);
+    display:flex;flex-direction:column;gap:6px;text-align:center;font-size:12px;color:var(--ink-60);
+  }
+
+  /* hours tables (dining) · © 2026 Saaima Saleh */
+  #husna-hub .hh-hours{border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}
+  #husna-hub .hh-hours__name{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;background:var(--ice-mist);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.3px}
+  #husna-hub .hh-hours__name em{font-style:normal;font-family:var(--font-body);font-size:11px;font-weight:400;color:var(--ink-60);white-space:nowrap}
+  #husna-hub .hh-hours > div:not(.hh-hours__name){display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 14px;border-top:1px solid var(--ice-mist);font-size:13.5px}
+  #husna-hub .hh-hours > div:not(.hh-hours__name) b{font-weight:500;white-space:nowrap}
+  #husna-hub .hh-hours > div:not(.hh-hours__name) span{color:var(--ink-60)}
+
+  /* packing checklist · © 2026 Saaima Saleh */
+  #husna-hub .hh-checks{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}
+  #husna-hub button.hh-check{display:flex;align-items:center;gap:12px;min-height:46px;padding:8px 14px 8px 12px;border-top:1px solid var(--ice-mist);transition:background .12s ease}
+  #husna-hub button.hh-check:first-child{border-top:0}
+  @media (hover:hover){#husna-hub button.hh-check:hover{background:var(--ice-mist)}}
+  #husna-hub .hh-check__box{
+    width:22px;height:22px;border-radius:7px;border:2px solid var(--ice);flex:none;
+    display:flex;align-items:center;justify-content:center;color:var(--white);transition:background .12s ease,border-color .12s ease;
+  }
+  #husna-hub .hh-check__box svg{width:13px;height:13px;opacity:0}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__box{background:var(--ind);border-color:var(--ind)}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__box svg{opacity:1}
+  #husna-hub .hh-check__t{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  #husna-hub .hh-check__t b{font-size:14px;font-weight:400}
+  #husna-hub .hh-check__t span{font-size:11.5px;color:var(--ink-60);margin-top:2px}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__t b{color:var(--ink-50);text-decoration:line-through;text-decoration-color:var(--ind-soft)}
+  #husna-hub .hh-packnote{font-size:12.5px;line-height:1.4;color:var(--ink-60);background:var(--ice-mist);border-radius:12px;padding:10px 14px}
+  #husna-hub .hh-packreset{align-self:center;font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--ind);padding:8px 12px}
+
+  /* map embed · © 2026 Saaima Saleh */
+  #husna-hub .hh-map{border-radius:var(--r);overflow:hidden;border:1px solid var(--ice-pale);aspect-ratio:4/3;background:var(--ice-mist)}
+  #husna-hub .hh-map iframe{width:100%;height:100%;border:0;display:block}
+
+  /* emails list */
+  #husna-hub .hh-emails{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}
+  #husna-hub .hh-emails a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:10px 14px;border-top:1px solid var(--ice-mist)}
+  #husna-hub .hh-emails a:first-child{border-top:0}
+  #husna-hub .hh-emails a.is-new{background:var(--ice-mist)}
+  #husna-hub .hh-emails .hh-email__t{display:flex;flex-direction:column;gap:1px;min-width:0}
+  #husna-hub .hh-emails .hh-email__t b{font-size:15px;font-weight:500}
+  #husna-hub .hh-emails .hh-email__t span{font-size:12px;color:var(--ink-60)}
+  #husna-hub .hh-emails svg{width:16px;height:16px;color:var(--ind);flex:none}
+  #husna-hub .hh-emails__empty{padding:22px 16px;text-align:center;font-size:13.5px;color:var(--ink-60);font-weight:300}
+
+  /* contact rows */
+  #husna-hub .hh-rows{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}
+  #husna-hub .hh-rows a{display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 14px 10px 12px;border-top:1px solid var(--ice-mist);transition:background .12s ease}
+  #husna-hub .hh-rows a:first-child{border-top:0}
+  #husna-hub .hh-rows a:hover{background:var(--ice-mist)}
+  #husna-hub .hh-rows .hh-ico{width:38px;height:38px;border-radius:12px;background:var(--ice-pale);color:var(--ind-deep);display:flex;align-items:center;justify-content:center;flex:none}
+  #husna-hub .hh-rows .hh-ico svg{width:20px;height:20px}
+  #husna-hub .hh-rows .hh-row__t{display:flex;flex-direction:column;line-height:1.15;flex:1;min-width:0}
+  #husna-hub .hh-rows .hh-row__t b{font-family:var(--font-head);font-size:14px;font-weight:500}
+  #husna-hub .hh-rows .hh-row__t span{font-size:12px;color:var(--ink-60);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #husna-hub .hh-rows .hh-chev{width:18px;height:18px;color:var(--ind);flex:none}
+
+  /* faq accordion */
+  #husna-hub .hh-faq details{border-bottom:1px solid var(--ice-mist)}
+  #husna-hub .hh-faq summary{
+    list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:12px 0;cursor:pointer;
+    font-family:var(--font-head);font-size:14px;font-weight:500;
+  }
+  #husna-hub .hh-faq summary::-webkit-details-marker{display:none}
+  #husna-hub .hh-faq summary svg{width:18px;height:18px;color:var(--ind);flex:none;transition:transform .2s ease}
+  #husna-hub .hh-faq details[open] summary svg{transform:rotate(180deg)}
+  #husna-hub .hh-faq p{padding:0 0 14px;font-size:15px;line-height:1.45;font-weight:300}
+
+  /* contact panel: grouped by who answers what · © 2026 Saaima Saleh */
+  #husna-hub .hh-contactp .hh-dlg__body{gap:18px}
+  #husna-hub .hh-cg{display:flex;flex-direction:column;gap:10px}
+  #husna-hub .hh-cg__head h3{font-family:var(--font-head);font-size:18px;font-weight:600;line-height:1.1;letter-spacing:-.2px;margin:2px 0 0}
+  #husna-hub .hh-cg__for{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+  #husna-hub .hh-cg__for li{font-size:12px;line-height:1.2;padding:5px 10px;border-radius:999px;background:var(--ice-mist);color:var(--ink);font-weight:400}
+  #husna-hub .hh-cg__note{font-size:13px;line-height:1.4;font-weight:300;color:var(--ink-60)}
+  #husna-hub .hh-cg--star .hh-rows{border-color:var(--ind-soft)}
+  #husna-hub .hh-cg + .hh-cg{padding-top:18px;border-top:1px solid var(--ice-mist)}
+
+  @media (min-width:900px){
+    #husna-hub .hh-wrap{padding-inline:40px}
+    /* hero: title left, arch trio right · © 2026 Saaima Saleh */
+    #husna-hub .hh-hero{padding:26px 0 54px}
+    #husna-hub .hh-hero__in{
+      display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo arches" "title arches";
+      column-gap:40px;align-items:center;
+      width:100%;max-width:var(--max);margin-inline:auto;padding-inline:40px;
+    }
+    #husna-hub .hh-hero__logo{grid-area:logo;height:40px !important;margin:0;align-self:start;justify-self:start}
+    #husna-hub .hh-arches{grid-area:arches}
+    #husna-hub .hh-hero__title{grid-area:title;align-items:flex-start;text-align:left;margin-top:0;align-self:start;padding-top:26px}
+    #husna-hub .hh-hero__sss{font-size:11px;letter-spacing:4px}
+    #husna-hub .hh-hero__eyebrow{font-size:44px;letter-spacing:5px}
+    #husna-hub .hh-hero__script{font-size:64px;margin-top:4px}
+    #husna-hub .hh-hero__badge{font-size:10px;margin-top:18px}
+    #husna-hub .hh-arches{margin-top:0}
+    #husna-hub .hh-arch--main{width:220px;height:296px}
+    #husna-hub .hh-arch--side{width:136px;height:198px}
+    #husna-hub .hh-arch--l{margin-right:-20px;margin-bottom:14px}
+    #husna-hub .hh-arch--r{margin-left:-20px;margin-bottom:14px}
+    #husna-hub .hh-flake--a{width:90px;height:90px;top:40px;left:4%}
+    #husna-hub .hh-flake--b{width:56px;height:56px;top:auto;bottom:60px;right:3%}
+    #husna-hub .hh-flake--c{display:block;position:absolute;width:44px;height:44px;top:60px;right:38%}
+    /* countdown + actions share one raised bar under the hero */
+    #husna-hub .hh-bar{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      width:100%;max-width:var(--max);margin-inline:auto;padding-inline:40px;
+    }
+    #husna-hub .hh-count{
+      margin:-36px 0 0;height:72px;border-radius:16px;width:auto;max-width:none;flex:none;
+      box-shadow:0 8px 24px rgba(51,83,158,.22);
+    }
+    #husna-hub .hh-count__num{font-size:38px}
+    #husna-hub .hh-count__date b{font-size:17px}
+    #husna-hub .hh-count__date span{font-size:12px}
+    #husna-hub .hh-actions{margin:-22px 0 0;width:auto;max-width:none;display:flex;gap:10px}
+    #husna-hub .hh-actions .hh-btn{height:44px;padding:0 22px;font-size:13px}
+    #husna-hub .hh-feature{height:80px;margin-top:28px;border-radius:18px}
+    #husna-hub .hh-feature img{width:96px !important}
+    #husna-hub .hh-feature__txt{padding:0 20px}
+    #husna-hub .hh-feature__txt b{font-size:17px}
+    #husna-hub .hh-feature__txt span{font-size:13px}
+    #husna-hub .hh-groups{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px}
+    #husna-hub .hh-group{margin-top:0}
+    #husna-hub .hh-eyebrow{font-size:11px}
+    #husna-hub .hh-grid{grid-template-columns:1fr;gap:10px}
+    #husna-hub .hh-group[data-cols="2"] .hh-grid{grid-template-columns:1fr 1fr}
+    #husna-hub .hh-tile{height:72px;border-radius:16px}
+    #husna-hub .hh-tile img{width:62px !important}
+    #husna-hub .hh-tile__txt{padding:0 16px}
+    #husna-hub .hh-tile__txt b{font-size:16px}
+    #husna-hub .hh-tile__txt span{font-size:12px}
+    #husna-hub .hh-foot img{width:38px !important}
+    #husna-hub .hh-foot__q{font-size:14px}
+    #husna-hub .hh-foot .hh-btn{height:38px;padding:0 20px}
+    /* dialogs become centered modals */
+    #husna-hub .hh-sheet,#husna-hub .hh-full{margin:auto;width:min(560px,92vw);height:auto;max-height:86dvh;border-radius:20px}
+    #husna-hub .hh-sheet{padding:16px 24px 24px}
+    #husna-hub .hh-sheet::before{display:none}
+    #husna-hub .hh-full__head{border-radius:20px 20px 0 0;height:56px;padding:0 10px}
+    #husna-hub .hh-full__cta{border-radius:0 0 20px 20px;padding-bottom:16px}
+    @starting-style{#husna-hub dialog[open]{transform:scale(.96)}}
+  }
+  /* wide phones / small tablets: keep mobile layout centered */
+  @media (min-width:600px) and (max-width:899px){
+    #husna-hub .hh-arch--main{width:190px;height:254px}
+  }
