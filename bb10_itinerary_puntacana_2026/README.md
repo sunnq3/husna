@@ -50,4 +50,4 @@ Not on any day yet (from ATTN Overview): Under the Stars, Marriage Retreat sessi
 
 Oct 30 edits doc: Beach Walk with Dr. Saira (Sun, Tue) → Tides & Tadabbur with Dr. Saira, with a session line on the card and a longer `desc` in the detail sheet only; Contact page rebuilt as who-to-contact-for-what (Sr. Iman, Husna bookings, BRX, Nickelodeon, Spa, Husna programming) and mirrored on the hub; spa link now emails madrian@nick-resorts.com.
 
-Placeholders waiting for links: competition sign-up forms, dinner app, (hub link set to https://husna.com/beach-beyond-punta-cana-2026-dashboard/).
+Competition sign-up links point to husna.com/bb10-tournaments/<slug>/ (Rules & sign up); the tournaments page says Sand Castle needs no sign-up. Placeholders waiting for links: dinner app, (hub link set to https://husna.com/beach-beyond-punta-cana-2026-dashboard/).
