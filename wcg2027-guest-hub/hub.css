@@ -90,7 +90,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   /* ---------- hero: night sky — Deerhurst aerial, Saaima's title artwork in the sky · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-hero{
     position:relative;overflow:hidden;color:var(--white);background:#16222E;
-    min-height:640px;display:flex;flex-direction:column;
+    min-height:600px;display:flex;flex-direction:column;
     padding:calc(18px + env(safe-area-inset-top,0px)) 16px 0;
   }
   #husna-hub .hh-hero__ph{
@@ -159,8 +159,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
 
   /* ---------- groups & tiles · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-group{margin-top:22px}
-  #husna-hub .hh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
-  #husna-hub .hh-grid > :nth-child(odd):last-child{grid-column:1 / -1}   /* an odd last tile spans the row */
+  #husna-hub .hh-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px}   /* tiles stack full width */
   #husna-hub button.hh-tile,#husna-hub .hh-tile{
     display:flex;align-items:stretch;width:100%;height:66px;border-radius:var(--r);overflow:hidden;
     background:var(--white);border:1px solid var(--ice-pale);box-shadow:var(--shadow);color:var(--ink);
@@ -324,7 +323,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   @media (min-width:900px){
     #husna-hub .hh-wrap{padding-inline:40px}
     /* hero: logo left, title centred; the timer stays exactly as it is on mobile · © 2026 Saaima Saleh */
-    #husna-hub .hh-hero{min-height:560px;padding:26px 48px 0}
+    #husna-hub .hh-hero{min-height:530px;padding:26px 48px 0}
     #husna-hub .hh-hero__ph{object-position:50% 78%}
     #husna-hub .hh-count{max-width:492px}
     #husna-hub .hh-actions{max-width:492px}
@@ -342,7 +341,6 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     #husna-hub .hh-group{margin-top:0}
     #husna-hub .hh-eyebrow{font-size:11px}
     #husna-hub .hh-grid{grid-template-columns:1fr;gap:10px}
-    #husna-hub .hh-group[data-cols="2"] .hh-grid{grid-template-columns:1fr 1fr}
     #husna-hub .hh-tile{height:72px;border-radius:16px}
     #husna-hub .hh-tile img{width:62px !important}
     #husna-hub .hh-tile__txt{padding:0 16px}
