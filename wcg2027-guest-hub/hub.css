@@ -21,16 +21,16 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
 
 /* ---------- tokens & scope · winter indigo / ice, sampled from the WCG 2027 art · © 2026 Saaima Saleh ---------- */
 #husna-hub{
-  --ind:#4266AE;        /* title indigo */
-  --ind-deep:#33539E;   /* hover / pressed */
-  --ind-soft:#8FA8D6;   /* light accents */
+  --ind:#3A5CC2;        /* vibrant royal indigo */
+  --ind-deep:#2B48A8;   /* hover / pressed */
+  --ind-soft:#8CA6E4;   /* light accents */
   --ice:#C8D8F0;        /* arch strokes, borders */
   --ice-pale:#DFE9F7;   /* card borders */
   --ice-mist:#EDF3FA;   /* fills */
   --night:#0D2145;      /* deep vibrant night navy */
   --ink:#212A3A; --ink-60:rgba(33,42,58,.6); --ink-50:rgba(33,42,58,.5);
   --bg:#F5F8FC; --white:#fff;
-  --shadow:0 2px 8px rgba(66,102,174,.08);
+  --shadow:0 2px 8px rgba(54,86,186,.08);
   --r:14px;
   --font-head:"halyard-display","Plus Jakarta Sans",system-ui,sans-serif;
   --font-body:"source-sans-3","Source Sans 3",system-ui,sans-serif;
@@ -75,7 +75,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   }
   #husna-hub .hh-btn{-webkit-tap-highlight-color:transparent;transition:background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .1s ease}
   #husna-hub .hh-btn:active{transform:scale(.98)}
-  #husna-hub .hh-btn--primary{background:var(--ind);color:var(--white);box-shadow:0 4px 12px rgba(66,102,174,.32)}
+  #husna-hub .hh-btn--primary{background:var(--ind);color:var(--white);box-shadow:0 4px 12px rgba(54,86,186,.32)}
   #husna-hub .hh-btn--outline{background:var(--ice-pale);color:var(--ind-deep);border:0}   /* soft light-blue secondary, no outline */
   /* hover colours only on devices that actually hover; on touch the colour used to stick after a tap */
   @media (hover:hover){
@@ -118,7 +118,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     display:flex;align-items:stretch;height:60px;margin:-30px auto 0;position:relative;z-index:2;
     width:calc(100% - 28px);max-width:calc(var(--max) - 28px);
     border-radius:var(--r);background:var(--white);border:1px solid var(--ice-pale);
-    box-shadow:0 6px 18px rgba(51,83,158,.16);overflow:hidden;
+    box-shadow:0 6px 18px rgba(43,72,168,.16);overflow:hidden;
   }
   #husna-hub .hh-count__days{display:flex;align-items:center;gap:8px;padding:0 14px;border-right:1px solid var(--ice-mist)}
   #husna-hub .hh-count__num{font-family:var(--font-head);font-size:30px;font-weight:700;line-height:1;color:var(--ind);letter-spacing:-1px;min-width:2ch;text-align:center}
@@ -137,7 +137,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   }
   #husna-hub .hh-actions .hh-btn{height:40px;padding:0 14px;font-size:13px;justify-content:space-between}
   /* both top buttons solid and raised; the white outline one looked pressed in */
-  #husna-hub .hh-actions .hh-btn--outline{background:var(--ind);color:var(--white);border:0;box-shadow:0 4px 12px rgba(66,102,174,.32)}
+  #husna-hub .hh-actions .hh-btn--outline{background:var(--ind);color:var(--white);border:0;box-shadow:0 4px 12px rgba(54,86,186,.32)}
   @media (hover:hover){#husna-hub .hh-actions .hh-btn--outline:hover{background:var(--ind-deep);color:var(--white)}}
   #husna-hub .hh-actions svg{width:15px;height:15px;flex:none}
   /* itinerary before it exists: hub.js adds this when CONFIG.itinerary is empty · © 2026 Saaima Saleh */
@@ -166,7 +166,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     background:var(--white);border:1px solid var(--ice-pale);box-shadow:var(--shadow);color:var(--ink);
     transition:transform .12s ease, box-shadow .12s ease;
   }
-  @media (hover:hover){#husna-hub .hh-tile:not([aria-disabled]):hover{box-shadow:0 6px 16px rgba(66,102,174,.18)}}
+  @media (hover:hover){#husna-hub .hh-tile:not([aria-disabled]):hover{box-shadow:0 6px 16px rgba(54,86,186,.18)}}
   #husna-hub .hh-tile:not([aria-disabled]):active{transform:scale(.985)}
   #husna-hub .hh-tile img{width:58px !important;height:100% !important;object-fit:cover;flex:none}
   #husna-hub .hh-tile__txt{display:flex;flex-direction:column;justify-content:center;padding:0 12px;line-height:1.1;min-width:0}
@@ -182,7 +182,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     display:flex;align-items:center;gap:12px;
     height:var(--foot-h);
     padding:0 16px;
-    background:var(--ind);box-shadow:0 -6px 18px rgba(51,83,158,.2);color:var(--white);
+    background:var(--ind);box-shadow:0 -6px 18px rgba(43,72,168,.2);color:var(--white);
   }
   #husna-hub .hh-foot__in{display:flex;align-items:center;gap:12px;width:100%;max-width:var(--max);margin-inline:auto}
   #husna-hub .hh-foot img{width:34px !important;height:auto;flex:none}
