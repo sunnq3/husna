@@ -176,11 +176,16 @@
     </div>
     <div class="hh-dlg__body">
       <p class="hh-lead"><b style="font-weight:600">Deerhurst Resort</b><br>1235 Deerhurst Drive, Huntsville, ON &middot; about 2&frac12; hours north of the GTA.</p>
-      <div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">Resort map</span>
-        <a class="hh-mapimg" href="https://sunnq3.github.io/husna/wcg2027-guest-hub/img/resort-map-full.jpg" target="_blank" rel="noopener" data-elementor-open-lightbox="no">
-          <img src="https://sunnq3.github.io/husna/wcg2027-guest-hub/img/resort-map.jpg" alt="Deerhurst resort property map" loading="lazy">
-          <span class="hh-mapimg__tip">Tap to open full size &#8599;</span>
-        </a></div>
+      <div class="hh-stack" style="gap:10px">
+        <div class="hh-tabs" role="tablist" id="hh-map-tabs">
+          <button type="button" role="tab" aria-selected="true" data-view="resort">Resort map</button>
+          <button type="button" role="tab" aria-selected="false" data-view="google">Google map</button>
+        </div>
+        <div class="hh-zoom" id="hh-zoom"><img id="hh-map-img" alt="Deerhurst resort property map" draggable="false"></div>
+        <div class="hh-gmap" id="hh-gmap" hidden></div>
+        <p class="hh-maphint" id="hh-map-hint">Pinch or scroll to zoom &middot; drag to pan &middot; double-tap to reset &middot;
+          <a id="hh-map-full" href="https://sunnq3.github.io/husna/wcg2027-guest-hub/img/resort-map-full.jpg" target="_blank" rel="noopener" data-elementor-open-lightbox="no" style="color:var(--ind)">full size &#8599;</a></p>
+      </div>
       <div class="hh-list">
         <div><span>Check-in</span><b>From 3:00 PM</b></div>
         <div><span>Check-out</span><b>By 11:00 AM</b></div>

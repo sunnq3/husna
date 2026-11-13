@@ -275,13 +275,15 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-packnote{font-size:12.5px;line-height:1.4;color:var(--ink-60);background:var(--ice-mist);border-radius:12px;padding:10px 14px}
   #husna-hub .hh-packreset{align-self:center;font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--ind);padding:8px 12px}
 
-  /* resort map (tap opens the full-size image, where pinch-zoom is native) · © 2026 Saaima Saleh */
-  #husna-hub .hh-mapimg{display:block;position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--ice-pale);background:var(--ice-mist)}
-  #husna-hub .hh-mapimg img{width:100% !important;height:auto !important;display:block}
-  #husna-hub .hh-mapimg__tip{
-    position:absolute;right:8px;bottom:8px;padding:5px 10px;border-radius:999px;
-    background:rgba(33,42,58,.78);color:#fff;font-family:var(--font-head);font-size:10px;font-weight:600;letter-spacing:.4px;
-  }
+  /* Directions maps: resort/Google toggle, pinch-zoom stage (zoom code ported from the BB10 hub) · © 2026 Saaima Saleh */
+  #husna-hub .hh-tabs{display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--ice-mist)}
+  #husna-hub .hh-tabs button{height:36px;border-radius:999px;font-family:var(--font-head);font-size:13px;font-weight:600;text-align:center;color:var(--ink-60)}
+  #husna-hub .hh-tabs button[aria-selected="true"]{background:var(--ind);color:var(--white)}
+  #husna-hub .hh-zoom{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:var(--ice-mist);border:1px solid var(--ice-pale);touch-action:none;position:relative;user-select:none;-webkit-user-select:none}
+  #husna-hub .hh-zoom img{position:absolute;left:0;top:0;width:100% !important;height:100% !important;object-fit:contain;transform-origin:0 0;will-change:transform;pointer-events:none}
+  #husna-hub .hh-gmap{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;border:1px solid var(--ice-pale);background:var(--ice-mist)}
+  #husna-hub .hh-gmap iframe{width:100%;height:100%;border:0;display:block}
+  #husna-hub .hh-maphint{font-size:11.5px;color:var(--ink-60);text-align:center}
 
   /* emails list */
   #husna-hub .hh-emails{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}

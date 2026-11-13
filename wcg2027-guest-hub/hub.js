@@ -376,6 +376,53 @@
   const lock = () => document.documentElement.style.overflow = dialogs.some(d => d.open) ? 'hidden' : '';
   dialogs.forEach(d => { d.addEventListener('close', lock); d.addEventListener('hh:open', lock); });
 
+  /* Directions: resort map with pinch / drag / wheel zoom, plus a Google map tab · © 2026 Saaima Saleh
+     Zoom engine ported from the BB10 hub (pointer events, so it works on iPhone and desktop alike). */
+  (function dirmaps(){
+    const stage = $('#hh-zoom'), img = $('#hh-map-img'), gbox = $('#hh-gmap'), hint = $('#hh-map-hint');
+    const tabs = $$('#hh-map-tabs [role=tab]'), full = $('#hh-map-full');
+    if (!stage || !img || !tabs.length) return;
+    img.src = IMG + 'resort-map.jpg';
+    if (full) full.href = IMG + 'resort-map-full.jpg';
+
+    let s = 1, x = 0, y = 0, px = 0, py = 0;
+    const apply = () => img.style.transform = `translate(${x}px,${y}px) scale(${s})`;
+    const reset = () => { s = 1; x = 0; y = 0; apply(); };
+    const clamp = () => { s = Math.min(6, Math.max(1, s)); if (s === 1) { x = 0; y = 0; } };
+    const zoomTo = ns => { ns = Math.min(6, Math.max(1, ns)); const k = ns / s; x = px - (px - x) * k; y = py - (py - y) * k; s = ns; };
+
+    function show(view){
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.view === view)));
+      const resort = view === 'resort';
+      stage.hidden = !resort; hint.hidden = !resort; gbox.hidden = resort;
+      if (resort) { reset(); return; }
+      if (!gbox.firstChild) gbox.innerHTML = '<iframe src="https://www.google.com/maps?q=Deerhurst+Resort,+1235+Deerhurst+Dr,+Huntsville,+ON&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Deerhurst Resort"></iframe>';
+    }
+    tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.view)));
+    const dlg = document.getElementById('hh-map');
+    if (dlg) dlg.addEventListener('hh:open', () => show('resort'));
+    // bypass any theme/Elementor lightbox that intercepts image links
+    if (full) full.addEventListener('click', e => { e.preventDefault(); e.stopImmediatePropagation(); window.open(full.href, '_blank', 'noopener'); }, true);
+
+    const pts = new Map(); let startDist = 0, startS = 1, lastX = 0, lastY = 0, lastTap = 0;
+    stage.addEventListener('pointerdown', e => {
+      stage.setPointerCapture(e.pointerId); pts.set(e.pointerId, e);
+      if (pts.size === 1) { lastX = e.clientX; lastY = e.clientY;
+        const now = Date.now(); if (now - lastTap < 300) reset(); lastTap = now; }
+      if (pts.size === 2) { const [a, b] = [...pts.values()]; startDist = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); startS = s;
+        const r = stage.getBoundingClientRect(); px = (a.clientX + b.clientX) / 2 - r.left; py = (a.clientY + b.clientY) / 2 - r.top; }
+    });
+    stage.addEventListener('pointermove', e => {
+      if (!pts.has(e.pointerId)) return; pts.set(e.pointerId, e);
+      if (pts.size === 1) { x += e.clientX - lastX; y += e.clientY - lastY; lastX = e.clientX; lastY = e.clientY; }
+      else if (pts.size === 2) { const [a, b] = [...pts.values()]; const d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); zoomTo(startS * (d / startDist)); }
+      clamp(); apply();
+    });
+    const up = e => { pts.delete(e.pointerId); };
+    stage.addEventListener('pointerup', up); stage.addEventListener('pointercancel', up);
+    stage.addEventListener('wheel', e => { e.preventDefault(); const r = stage.getBoundingClientRect(); px = e.clientX - r.left; py = e.clientY - r.top; zoomTo(s * (e.deltaY < 0 ? 1.12 : 0.9)); clamp(); apply(); }, { passive: false });
+  })();
+
   /* expiry: hide anything with data-until in the past · © 2026 Saaima Saleh */
   const today = new Date().toISOString().slice(0,10);
   $$('[data-until]').forEach(el => { if (el.dataset.until < today) el.hidden = true; });
