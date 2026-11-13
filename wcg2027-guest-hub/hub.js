@@ -376,14 +376,6 @@
   const lock = () => document.documentElement.style.overflow = dialogs.some(d => d.open) ? 'hidden' : '';
   dialogs.forEach(d => { d.addEventListener('close', lock); d.addEventListener('hh:open', lock); });
 
-  /* map: load the embed only when the panel first opens (keeps the page itself light) · © 2026 Saaima Saleh */
-  (function lazymap(){
-    const box = $('#hh-map-embed'); if (!box) return;
-    $('#hh-map').addEventListener('hh:open', () => {
-      box.innerHTML = '<iframe src="https://www.google.com/maps?q=Deerhurst+Resort,+1235+Deerhurst+Dr,+Huntsville,+ON&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Deerhurst Resort"></iframe>';
-    }, { once: true });
-  })();
-
   /* expiry: hide anything with data-until in the past · © 2026 Saaima Saleh */
   const today = new Date().toISOString().slice(0,10);
   $$('[data-until]').forEach(el => { if (el.dataset.until < today) el.hidden = true; });

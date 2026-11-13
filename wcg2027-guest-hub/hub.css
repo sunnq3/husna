@@ -275,9 +275,13 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-packnote{font-size:12.5px;line-height:1.4;color:var(--ink-60);background:var(--ice-mist);border-radius:12px;padding:10px 14px}
   #husna-hub .hh-packreset{align-self:center;font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--ind);padding:8px 12px}
 
-  /* map embed · © 2026 Saaima Saleh */
-  #husna-hub .hh-map{border-radius:var(--r);overflow:hidden;border:1px solid var(--ice-pale);aspect-ratio:4/3;background:var(--ice-mist)}
-  #husna-hub .hh-map iframe{width:100%;height:100%;border:0;display:block}
+  /* resort map (tap opens the full-size image, where pinch-zoom is native) · © 2026 Saaima Saleh */
+  #husna-hub .hh-mapimg{display:block;position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--ice-pale);background:var(--ice-mist)}
+  #husna-hub .hh-mapimg img{width:100% !important;height:auto !important;display:block}
+  #husna-hub .hh-mapimg__tip{
+    position:absolute;right:8px;bottom:8px;padding:5px 10px;border-radius:999px;
+    background:rgba(33,42,58,.78);color:#fff;font-family:var(--font-head);font-size:10px;font-weight:600;letter-spacing:.4px;
+  }
 
   /* emails list */
   #husna-hub .hh-emails{display:flex;flex-direction:column;border:1px solid var(--ice-pale);border-radius:var(--r);overflow:hidden}
