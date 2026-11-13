@@ -96,6 +96,18 @@
       ]
     },
 
+    // Resort extras panel (Nickelodeon Extras tile). Built by JS; no WordPress change needed.
+    extras: {
+      email: 'jesantos@nick-resorts.com', subject: 'Husna Guest HS-1XXX/D26', emailUrl: 'http://eepurl.com/BPJ4-0xjDc',
+      groups: [
+        { name: 'Birthdays', items: [['Birthday cake', 'from $35'], ['SpongeBob cake', 'from $80'], ['Balloon arrangement', 'from $25'], ['Themed birthday package', 'from $200'], ['Pajama Jam character breakfast', '$70 adult \u00b7 $50 child']] },
+        { name: 'Anniversaries & curated dining', items: [['Candlelight beach dinner', '$300 / couple'], ['Chef\u2019s table experience', '$70 adult \u00b7 $35 child']] },
+        { name: 'Group & family experiences', items: [['TMNT pizza experience', '$40 adult \u00b7 $35 child'], ['Private sliming (up to 6)', '$59'], ['Family sunset BBQ', '$99 adult \u00b7 $55 child'], ['Private meet & greet', 'from $99'], ['Meet SpongeBob at Pineapple Villa', '$150']] },
+        { name: 'Vacation treats', items: [['Floating breakfast', '$25 / adult'], ['Bali beds on the beach', 'from $80'], ['Special lobster dinner', 'from $59'], ['Premium cuts / tomahawk', 'from $70']] },
+        { name: 'Babysitting', items: [['On-site, $25 per hour for one child, $10 per hour for each additional child.', '']] }
+      ]
+    },
+
     // Contact panel (Contact button): who to contact for what. Built by JS; no WordPress change needed.
     contacts: {
       intro: 'Sr. Iman and the Husna team are here before and during the trip. For everything else, here is who to ask.',
@@ -313,6 +325,53 @@
     const a = document.createElement('a');
     a.href = CONFIG.itinerary.replace(/\/?$/, '') + '#signups'; a.className = tile.className;
     a.innerHTML = tile.innerHTML; tile.replaceWith(a);
+  })();
+
+  /* panels the WordPress snippet may be missing (a paste that got cut short lost FAQ, Extras and Maps once):
+     FAQ shell, Resort extras and Maps are (re)built here from CONFIG, so the snippet only has to carry the tiles · © 2026 Saaima Saleh */
+  (function ensurePanels(){
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const back = '<button class="hh-back" type="button" data-close aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>';
+    const put = (id, html) => { const old = document.getElementById(id); if (old) old.outerHTML = html; else root.insertAdjacentHTML('beforeend', html); };
+    if (!document.getElementById('hh-faq')) root.insertAdjacentHTML('beforeend', `
+    <dialog class="hh-full hh-dlg" id="hh-faq" aria-labelledby="hh-faq-t">
+      <div class="hh-full__head">${back}<div><span class="hh-eyebrow">Need help</span><h2 id="hh-faq-t">Frequently asked questions</h2></div></div>
+      <div class="hh-dlg__body hh-faq" style="gap:0"></div>
+    </dialog>`);
+    const X = CONFIG.extras;
+    if (X) put('hh-extras', `
+    <dialog class="hh-full hh-dlg" id="hh-extras" aria-labelledby="hh-extras-t">
+      <div class="hh-full__head">${back}<div><span class="hh-eyebrow">Not included</span><h2 id="hh-extras-t">Resort extras</h2></div></div>
+      <div class="hh-dlg__body">
+        <p class="hh-lead">Optional, paid separately. Email the resort to reserve. <a href="${X.emailUrl}" target="_blank" rel="noopener" style="color:var(--blue-deep);font-weight:400;white-space:nowrap">See the full email \u2197</a></p>
+        ${X.groups.map(g => `<div class="hh-stack" style="gap:6px"><span class="hh-eyebrow">${esc(g.name)}</span><div class="hh-list">${g.items.map(([a, b]) => `<div><span>${esc(a)}</span>${b ? `<b>${esc(b)}</b>` : ''}</div>`).join('')}</div></div>`).join('')}
+      </div>
+      <div class="hh-full__cta">
+        <a class="hh-btn hh-btn--primary" href="mailto:${X.email}?subject=${encodeURIComponent(X.subject)}">Email the resort to book</a>
+        <span>Put your Husna ID (HS-1XXX/D26) in the subject line.</span>
+      </div>
+    </dialog>`);
+    put('hh-maps', `
+    <dialog class="hh-full hh-dlg hh-maps" id="hh-maps" aria-labelledby="hh-maps-t">
+      <div class="hh-full__head">
+        <button class="hh-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <h2 id="hh-maps-t">Resort maps</h2><span style="width:32px"></span>
+      </div>
+      <div class="hh-tabs" role="tablist" id="hh-map-tabs">
+        <button type="button" role="tab" aria-selected="true" data-map="0">Map 1 \u00b7 Resort</button>
+        <button type="button" role="tab" aria-selected="false" data-map="1">Map 2 \u00b7 Detail</button>
+      </div>
+      <div class="hh-zoom" id="hh-zoom"><img id="hh-map-img" alt="Resort map" draggable="false"></div>
+      <div class="hh-full__cta">
+        <a class="hh-btn hh-btn--outline" id="hh-map-full" href="#" target="_blank" rel="noopener" data-elementor-open-lightbox="no" data-elementor-lightbox-disable="true">Open full-size image</a>
+        <span>Pinch or scroll to zoom \u00b7 drag to pan \u00b7 double-tap to reset</span>
+      </div>
+    </dialog>`);
+    // tiles for these panels may also be missing their buttons: make sure each tile opens its panel
+    [['extras', 'hh-extras'], ['maps', 'hh-maps']].forEach(([src, id]) => {
+      const img = root.querySelector(`.hh-tile img[data-src="${src}"]`); const tile = img && img.closest('.hh-tile');
+      if (tile && tile.tagName !== 'BUTTON') { const b = document.createElement('button'); b.type = 'button'; b.className = tile.className; b.dataset.open = id; b.innerHTML = tile.innerHTML; tile.replaceWith(b); }
+    });
   })();
 
   /* FAQ: rendered from CONFIG.faq, replacing the pasted list · © 2026 Saaima Saleh */
