@@ -3,7 +3,7 @@
    © 2026 Saaima Saleh. Licensed to Husna Vacations for use on husna.com only. All other rights reserved.
    Author: Saaima Saleh · Do not copy, redistribute or reuse without written permission.
    ============================================================ */
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap");
 
 /* ---------- Elementor breakout: make the widget span the full page width · © 2026 Saaima Saleh ---------- */
 html:has(#husna-hub),body:has(#husna-hub){margin:0;padding:0;background:#EDF3FA;min-height:0}
@@ -34,7 +34,6 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   --r:14px;
   --font-head:"halyard-display","Plus Jakarta Sans",system-ui,sans-serif;
   --font-body:"source-sans-3","Source Sans 3",system-ui,sans-serif;
-  --font-script:"Kaushan Script",cursive;   /* "getaway" script — same script family as the BB10 hub */
   --charcoal:#262C38;   /* dark headers (dining hours) */
   --foot-h:60px;
   --max:520px;            /* mobile column width on tablets */
@@ -127,14 +126,13 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   }
   #husna-hub .hh-arch img{width:100% !important;height:100% !important;object-fit:cover}
   #husna-hub .hh-arch--main{width:200px;height:262px;z-index:2}
-  /* title block: script overlaps the title, like the brochure lockup · © 2026 Saaima Saleh */
+  /* title block: light lowercase display under the caps, like the carousel interiors · © 2026 Saaima Saleh */
   #husna-hub .hh-hero__title{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:26px;color:var(--ind);position:relative;z-index:1}
   #husna-hub .hh-hero__sss{font-family:var(--font-head);font-size:9px;font-weight:500;letter-spacing:3px;text-transform:lowercase;color:var(--ink-60);margin-bottom:8px}
   #husna-hub .hh-hero__eyebrow{font-family:var(--font-head);font-size:27px;font-weight:700;letter-spacing:3px;text-transform:uppercase;line-height:1}
   #husna-hub .hh-hero__script{
-    font-family:var(--font-script);font-size:38px;line-height:1;margin-top:-7px;font-weight:400;
-    transform:rotate(-3deg);color:var(--ind-deep);
-    text-shadow:-2px 2px 0 #E7F0FA,2px -2px 0 #E7F0FA,2px 2px 0 #E7F0FA,-2px -2px 0 #E7F0FA;  /* lifts the overlap off the caps */
+    font-family:var(--font-head);font-size:33px;line-height:1;margin-top:9px;font-weight:300;
+    text-transform:lowercase;letter-spacing:2.5px;color:var(--ind-deep);
   }
   #husna-hub .hh-hero__ed{
     display:flex;align-items:center;gap:10px;margin-top:14px;
@@ -365,7 +363,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     #husna-hub .hh-hero__title{grid-area:title;align-items:flex-start;text-align:left;margin-top:0;align-self:start;padding-top:26px}
     #husna-hub .hh-hero__sss{font-size:11px;letter-spacing:4px}
     #husna-hub .hh-hero__eyebrow{font-size:44px;letter-spacing:4.5px}
-    #husna-hub .hh-hero__script{font-size:60px;margin-top:-13px;align-self:center}
+    #husna-hub .hh-hero__script{font-size:52px;margin-top:14px;letter-spacing:5px}
     #husna-hub .hh-hero__ed{font-size:10.5px;margin-top:24px}
     #husna-hub .hh-hero__ed::before,#husna-hub .hh-hero__ed::after{width:30px}
     #husna-hub .hh-arches{margin-top:0}
