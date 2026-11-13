@@ -16,12 +16,13 @@
     itinerary: '',                    // leave empty until the itinerary page exists; the button disables itself
     img: {
       wordmark:   IMG + 'wordmark-white.png',
-      hero:       IMG + 'arch-hero.jpg',        // Deerhurst portico & deer, ghosted into the indigo
+      hero:       IMG + 'night-hero.jpg',       // Deerhurst aerial at night, lot trimmed
+      title:      IMG + 'title-white.png',      // Saaima's "Winter Classic getaway" artwork (from the IG post file)
       smiley:     'https://husna.com/wp-content/uploads/2026/09/smiley.png',
       emails:     IMG + 'feat-moon.jpg',        // moon over the snowy pines
       packing:    IMG + 'th-packing.jpg',       // backpack in the snow
       waiver:     IMG + 'th-waiver.jpg',        // skating trio
-      map:        IMG + 'th-map.jpg',           // "To Deerhurst" bear sign
+      map:        IMG + 'th-map.jpg',           // Deerhurst entrance sign
       activities: IMG + 'th-activities.jpg',    // cross-country skiing
       dining:     IMG + 'th-dining.jpg',        // Maple Pub burger
       app:        IMG + 'th-app.jpg'            // Deerhurst logo

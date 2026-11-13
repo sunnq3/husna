@@ -10,7 +10,7 @@
 
 <!-- Loading screen: shown until hub.css has arrived, so nothing unstyled ever flashes · © 2026 Saaima Saleh -->
 <style>.hh-boot{visibility:hidden}
-.hh-boot-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#33539E;visibility:visible}
+.hh-boot-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#16222E;visibility:visible}
 .hh-boot-screen img{width:76px !important;height:auto !important;max-width:none;animation:hh-spin 1.6s linear infinite}
 @keyframes hh-spin{to{transform:rotate(360deg)}}</style>
 <script>setTimeout(function(){var h=document.getElementById('husna-hub');if(h)h.classList.remove('hh-boot');},6000);</script>
@@ -18,15 +18,14 @@
 <div id="husna-hub" class="hh-boot" data-author="Saaima Saleh" data-copyright="© 2026 Saaima Saleh">
   <div class="hh-boot-screen" aria-label="Loading"><img src="https://husna.com/wp-content/uploads/2026/09/smiley.png" alt=""></div>
 
-  <!-- Hero: indigo nocturne — the deer ghosted into deep indigo, white type, falling snow · © 2026 Saaima Saleh -->
+  <!-- Hero: Deerhurst at night, Saaima's title artwork in the sky, falling snow · © 2026 Saaima Saleh -->
   <header class="hh-hero">
-    <img class="hh-hero__ph" data-src="hero" alt="" aria-hidden="true" fetchpriority="high">
+    <img class="hh-hero__ph" data-src="hero" alt="Deerhurst Resort on a winter night" fetchpriority="high">
+    <div class="hh-hero__deep" aria-hidden="true"></div>
     <div class="hh-hero__in">
       <img class="hh-hero__logo" data-src="wordmark" alt="Husna Vacations">
       <div class="hh-hero__title">
-        <span class="hh-hero__eyebrow">Winter Classic</span>
-        <span class="hh-hero__script">getaway</span>
-        <span class="hh-hero__hair" aria-hidden="true"></span>
+        <img class="hh-hero__art" data-src="title" alt="Winter Classic Getaway">
         <span class="hh-hero__ed">The Ramadan Edition</span>
       </div>
     </div>
