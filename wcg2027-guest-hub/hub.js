@@ -47,7 +47,7 @@
 
     // Packing guide (Packing tile). Checked items persist on the guest's phone. Edit here; no WordPress change needed.
     packing: {
-      note: 'Don’t worry if you’ve forgotten something — there are plenty of shops nearby in town.',
+      note: 'Don’t worry if you’ve forgotten something. There are plenty of shops nearby in town.',
       groups: [
         { name: 'Essentials', items: [
           ['Cash & credit cards', 'You’ll need a credit card at check-in'],
@@ -212,7 +212,7 @@
     const newCount = live.filter(isNew).length;
 
     if (!live.length) {
-      list.innerHTML = '<div class="hh-emails__empty">Emails will appear here as they’re sent — watch this space.</div>';
+      list.innerHTML = '<div class="hh-emails__empty">Emails will appear here as they’re sent. Watch this space.</div>';
       return;
     }
 
@@ -249,7 +249,8 @@
     const tick = '<span class="hh-check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>';
 
     body.innerHTML = `
-      <p class="hh-lead">This is a real checklist — tap items to check them off. Your list saves on this phone, so you can come back to it as you pack.</p>
+      <p class="hh-packhead">Tap items to check them off</p>
+      <p class="hh-packsub">This is a real checklist. It saves on your phone, so you can come back to it as you pack.</p>
       <p class="hh-packnote">${esc(P.note)}</p>
       ${P.groups.map(g => `
         <span class="hh-eyebrow">${esc(g.name)}</span>
