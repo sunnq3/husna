@@ -46,6 +46,12 @@
       { title: 'Welcome to Beach & Beyond 10',    date: 'Aug 20', added: '2026-08-20', url: 'http://eepurl.com/g_yoOcaoBU' }
     ],
 
+    // Extra FAQ entries appended to the pasted FAQ list by JS. Edit here; no WordPress change needed.
+    faqExtra: [
+      { q: 'Is there a doctor at the resort?',
+        a: 'Yes, there is a medical clinic on site. A doctor\u2019s consultation is $180, excluding medication, and the rate goes up outside normal hours (9 AM \u2013 6 PM). Depending on your travel insurance, the consultation may be covered, so keep your policy details handy.' }
+    ],
+
     // Contact panel (Contact button): who to contact for what. Built by JS; no WordPress change needed.
     contacts: {
       intro: 'Sr. Iman and the Husna team are here before and during the trip. For everything else, here is who to ask.',
@@ -65,6 +71,10 @@
           for: ['Babysitting', 'Life jackets', 'Strollers', 'Food & drink allergies', 'When the front desk isn\u2019t getting back to you'],
           note: 'For anything in your room (keys, A/C, towels), ask the front desk first.',
           rows: [ { kind: 'email', label: 'Email', sub: 'jesantos@nick-resorts.com', to: 'jesantos@nick-resorts.com', subject: 'Husna Guest' } ] },
+        { name: 'Medical clinic', role: 'On site at the resort',
+          for: ['Doctor\u2019s consultation $180, excluding medication', 'Open 9 AM \u2013 6 PM; higher rate outside these hours', 'May be covered by your travel insurance'],
+          note: 'Ask the front desk or your building\u2019s Gazebo concierge to reach the clinic.',
+          rows: [] },
         { name: 'Spa', role: 'Nickelodeon Resort',
           for: ['All bookings & enquiries'],
           rows: [ { kind: 'email', label: 'Email', sub: 'madrian@nick-resorts.com', to: 'madrian@nick-resorts.com', subject: 'Husna Guest – spa booking' } ] },
@@ -260,6 +270,15 @@
     a.innerHTML = tile.innerHTML; tile.replaceWith(a);
   })();
 
+  /* FAQ extras: appended to the pasted list from CONFIG.faqExtra · © 2026 Saaima Saleh */
+  (function faqExtra(){
+    const list = root.querySelector('#hh-faq .hh-faq'); const F = CONFIG.faqExtra;
+    if (!list || !F || !F.length) return;
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const chev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+    list.insertAdjacentHTML('beforeend', F.map(f => `<details name="hh-faq"><summary>${esc(f.q)}${chev}</summary><p>${esc(f.a)}</p></details>`).join(''));
+  })();
+
   /* contact: who to contact for what, built from CONFIG.contacts (replaces the pasted sheet) · © 2026 Saaima Saleh */
   (function contacts(){
     const C = CONFIG.contacts, old = document.getElementById('hh-contact');
@@ -283,7 +302,7 @@
         <div class="hh-cg__head"><span class="hh-eyebrow">${esc(g.role)}</span><h3>${esc(g.name)}</h3></div>
         ${g.for ? `<ul class="hh-cg__for">${g.for.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}
         ${g.note ? `<p class="hh-cg__note">${esc(g.note)}</p>` : ''}
-        <div class="hh-rows">${g.rows.map(row).join('')}</div>
+        ${g.rows && g.rows.length ? `<div class="hh-rows">${g.rows.map(row).join('')}</div>` : ''}
       </section>`;
     old.outerHTML = `
     <dialog class="hh-full hh-dlg hh-contactp" id="hh-contact" aria-labelledby="hh-contact-t">

@@ -63,6 +63,10 @@
             "Some spa times are reserved for women only, men only (male therapist available) or mother & daughter. Check each day's itinerary."] },
 
     { "topic": "Booking", "q": "Who can help with non-inclusive bookings and special requests?",
-      "a": ["The Gazebo concierge, in front of each building, 8 AM – 5 PM."] }
+      "a": ["The Gazebo concierge, in front of each building, 8 AM – 5 PM."] },
+
+    { "topic": "Resort", "q": "Is there a doctor at the resort?",
+      "a": ["Yes, there is a medical clinic on site. A doctor’s consultation is $180, excluding medication. The rate goes up outside normal hours (9 AM – 6 PM).",
+            "Depending on your travel insurance, the consultation may be covered, so keep your policy details handy. Ask the front desk or your building’s Gazebo concierge to reach the clinic."] }
   ]
 }

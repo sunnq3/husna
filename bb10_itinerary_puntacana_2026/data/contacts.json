@@ -25,6 +25,10 @@
       "note": "For anything in your room (keys, A/C, towels), ask the front desk first.",
       "email": "jesantos@nick-resorts.com", "subject": "Husna Guest" },
 
+    { "name": "Medical clinic", "role": "On site at the resort",
+      "for": ["Doctor’s consultation $180, excluding medication", "9 AM – 6 PM · higher rate outside these hours", "May be covered by travel insurance"],
+      "note": "Ask the front desk or your building’s Gazebo concierge to reach the clinic." },
+
     { "name": "Spa", "role": "Nickelodeon Resort",
       "for": ["All bookings and enquiries"],
       "email": "madrian@nick-resorts.com", "subject": "Husna Guest – spa booking" },
