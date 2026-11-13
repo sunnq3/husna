@@ -46,10 +46,19 @@
       { title: 'Welcome to Beach & Beyond 10',    date: 'Aug 20', added: '2026-08-20', url: 'http://eepurl.com/g_yoOcaoBU' }
     ],
 
-    // Extra FAQ entries appended to the pasted FAQ list by JS. Edit here; no WordPress change needed.
-    faqExtra: [
-      { q: 'Is there a doctor at the resort?',
-        a: 'Yes, there is a medical clinic on site. A doctor\u2019s consultation is $180, excluding medication, and the rate goes up outside normal hours (9 AM \u2013 6 PM). Depending on your travel insurance, the consultation may be covered, so keep your policy details handy.' }
+    // FAQ (FAQ button). Rendered by JS and replaces whatever is pasted in WordPress. Edit here; no WordPress change needed.
+    faq: [
+      { q: 'Will the entire resort be exclusive to Husna guests?', a: 'Yes. Only Husna guests and resort staff will be present for December 19\u201324, 2026.' },
+      { q: 'Do we have to pay for food?', a: 'No. All-you-can-eat halal is included at every restaurant, pop-up, caf\u00e9, buffet and snack bar. Specialty items like lobster, tomahawk, private beach dinners and custom cakes are extra.' },
+      { q: 'Is it always halal or only for these dates?', a: 'Only for our dates, December 19\u201324, 2026. After that the resort returns to normal operations.' },
+      { q: 'Are flights included?', a: 'No. Flights and airport transfers are not included.' },
+      { q: 'Are the rates per night or for the whole stay?', a: 'They cover the entire 5 nights. They are not per-night rates.' },
+      { q: 'What airport should I fly into?', a: 'Punta Cana International Airport (PUJ). Recommended arrival on December 19 is between 3:00 PM and 5:00 PM.' },
+      { q: 'Is babysitting available?', a: 'Yes. $25 per hour for one child and $10 per hour for each additional child.' },
+      { q: 'Is there a doctor at the resort?', a: 'Yes, there is a medical clinic on site. A doctor\u2019s consultation is $180, excluding medication, and the rate goes up outside normal hours (9 AM \u2013 6 PM). Depending on your travel insurance, the consultation may be covered, so keep your policy details handy.' },
+      { q: 'Is it suitable for senior guests?', a: 'Absolutely, as long as they are mobile. Husna welcomes seniors every year.' },
+      { q: 'Is there a private pool for sisters?', a: 'There are two main pools; the second is dedicated to sisters. Neither is fully enclosed, so not private enough to remove hijab.' },
+      { q: 'Can we tip in USD?', a: 'Yes. USD tips are preferred and guests are encouraged to tip generously.' }
     ],
 
     // Contact panel (Contact button): who to contact for what. Built by JS; no WordPress change needed.
@@ -270,13 +279,13 @@
     a.innerHTML = tile.innerHTML; tile.replaceWith(a);
   })();
 
-  /* FAQ extras: appended to the pasted list from CONFIG.faqExtra · © 2026 Saaima Saleh */
-  (function faqExtra(){
-    const list = root.querySelector('#hh-faq .hh-faq'); const F = CONFIG.faqExtra;
+  /* FAQ: rendered from CONFIG.faq, replacing the pasted list · © 2026 Saaima Saleh */
+  (function faq(){
+    const list = root.querySelector('#hh-faq .hh-faq'); const F = CONFIG.faq;
     if (!list || !F || !F.length) return;
     const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const chev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
-    list.insertAdjacentHTML('beforeend', F.map(f => `<details name="hh-faq"><summary>${esc(f.q)}${chev}</summary><p>${esc(f.a)}</p></details>`).join(''));
+    list.innerHTML = F.map((f, i) => `<details name="hh-faq"${i ? '' : ' open'}><summary>${esc(f.q)}${chev}</summary><p>${esc(f.a)}</p></details>`).join('');
   })();
 
   /* contact: who to contact for what, built from CONFIG.contacts (replaces the pasted sheet) · © 2026 Saaima Saleh */
