@@ -7,6 +7,7 @@
       {"heading": "Breakfast"},
       {"start": "7:00 AM", "end": "11:00 AM", "title": "Breakfast Buffet", "cat": "food", "location": "Explorer's Table"},
       {"start": "8:00 AM", "end": "5:00 PM", "title": "Gazebo Concierge", "cat": "hours", "location": "Front of each building", "note": "Help with booking non-inclusive activities and special requests"},
+      {"start": "8:00 AM", "end": "7:00 PM", "title": "Spa Time", "cat": "husna", "location": "Vassa Spa (Gourmet Village)", "note": "Open to everyone · reservations required", "link": "spa"},
       {"start": "10:00 AM", "end": "5:30 PM", "title": "Aqua Nick", "cat": "hours"},
       {"start": "10:00 AM", "end": "5:00 PM", "title": "Nickelodeon Place", "cat": "hours", "ages": "Ages 4–12", "note": "Ready to Play kids’ club"},
       {"start": "10:00 AM", "title": "Spanish Lessons", "cat": "nick", "location": "Mango's Bar"},

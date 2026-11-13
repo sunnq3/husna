@@ -29,9 +29,11 @@
       "for": ["Doctor’s consultation $180, excluding medication", "9 AM – 6 PM · higher rate outside these hours", "May be covered by travel insurance"],
       "note": "Ask the front desk or your building’s Gazebo concierge to reach the clinic." },
 
-    { "name": "Spa", "role": "Nickelodeon Resort",
-      "for": ["All bookings and enquiries"],
-      "email": "madrian@nick-resorts.com", "subject": "Husna Guest – spa booking" },
+    { "name": "Vassa Spa", "role": "Milena Adrian Ponce · all bookings and enquiries",
+      "for": ["Husna packages", "20% off when you book & pay by Dec 18", "Ladies-only and men-only days"],
+      "note": "Put “Husna Group” and your HUSNA ID in the subject line.",
+      "email": "madrian@nick-resorts.com", "subject": "Husna Group Spa Booking | HUSNA ID: ",
+      "url": "https://vassa.bitrix24.site/ndr/eng/", "urlText": "Spa menu & price list" },
 
     { "name": "Husna programming", "role": "Activities and competitions",
       "for": ["How to sign up", "Prayers", "Competitions"],

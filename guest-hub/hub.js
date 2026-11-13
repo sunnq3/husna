@@ -61,6 +61,41 @@
       { q: 'Can we tip in USD?', a: 'Yes. USD tips are preferred and guests are encouraged to tip generously.' }
     ],
 
+    // Vassa Spa panel (Vassa Spa tile), from the Nov 1 spa email. Built by JS; no WordPress change needed.
+    spa: {
+      email:    'madrian@nick-resorts.com',
+      subject:  'Husna Group Spa Booking | HUSNA ID: ',
+      menu:     'https://vassa.bitrix24.site/ndr/eng/',
+      deadline: 'December 18, 2026',
+      intro:    'Between the beach days and the family fun, there is time set aside just for you. The Vassa Spa at the resort has two Husna-only packages and dedicated ladies-only and men-only days.',
+      offer:    { title: '20% off all spa menu services', sub: 'Book and pay by December 18, 2026. Every pre-booked treatment is also entered to win up to $150 off.' },
+      packages: [
+        { title: 'The Husna Spa Package', price: 'USD 470', meta: '4 treatments \u00b7 one guest',
+          items: ['50-min Deep Tissue Massage', '50-min Vitamin C Facial', '50-min Citrus Scrub', 'Classic Pedicure'] },
+        { title: 'The Mother & Daughter Escape', price: 'USD 450', meta: 'For two \u00b7 perfect for Mommy & Me Day',
+          items: ['2 \u00d7 50-min Relaxing Massages', '2 \u00d7 25-min Refreshing Facials', '2 Classic Manicures'] }
+      ],
+      week: [
+        ['2026-12-19', 'Open to everyone', '8 AM \u2013 7 PM'],
+        ['2026-12-20', 'Ladies only (18+)', '8 AM \u2013 7 PM'],
+        ['2026-12-21', 'Mommy & Me', '8 AM \u2013 7 PM \u00b7 ladies of all ages, under 18s with an adult'],
+        ['2026-12-22', 'Men only, then ladies only (18+)', 'Men 8 AM \u2013 12 PM \u00b7 Ladies 1 \u2013 7 PM'],
+        ['2026-12-23', 'Men only, then everyone', 'Men 8 AM \u2013 12 PM \u00b7 Everyone 12 \u2013 7 PM'],
+        ['2026-12-24', 'Open to everyone', '8 AM \u2013 7 PM']
+      ],
+      steps: [
+        'Choose a Husna package or browse the spa menu and price list.',
+        'Email Milena Adrian Ponce at madrian@nick-resorts.com with \u201cHusna Group\u201d and your HUSNA ID number in the subject line.',
+        'Share your treatments, preferred day and time, number of guests, and whether you would like a female or male therapist.'
+      ],
+      notes: [
+        'The 20% discount only applies to spa menu services booked and paid by December 18, 2026.',
+        'Arrive early to enjoy the hydrotherapy circuit included with your treatment, and bring modest swimwear.',
+        'Changes need at least 24 hours\u2019 notice; late cancellations and no-shows may be charged.',
+        'Let the spa know about any pregnancy, allergies or health conditions when you book.'
+      ]
+    },
+
     // Contact panel (Contact button): who to contact for what. Built by JS; no WordPress change needed.
     contacts: {
       intro: 'Sr. Iman and the Husna team are here before and during the trip. For everything else, here is who to ask.',
@@ -84,9 +119,10 @@
           for: ['Doctor\u2019s consultation $180, excluding medication', 'Open 9 AM \u2013 6 PM; higher rate outside these hours', 'May be covered by your travel insurance'],
           note: 'Ask the front desk or your building\u2019s Gazebo concierge to reach the clinic.',
           rows: [] },
-        { name: 'Spa', role: 'Nickelodeon Resort',
-          for: ['All bookings & enquiries'],
-          rows: [ { kind: 'email', label: 'Email', sub: 'madrian@nick-resorts.com', to: 'madrian@nick-resorts.com', subject: 'Husna Guest – spa booking' } ] },
+        { name: 'Vassa Spa', role: 'Milena Adrian Ponce',
+          for: ['All bookings & enquiries', 'Husna packages', '20% off when you book & pay by Dec 18'],
+          note: 'Put \u201cHusna Group\u201d and your HUSNA ID in the subject line.',
+          rows: [ { kind: 'email', label: 'Email', sub: 'madrian@nick-resorts.com', to: 'madrian@nick-resorts.com', subject: 'Husna Group Spa Booking | HUSNA ID: ' } ] },
         { name: 'Husna programming', role: 'Activities & competitions',
           for: ['How to sign up', 'Prayers', 'Competitions'],
           rows: [ { kind: 'email', label: 'Email', sub: 'guests@husna.com', to: 'guests@husna.com', subject: 'Husna Guest – programming' } ] }
@@ -286,6 +322,63 @@
     const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const chev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
     list.innerHTML = F.map((f, i) => `<details name="hh-faq"${i ? '' : ' open'}><summary>${esc(f.q)}${chev}</summary><p>${esc(f.a)}</p></details>`).join('');
+  })();
+
+  /* Vassa Spa: panel built from CONFIG.spa · © 2026 Saaima Saleh */
+  (function spa(){
+    const P = CONFIG.spa; const img0 = root.querySelector('.hh-tile img[data-src="spa"]');
+    const tile = img0 && img0.closest('.hh-tile'); if (!P || !tile) return;
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const back = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+    const out = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+    const mail = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>';
+    const tick = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+    const DAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    const day = iso => { const d = new Date(iso + 'T12:00:00'); return { dow: DAYS[d.getDay()], n: d.getDate() }; };
+    const mailto = `mailto:${P.email}?subject=${encodeURIComponent(P.subject)}`;
+    const ext = 'target="_blank" rel="noopener" data-elementor-open-lightbox="no"';
+    const linkify = t => esc(t).replace(/([\w.+-]+@[\w-]+\.[\w.-]+\w)/g, `<a href="${mailto}">$1</a>`);
+    root.insertAdjacentHTML('beforeend', `
+    <dialog class="hh-full hh-dlg hh-spa" id="hh-spa" aria-labelledby="hh-spa-t">
+      <div class="hh-full__head">
+        <button class="hh-back" type="button" data-close aria-label="Back">${back}</button>
+        <div><span class="hh-eyebrow">Nickelodeon Resort</span><h2 id="hh-spa-t">Vassa Spa</h2></div>
+      </div>
+      <div class="hh-dlg__body">
+        <div class="hh-spa__photo"><img src="${CONFIG.img.spa}" alt=""></div>
+        <p class="hh-lead">${esc(P.intro)}</p>
+        <div class="hh-offer"><span class="hh-eyebrow">Husna guest offer</span><b>${esc(P.offer.title)}</b><span>${esc(P.offer.sub)}</span></div>
+
+        <span class="hh-eyebrow">Exclusive Husna packages</span>
+        <div class="hh-pkgs">${P.packages.map(k => `
+          <div class="hh-pkg">
+            <div class="hh-pkg__head"><div><b>${esc(k.title)}</b><span>${esc(k.meta)}</span></div><em>${esc(k.price)}</em></div>
+            <ul>${k.items.map(i => `<li>${tick}${esc(i)}</li>`).join('')}</ul>
+            <a class="hh-btn hh-btn--outline" href="${mailto}">Book this package ${mail}</a>
+          </div>`).join('')}
+        </div>
+        <p class="hh-exhelp">Prefer to choose your own? <a href="${P.menu}" ${ext}>See the full spa menu &amp; price list ↗</a></p>
+
+        <span class="hh-eyebrow">Your spa week at a glance</span>
+        <div class="hh-exbox">${P.week.map(([iso, who, when]) => { const d = day(iso); return `
+          <div class="hh-when"><span class="hh-cal"><span>${d.dow}</span><b>${d.n}</b></span><span class="hh-when__t"><b>${esc(who)}</b><span>${esc(when)}</span></span></div>`; }).join('')}
+        </div>
+
+        <span class="hh-eyebrow">How to book</span>
+        <ol class="hh-steps">${P.steps.map(t => `<li><span>${linkify(t)}</span></li>`).join('')}</ol>
+
+        <span class="hh-eyebrow">Good to know</span>
+        <ul class="hh-notes">${P.notes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+        <p class="hh-exhelp">All spa enquiries and bookings go to Milena Adrian Ponce · <a href="${mailto}">${esc(P.email)}</a></p>
+      </div>
+      <div class="hh-full__cta">
+        <a class="hh-btn hh-btn--primary" href="${mailto}">Email the spa to book ${mail}</a>
+      </div>
+    </dialog>`);
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = tile.className; b.dataset.open = 'hh-spa';
+    b.innerHTML = tile.innerHTML; tile.replaceWith(b);
+    b.querySelector('.hh-tile__txt span').textContent = '20% off';
   })();
 
   /* contact: who to contact for what, built from CONFIG.contacts (replaces the pasted sheet) · © 2026 Saaima Saleh */
