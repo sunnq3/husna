@@ -250,6 +250,16 @@
     } else if (tile) { tile.removeAttribute('aria-disabled'); tile.dataset.open = 'hh-excursions'; }
   })();
 
+  /* competitions tile → the itinerary's Sign-ups page (the WordPress markup has it disabled) · © 2026 Saaima Saleh */
+  (function competitions(){
+    const img = root.querySelector('.hh-tile img[data-src="competitions"]');
+    const tile = img && img.closest('.hh-tile');
+    if (!tile || !CONFIG.itinerary) return;
+    const a = document.createElement('a');
+    a.href = CONFIG.itinerary.replace(/\/?$/, '') + '#signups'; a.className = tile.className;
+    a.innerHTML = tile.innerHTML; tile.replaceWith(a);
+  })();
+
   /* contact: who to contact for what, built from CONFIG.contacts (replaces the pasted sheet) · © 2026 Saaima Saleh */
   (function contacts(){
     const C = CONFIG.contacts, old = document.getElementById('hh-contact');
