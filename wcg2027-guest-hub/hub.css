@@ -28,6 +28,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   --ice-pale:#DFE9F7;   /* card borders */
   --ice-mist:#EDF3FA;   /* fills */
   --night:#101F6B;      /* brochure ultramarine, night */
+  --night-deep:#0B1750; /* ultramarine pressed/hover */
   --ink:#212A3A; --ink-60:rgba(33,42,58,.6); --ink-50:rgba(33,42,58,.5);
   --bg:#F5F8FC; --white:#fff;
   --shadow:0 2px 8px rgba(32,64,143,.08);
@@ -75,11 +76,11 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   }
   #husna-hub .hh-btn{-webkit-tap-highlight-color:transparent;transition:background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .1s ease}
   #husna-hub .hh-btn:active{transform:scale(.98)}
-  #husna-hub .hh-btn--primary{background:var(--ind);color:var(--white);box-shadow:0 4px 12px rgba(32,64,143,.32)}
+  #husna-hub .hh-btn--primary{background:var(--night);color:var(--white);box-shadow:0 4px 12px rgba(16,31,107,.35)}
   #husna-hub .hh-btn--outline{background:var(--ice-pale);color:var(--ind-deep);border:0}   /* soft light-blue secondary, no outline */
   /* hover colours only on devices that actually hover; on touch the colour used to stick after a tap */
   @media (hover:hover){
-    #husna-hub .hh-btn--primary:hover{background:var(--ind-deep);color:var(--white)}
+    #husna-hub .hh-btn--primary:hover{background:var(--night-deep);color:var(--white)}
     #husna-hub .hh-btn--outline:hover{background:var(--ice);color:var(--ind-deep)}
   }
   #husna-hub .hh-btn:focus{outline:0}
@@ -137,8 +138,8 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   }
   #husna-hub .hh-actions .hh-btn{height:40px;padding:0 14px;font-size:13px;justify-content:space-between}
   /* both top buttons solid and raised; the white outline one looked pressed in */
-  #husna-hub .hh-actions .hh-btn--outline{background:var(--ind);color:var(--white);border:0;box-shadow:0 4px 12px rgba(32,64,143,.32)}
-  @media (hover:hover){#husna-hub .hh-actions .hh-btn--outline:hover{background:var(--ind-deep);color:var(--white)}}
+  #husna-hub .hh-actions .hh-btn--outline{background:var(--night);color:var(--white);border:0;box-shadow:0 4px 12px rgba(16,31,107,.35)}
+  @media (hover:hover){#husna-hub .hh-actions .hh-btn--outline:hover{background:var(--night-deep);color:var(--white)}}
   #husna-hub .hh-actions svg{width:15px;height:15px;flex:none}
   /* itinerary before it exists: hub.js adds this when CONFIG.itinerary is empty · © 2026 Saaima Saleh */
   #husna-hub .hh-actions .hh-btn[aria-disabled]{background:var(--ice-mist);color:var(--ink-50);box-shadow:none;cursor:default;pointer-events:none}
@@ -182,7 +183,7 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     display:flex;align-items:center;gap:12px;
     height:var(--foot-h);
     padding:0 16px;
-    background:var(--ind);box-shadow:0 -6px 18px rgba(22,48,110,.2);color:var(--white);
+    background:var(--night);box-shadow:0 -6px 18px rgba(12,24,80,.25);color:var(--white);
   }
   #husna-hub .hh-foot__in{display:flex;align-items:center;gap:12px;width:100%;max-width:var(--max);margin-inline:auto}
   #husna-hub .hh-foot img{width:34px !important;height:auto;flex:none}
@@ -190,8 +191,8 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-foot .hh-btn{height:36px;padding:0 16px;font-size:13px}
   #husna-hub .hh-btn--ghost{background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.7);color:var(--white)}
   #husna-hub .hh-btn--ghost:hover,#husna-hub .hh-btn--ghost:focus-visible{background:rgba(255,255,255,.3);border-color:var(--white);color:var(--white)}
-  #husna-hub .hh-btn--white{background:var(--white);color:var(--ind-deep)}
-  #husna-hub .hh-btn--white:hover,#husna-hub .hh-btn--white:focus-visible{background:var(--ice-pale);color:var(--ind-deep)}
+  #husna-hub .hh-btn--white{background:var(--white);color:var(--night)}
+  #husna-hub .hh-btn--white:hover,#husna-hub .hh-btn--white:focus-visible{background:var(--ice-pale);color:var(--night)}
 
   /* shared */
   #husna-hub dialog{
