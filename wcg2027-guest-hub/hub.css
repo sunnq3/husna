@@ -87,57 +87,38 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-tile:focus-visible,#husna-hub .hh-feature:focus-visible{outline:3px solid var(--ind-soft);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){#husna-hub *{transition:none !important;animation:none !important}}
 
-  /* ---------- hero: icy sky, echoed arch, sketch landscape — the carousel cover as a webpage · © 2026 Saaima Saleh ---------- */
+  /* ---------- hero: indigo nocturne — deep colour block, the deer ghosted in, white type · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-hero{
-    position:relative;overflow:hidden;
+    position:relative;overflow:hidden;color:var(--white);
     background:
-      radial-gradient(130% 90% at 50% -10%, #CDDFF5 0%, rgba(205,223,245,0) 60%),
-      linear-gradient(180deg,#DDE9F7 0%,#E7F0FA 48%,#EFF5FC 100%);
-    padding:calc(14px + env(safe-area-inset-top,0px)) 16px 58px;
+      radial-gradient(120% 90% at 80% -10%, rgba(143,168,214,.35) 0%, rgba(143,168,214,0) 55%),
+      linear-gradient(168deg,#3F63AC 0%,#33539E 46%,#243E7C 100%);
+    padding:calc(18px + env(safe-area-inset-top,0px)) 16px 54px;
   }
-  /* sketch landscape pinned to the hero floor · © 2026 Saaima Saleh */
-  #husna-hub .hh-sketch{position:absolute;left:0;right:0;bottom:-2px;height:88px;color:rgba(66,102,174,.30);pointer-events:none}
-  #husna-hub .hh-sketch svg{width:100%;height:100%;display:block}
+  /* the deer photo, ghosted into the indigo · © 2026 Saaima Saleh */
+  #husna-hub .hh-hero__ph{
+    position:absolute;inset:0;width:100% !important;height:100% !important;object-fit:cover;object-position:50% 36%;
+    opacity:.2;mix-blend-mode:luminosity;pointer-events:none;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 62%,transparent 96%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 62%,transparent 96%);
+  }
   #husna-hub .hh-hero__in{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
   #husna-hub .hh-hero__logo{height:30px !important;width:auto !important;margin:0 auto}
-  /* countdown + actions row: plain flow on mobile, one bar on desktop · © 2026 Saaima Saleh */
+  /* countdown + actions: same at every width — the card is the anchor · © 2026 Saaima Saleh */
   #husna-hub .hh-bar{display:contents}
-  /* faint snowflakes · © 2026 Saaima Saleh */
-  #husna-hub .hh-flake{position:absolute;color:var(--ice);opacity:.55;pointer-events:none}
-  #husna-hub .hh-flake svg{width:100%;height:100%}
-  #husna-hub .hh-flake--a{width:68px;height:68px;top:30px;left:-14px;transform:rotate(12deg)}
-  #husna-hub .hh-flake--b{width:46px;height:46px;top:98px;right:-8px;transform:rotate(-18deg)}
-  #husna-hub .hh-flake--c{display:none}
   /* falling snow (canvas added by hub.js, drawn by a frame loop so iPhones keep it moving) · © 2026 Saaima Saleh */
   #husna-hub .hh-snow{position:absolute;inset:0;width:100% !important;height:100% !important;pointer-events:none}
-  /* hero arch with echo rings, like the carousel cover · © 2026 Saaima Saleh */
-  #husna-hub .hh-arches{display:flex;align-items:flex-end;justify-content:center;margin-top:22px;position:relative;z-index:1}
-  #husna-hub .hh-arches::before,#husna-hub .hh-arches::after{
-    content:"";position:absolute;pointer-events:none;
-    border:1.5px solid rgba(66,102,174,.32);border-radius:999px 999px 20px 20px;
-  }
-  #husna-hub .hh-arches::before{inset:-11px}
-  #husna-hub .hh-arches::after{inset:-23px;border-width:1px;border-color:rgba(66,102,174,.16)}
-  #husna-hub .hh-arch{
-    flex:none;overflow:hidden;background:var(--ice);
-    border:5px solid var(--white);
-    border-radius:999px 999px 14px 14px;
-    box-shadow:0 12px 30px rgba(66,102,174,.26);
-  }
-  #husna-hub .hh-arch img{width:100% !important;height:100% !important;object-fit:cover}
-  #husna-hub .hh-arch--main{width:200px;height:262px;z-index:2}
-  /* title block: three quiet lines — caps title, small getaway, ruled edition · © 2026 Saaima Saleh */
-  #husna-hub .hh-hero__title{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:26px;color:var(--ind);position:relative;z-index:1}
+  /* title block: caps title, small getaway, then air + a hairline before the edition line · © 2026 Saaima Saleh */
+  #husna-hub .hh-hero__title{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:46px;margin-bottom:6px;color:var(--white);position:relative;z-index:1}
   #husna-hub .hh-hero__eyebrow{font-family:var(--font-head);font-size:27px;font-weight:700;letter-spacing:3px;text-transform:uppercase;line-height:1}
   #husna-hub .hh-hero__script{
     font-family:var(--font-head);font-size:13px;line-height:1;margin-top:8px;font-weight:300;
-    text-transform:lowercase;letter-spacing:6px;color:var(--ind-deep);
+    text-transform:lowercase;letter-spacing:6px;color:var(--ice);
   }
+  #husna-hub .hh-hero__hair{width:1px;height:24px;background:rgba(255,255,255,.4);margin:20px auto 16px}
   #husna-hub .hh-hero__ed{
-    display:flex;align-items:center;gap:10px;margin-top:14px;
-    font-family:var(--font-head);font-size:9.5px;font-weight:600;letter-spacing:3.2px;text-transform:uppercase;color:var(--ind);
+    font-family:var(--font-head);font-size:9px;font-weight:500;letter-spacing:2.8px;text-transform:uppercase;color:rgba(255,255,255,.75);
   }
-  #husna-hub .hh-hero__ed::before,#husna-hub .hh-hero__ed::after{content:"";width:22px;height:1px;background:var(--ind-soft)}
 
   /* ---------- countdown card · © 2026 Saaima Saleh ---------- */
   #husna-hub .hh-count{
@@ -349,42 +330,17 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
 
   @media (min-width:900px){
     #husna-hub .hh-wrap{padding-inline:40px}
-    /* hero: title left, arch right · © 2026 Saaima Saleh */
-    #husna-hub .hh-hero{padding:26px 0 72px}
-    #husna-hub .hh-sketch{height:118px}
-    #husna-hub .hh-hero__in{
-      display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo arches" "title arches";
-      column-gap:40px;align-items:center;
-      width:100%;max-width:var(--max);margin-inline:auto;padding-inline:40px;
-    }
-    #husna-hub .hh-hero__logo{grid-area:logo;height:40px !important;margin:0;align-self:start;justify-self:start}
-    #husna-hub .hh-arches{grid-area:arches}
-    #husna-hub .hh-hero__title{grid-area:title;align-items:flex-start;text-align:left;margin-top:0;align-self:start;padding-top:26px}
-    #husna-hub .hh-hero__eyebrow{font-size:44px;letter-spacing:4.5px}
+    /* hero: logo left, title centred; the timer stays exactly as it is on mobile · © 2026 Saaima Saleh */
+    #husna-hub .hh-hero{padding:26px 48px 70px}
+    #husna-hub .hh-count{max-width:492px}
+    #husna-hub .hh-actions{max-width:492px}
+    #husna-hub .hh-hero__in{width:100%;max-width:var(--max);margin-inline:auto}
+    #husna-hub .hh-hero__logo{height:38px !important;margin:0;align-self:flex-start}
+    #husna-hub .hh-hero__title{margin-top:30px;margin-bottom:10px}
+    #husna-hub .hh-hero__eyebrow{font-size:46px;letter-spacing:5px}
     #husna-hub .hh-hero__script{font-size:17px;margin-top:11px;letter-spacing:9px}
-    #husna-hub .hh-hero__ed{font-size:10.5px;margin-top:24px}
-    #husna-hub .hh-hero__ed::before,#husna-hub .hh-hero__ed::after{width:30px}
-    #husna-hub .hh-arches{margin-top:0}
-    #husna-hub .hh-arch--main{width:258px;height:340px;border-width:6px}
-    #husna-hub .hh-arches::before{inset:-13px}
-    #husna-hub .hh-arches::after{inset:-27px}
-    #husna-hub .hh-flake--a{width:90px;height:90px;top:40px;left:4%}
-    #husna-hub .hh-flake--b{width:56px;height:56px;top:auto;bottom:60px;right:3%}
-    #husna-hub .hh-flake--c{display:block;position:absolute;width:44px;height:44px;top:60px;right:38%}
-    /* countdown + actions share one raised bar under the hero */
-    #husna-hub .hh-bar{
-      display:flex;align-items:center;justify-content:space-between;gap:20px;
-      width:100%;max-width:var(--max);margin-inline:auto;padding-inline:40px;
-    }
-    #husna-hub .hh-count{
-      margin:-36px 0 0;height:72px;border-radius:16px;width:auto;max-width:none;flex:none;
-      box-shadow:0 8px 24px rgba(51,83,158,.22);
-    }
-    #husna-hub .hh-count__num{font-size:38px}
-    #husna-hub .hh-count__date b{font-size:17px}
-    #husna-hub .hh-count__date span{font-size:12px}
-    #husna-hub .hh-actions{margin:-22px 0 0;width:auto;max-width:none;display:flex;gap:10px}
-    #husna-hub .hh-actions .hh-btn{height:44px;padding:0 22px;font-size:13px}
+    #husna-hub .hh-hero__hair{height:28px;margin:24px auto 18px}
+    #husna-hub .hh-hero__ed{font-size:10px}
     #husna-hub .hh-feature{height:80px;margin-top:28px;border-radius:18px}
     #husna-hub .hh-feature img{width:96px !important}
     #husna-hub .hh-feature__txt{padding:0 20px}
@@ -410,8 +366,4 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
     #husna-hub .hh-full__head{border-radius:20px 20px 0 0;height:56px;padding:0 10px}
     #husna-hub .hh-full__cta{border-radius:0 0 20px 20px;padding-bottom:16px}
     @starting-style{#husna-hub dialog[open]{transform:scale(.96)}}
-  }
-  /* wide phones / small tablets: keep mobile layout centered */
-  @media (min-width:600px) and (max-width:899px){
-    #husna-hub .hh-arch--main{width:216px;height:284px}
   }

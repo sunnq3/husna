@@ -15,8 +15,8 @@
     whatsapp:  'https://chat.whatsapp.com/LgHd5DUl8w25hNKFY9pBAG',
     itinerary: '',                    // leave empty until the itinerary page exists; the button disables itself
     img: {
-      wordmark:   IMG + 'wordmark-blue.png',
-      archMain:   IMG + 'arch-hero.jpg',        // Deerhurst portico & deer in the snow
+      wordmark:   IMG + 'wordmark-white.png',
+      hero:       IMG + 'arch-hero.jpg',        // Deerhurst portico & deer, ghosted into the indigo
       smiley:     'https://husna.com/wp-content/uploads/2026/09/smiley.png',
       emails:     IMG + 'feat-moon.jpg',        // moon over the snowy pines
       packing:    IMG + 'th-packing.jpg',       // backpack in the snow
