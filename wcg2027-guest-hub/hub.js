@@ -145,14 +145,18 @@
     let W = 0, H = 0, flakes = [], raf = 0, seen = true, last = 0;
 
     function size(){
+      const w = hero.clientWidth, h = hero.clientHeight;
+      if (!w || !h) return false;                       // mid-layout: keep the old canvas
+      if (w === W && h === H && cv.width > 1) return false;   // iOS fires resize constantly while scrolling; only act on real change
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      W = hero.clientWidth; H = hero.clientHeight;
+      W = w; H = h;
       cv.width = Math.max(1, W * dpr); cv.height = Math.max(1, H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return true;
     }
     const make = y => ({ x: rnd(0, W), y: y == null ? rnd(-20, H) : y,
-      r: rnd(1, 3), v: rnd(9, 22), a: rnd(.3, .7), p: rnd(0, Math.PI * 2), w: rnd(6, 18), d: rnd(.3, .7) });
-    const fill = () => { flakes = []; const n = Math.round(Math.min(34, Math.max(16, W / 28))); while (flakes.length < n) flakes.push(make()); };
+      r: rnd(1, 2.6), v: rnd(6, 14), a: rnd(.28, .6), p: rnd(0, Math.PI * 2), w: rnd(5, 14), d: rnd(.25, .55) });
+    const fill = () => { flakes = []; const n = Math.round(Math.min(28, Math.max(14, W / 34))); while (flakes.length < n) flakes.push(make()); };
 
     function paint(dt){
       ctx.clearRect(0, 0, W, H);
@@ -175,8 +179,17 @@
 
     size(); fill();
     if (STILL) paint(0); else go();
-    window.addEventListener('resize', () => { size(); fill(); if (STILL) paint(0); });
-    window.addEventListener('load', () => { size(); if (STILL) paint(0); });    // hero height settles once fonts arrive
+    // iOS fires resize on every scroll as the URL bar collapses: act only after it settles, and never respawn the flakes
+    let rsz = 0;
+    window.addEventListener('resize', () => {
+      clearTimeout(rsz);
+      rsz = setTimeout(() => {
+        if (!size()) return;
+        flakes.forEach(f => { if (f.x > W) f.x = rnd(0, W); if (f.y > H) f.y = rnd(-20, H); });
+        if (STILL) paint(0);
+      }, 180);
+    });
+    window.addEventListener('load', () => { if (size() && STILL) paint(0); });  // hero height settles once fonts arrive
     document.addEventListener('visibilitychange', () => { if (document.hidden){ seen = false; } else { seen = true; go(); } });
     if ('IntersectionObserver' in window){
       new IntersectionObserver(es => es.forEach(e => {
@@ -184,6 +197,8 @@
         if (seen) go();
       })).observe(hero);
     }
+    // watchdog: if any race left the loop dead while the hero is on screen, restart it
+    setInterval(() => { if (!STILL && seen && !raf && !document.hidden) go(); }, 1500);
   })();
 
   /* countdown · © 2026 Saaima Saleh */
