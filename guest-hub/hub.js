@@ -170,8 +170,7 @@
           ['Power adaptor', 'International guests only']
         ]}
       ],
-      note: 'Forgot something? The resort gift shop is well stocked, from diapers and wipes to cold medicine, sunscreen and hats (at gift-shop prices).',
-      more: { text: 'Read our piece on travelling light', url: 'https://mailchi.mp/husna.com/hajjlessons' }
+      note: 'Forgot something? The resort gift shop is well stocked, from diapers and wipes to cold medicine, sunscreen and hats (at gift-shop prices).'
     },
 
     // Resort extras panel (Nickelodeon Extras tile). Built by JS; no WordPress change needed.
