@@ -262,6 +262,36 @@ body:has(#husna-hub) .elementor-widget-html{margin-bottom:0 !important}
   #husna-hub .hh-faq p{padding:0 0 14px;font-size:15px;line-height:1.45;font-weight:300}
 
   /* maps viewer */
+  /* packing checklist · © 2026 Saaima Saleh */
+  #husna-hub .hh-pack .hh-dlg__body{gap:12px}
+  #husna-hub .hh-pack .hh-dlg__body > *{flex:none}
+  #husna-hub .hh-pack .hh-eyebrow{margin-top:8px}
+  #husna-hub .hh-progress{display:flex;align-items:center;gap:12px}
+  #husna-hub .hh-progress__bar{flex:1;height:8px;border-radius:999px;background:var(--blue-mist);overflow:hidden}
+  #husna-hub .hh-progress__bar span{display:block;height:100%;width:0;border-radius:999px;background:var(--blue);transition:width .25s ease}
+  #husna-hub .hh-progress b{font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--blue-deep);white-space:nowrap}
+  #husna-hub .hh-tips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  #husna-hub .hh-tip{display:flex;flex-direction:column;gap:3px;padding:12px;border-radius:12px;background:var(--blue-mist)}
+  #husna-hub .hh-tip b{font-family:var(--font-head);font-size:13px;font-weight:600;line-height:1.2;color:var(--blue-deep)}
+  #husna-hub .hh-tip span{font-size:12px;line-height:1.35;color:var(--ink-60)}
+  #husna-hub .hh-packhead{font-family:var(--font-head);font-size:18px;font-weight:600;line-height:1.15;letter-spacing:-.2px;margin-top:8px}
+  #husna-hub .hh-packsub{font-size:13.5px;line-height:1.4;font-weight:300;margin-top:-6px}
+  #husna-hub .hh-packgnote{font-size:12.5px;line-height:1.4;color:var(--ink-60);margin-top:-4px}
+  #husna-hub .hh-checks{display:flex;flex-direction:column;border:1px solid var(--blue-pale);border-radius:14px;overflow:hidden;background:var(--white)}
+  #husna-hub button.hh-check{display:flex;align-items:center;gap:12px;min-height:46px;padding:8px 14px 8px 12px;border-top:1px solid var(--blue-mist);text-align:left;width:100%;transition:background .12s ease}
+  #husna-hub button.hh-check:first-child{border-top:0}
+  @media (hover:hover){#husna-hub button.hh-check:hover{background:var(--blue-mist)}}
+  #husna-hub .hh-check__box{width:22px;height:22px;border-radius:7px;border:2px solid var(--blue);flex:none;display:flex;align-items:center;justify-content:center;color:var(--white);transition:background .12s ease,border-color .12s ease}
+  #husna-hub .hh-check__box svg{width:13px;height:13px;opacity:0}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__box{background:var(--blue);border-color:var(--blue)}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__box svg{opacity:1}
+  #husna-hub .hh-check__t{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  #husna-hub .hh-check__t b{font-size:14px;font-weight:400}
+  #husna-hub .hh-check__t span{font-size:11.5px;color:var(--ink-60);margin-top:2px}
+  #husna-hub .hh-check[aria-pressed="true"] .hh-check__t b{color:var(--ink-60);text-decoration:line-through;text-decoration-color:var(--blue-light)}
+  #husna-hub .hh-packnote{font-size:12.5px;line-height:1.4;color:var(--ink-60);background:var(--blue-mist);border-radius:12px;padding:10px 14px}
+  #husna-hub .hh-packreset{align-self:center;font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--blue-deep);padding:8px 12px;background:none;border:0}
+
   /* Vassa Spa panel · © 2026 Saaima Saleh */
   #husna-hub .hh-spa .hh-dlg__body{gap:12px}
   #husna-hub .hh-spa .hh-dlg__body > *{flex:none}

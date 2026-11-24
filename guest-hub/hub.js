@@ -98,6 +98,82 @@
       ]
     },
 
+    // Packing checklist (Checklist tile), from the "What Do I Pack?" email. Checked items persist on the guest's phone. Edit here; no WordPress change needed.
+    checklist: {
+      intro: 'Time to start packing for Punta Cana. Travelling light is always easier for you and your family as you move from airport to resort to excursion, so pack travel-sized products and roll, don’t fold.',
+      tips: [
+        ['Carry-on essentials', 'Medicines, swimwear and printed copies of your travel documents go in your carry-on, not your checked bag.'],
+        ['Roll, don’t fold', 'Rolling clothes saves space and keeps wrinkles down. Linen has a mind of its own, so give it a pass.'],
+        ['Use every inch', 'Flatten belts along the sides, tuck socks into pockets, and fill shoes with small accessories.'],
+        ['One suitcase per person', 'With travel-sized products and strategic rolling, five nights fits in one bag each.']
+      ],
+      groups: [
+        { name: 'Documents & money', items: [
+          ['Passports'],
+          ['Travel documents', 'Printed copies in your carry-on'],
+          ['Credit cards'],
+          ['Cash', 'In small denominations, for tips']
+        ]},
+        { name: 'Prayer', items: [
+          ['Prayer mats', 'Not provided at the resort; please don’t use resort towels'],
+          ['Qur’an & dua books', 'Digital copies are easier to carry']
+        ]},
+        { name: 'Toiletries', items: [
+          ['Toothpaste, toothbrush, floss, mouthwash'],
+          ['Biodegradable wipes', 'A small pack for excursions and the flight'],
+          ['Deodorant'],
+          ['Istinja bottle'],
+          ['Contact lens solution & case'],
+          ['Skincare'],
+          ['Sunscreen'],
+          ['Feminine hygiene products'],
+          ['Travel-sized towel'],
+          ['Baby powder or dry shampoo', 'Gets sand out of hair'],
+          ['Hair products'],
+          ['Insect repellent'],
+          ['Nail cutter'],
+          ['Makeup']
+        ]},
+        { name: 'Clothing', note: 'Plan for 5 nights.', items: [
+          ['Protective sun-wear'],
+          ['Long dresses'],
+          ['Cardigans, sweaters or blazers', 'For cooler evenings'],
+          ['Plenty of undergarments'],
+          ['Fitness clothing', 'For the gym and Move N Improve'],
+          ['Nice or formal clothing', 'For night shows and dinners']
+        ]},
+        { name: 'Swimwear', note: 'Modest swimwear only: no bikinis, speedos or immodest swimwear anywhere on the resort. Brothers wear at least a tank top.', items: [
+          ['Modest swimwear'],
+          ['Water shoes or socks'],
+          ['Life jackets', 'Especially for children. The resort has some, but with a full resort they may not be available in your size when you need them. Excursions and activities provide their own.']
+        ]},
+        { name: 'Accessories', items: [
+          ['Sandals, flip-flops or water shoes'],
+          ['Walking shoes'],
+          ['Sun hats'],
+          ['Sunglasses'],
+          ['Hair accessories']
+        ]},
+        { name: 'Health & safety', items: [
+          ['After-bite'],
+          ['Cold & flu, anti-nausea and allergy medicine'],
+          ['Prescription medication'],
+          ['Epi-pens'],
+          ['Supplements']
+        ]},
+        { name: 'Tech', note: 'The Dominican Republic uses 120 V with North American outlets. Guests from elsewhere will need an adaptor.', items: [
+          ['Phone, headphones, chargers'],
+          ['Portable battery'],
+          ['Camera, memory card, lens cleaner, charger'],
+          ['E-reader', 'For the bookworms'],
+          ['Laptop or tablet', 'Do you really want to be working on vacation?'],
+          ['Power adaptor', 'International guests only']
+        ]}
+      ],
+      note: 'Forgot something? The resort gift shop is well stocked, from diapers and wipes to cold medicine, sunscreen and hats (at gift-shop prices).',
+      more: { text: 'Read our piece on travelling light', url: 'https://mailchi.mp/husna.com/hajjlessons' }
+    },
+
     // Resort extras panel (Nickelodeon Extras tile). Built by JS; no WordPress change needed.
     extras: {
       email: 'jesantos@nick-resorts.com', subject: 'Husna Guest HS-1XXX/D26', emailUrl: 'http://eepurl.com/BPJ4-0xjDc',
@@ -383,6 +459,70 @@
     const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const chev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
     list.innerHTML = F.map((f, i) => `<details name="hh-faq"${i ? '' : ' open'}><summary>${esc(f.q)}${chev}</summary><p>${esc(f.a)}</p></details>`).join('');
+  })();
+
+  /* checklist: panel + tappable list built from CONFIG.checklist; checks persist per phone · © 2026 Saaima Saleh */
+  (function checklist(){
+    const P = CONFIG.checklist; const img0 = root.querySelector('.hh-tile img[data-src="checklist"]');
+    const tile = img0 && img0.closest('.hh-tile'); if (!P || !tile) return;
+    const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const back = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+    const tick = '<span class="hh-check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>';
+    const LS = 'hh_bb10_checklist';
+    let done = {};
+    try { done = JSON.parse(localStorage.getItem(LS) || '{}') || {}; } catch(e){}
+    const save = () => { try { localStorage.setItem(LS, JSON.stringify(done)); } catch(e){} };
+    const key = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const total = P.groups.reduce((n, g) => n + g.items.length, 0);
+    const count = () => Object.keys(done).length;
+
+    const old = document.getElementById('hh-checklist'); if (old) old.remove();
+    root.insertAdjacentHTML('beforeend', `
+    <dialog class="hh-full hh-dlg hh-pack" id="hh-checklist" aria-labelledby="hh-checklist-t">
+      <div class="hh-full__head">
+        <button class="hh-back" type="button" data-close aria-label="Back">${back}</button>
+        <div><span class="hh-eyebrow">Before you go</span><h2 id="hh-checklist-t">Packing checklist</h2></div>
+      </div>
+      <div class="hh-dlg__body" id="hh-pack-body">
+        <p class="hh-lead">${esc(P.intro)}</p>
+        <div class="hh-progress"><div class="hh-progress__bar"><span id="hh-pack-fill"></span></div><b id="hh-pack-count"></b></div>
+        <span class="hh-eyebrow">Packing tips</span>
+        <div class="hh-tips">${P.tips.map(([t, d]) => `<div class="hh-tip"><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}</div>
+        <p class="hh-packhead">Tap items to check them off</p>
+        <p class="hh-packsub">This list saves on your phone, so you can come back to it as you pack.</p>
+        ${P.groups.map(g => `
+          <span class="hh-eyebrow">${esc(g.name)}</span>
+          ${g.note ? `<p class="hh-packgnote">${esc(g.note)}</p>` : ''}
+          <div class="hh-checks">${g.items.map(([t, sub]) => `
+            <button class="hh-check" type="button" data-k="${key(t)}" aria-pressed="${done[key(t)] ? 'true' : 'false'}">
+              ${tick}<span class="hh-check__t"><b>${esc(t)}</b>${sub ? `<span>${esc(sub)}</span>` : ''}</span>
+            </button>`).join('')}
+          </div>`).join('')}
+        <p class="hh-packnote">${esc(P.note)}</p>
+        ${P.more ? `<p class="hh-exhelp"><a href="${P.more.url}" target="_blank" rel="noopener" data-elementor-open-lightbox="no">${esc(P.more.text)} ↗</a></p>` : ''}
+        <button class="hh-packreset" type="button" id="hh-pack-reset">Reset my list</button>
+      </div>
+    </dialog>`);
+    const body = document.getElementById('hh-pack-body'), fill = document.getElementById('hh-pack-fill'), num = document.getElementById('hh-pack-count');
+    const paint = () => { const n = count(); fill.style.width = Math.round(100 * n / total) + '%'; num.textContent = n ? `${n} of ${total} packed` : `${total} items`; };
+    paint();
+    body.addEventListener('click', e => {
+      const c = e.target.closest('.hh-check');
+      if (c) {
+        const k = c.dataset.k, on = c.getAttribute('aria-pressed') !== 'true';
+        c.setAttribute('aria-pressed', String(on));
+        if (on) done[k] = 1; else delete done[k];
+        save(); paint(); return;
+      }
+      if (e.target.closest('#hh-pack-reset')) {
+        done = {}; save(); paint();
+        body.querySelectorAll('.hh-check').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      }
+    });
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = tile.className; b.dataset.open = 'hh-checklist';
+    b.innerHTML = tile.innerHTML; tile.replaceWith(b);
+    b.querySelector('.hh-tile__txt span').textContent = 'What to pack';
   })();
 
   /* Vassa Spa: panel built from CONFIG.spa · © 2026 Saaima Saleh */
