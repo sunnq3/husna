@@ -161,8 +161,10 @@
     D.settings.categories.forEach(c => CAT[c.id] = c);
     S.filters = S.filters.filter(f => CAT[f]);
     D.days = D.itinerary.days;
+    const first = Math.max(0, D.days.findIndex(d => d.id === 'sat'));   // Day 1 is Saturday; an earlier day is labelled, not numbered
     D.days.forEach((d, n) => {
-      d.n = n + 1;
+      d.n = n - first + 1;
+      d.tag = d.n >= 1 ? `Day ${d.n}` : (d.title || 'Early arrivals');
       const seen = {};
       d.items.forEach(it => {
         if (it.heading) return;
@@ -172,7 +174,7 @@
       });
     });
     const today = new Date(); const iso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-    S.day = (D.days.find(d => d.date === iso) || D.days[0]).id;
+    S.day = (D.days.find(d => d.date === iso) || D.days.find(d => d.id === 'sat') || D.days[0]).id;
 
     root.innerHTML = `
       <div class="bi-top" id="bi-top"></div>
@@ -250,7 +252,7 @@
       <div class="bi-bar"><div class="bi-col">
         <div class="bi-controls">
           <label class="bi-ctl bi-ctl--day">${svg('cal')}<span class="bi-ctl__txt">${esc(day.short)}</span>${svg('chev', 2.4).replace('<svg', '<svg class="bi-chev"')}
-            <select id="bi-day" aria-label="Choose a day">${D.days.map(d => `<option value="${d.id}"${d.id === S.day ? ' selected' : ''}>Day ${d.n} · ${esc(d.label)}</option>`).join('')}</select>
+            <select id="bi-day" aria-label="Choose a day">${D.days.map(d => `<option value="${d.id}"${d.id === S.day ? ' selected' : ''}>${esc(d.tag)} · ${esc(d.label)}</option>`).join('')}</select>
           </label>
           <button class="bi-ctl bi-ctl--filter${on ? ' is-on' : ''}" type="button" data-act="pop" aria-haspopup="true" aria-expanded="false" aria-controls="bi-pop">${svg('filter')}<span class="bi-ctl__txt">Filter</span>${on ? `<span class="bi-count">${S.filters.length}</span>` : ''}${svg('chev', 2.4).replace('<svg', '<svg class="bi-chev"')}</button>
           <div class="bi-pop" id="bi-pop" hidden role="group" aria-label="Filter by category">
@@ -261,7 +263,7 @@
         <div class="bi-pills${on ? ' is-filtered' : ''}">${pills}</div>
       </div></div>
       <div class="bi-dayhead"><div class="bi-col">
-        <h1>Day ${day.n} · ${esc(day.label)}</h1>
+        <h1>${esc(day.tag)} · ${esc(day.label)}</h1>
         <span class="bi-dayhead__meta">${on ? `${shown} of ${items.length}` : (anyTbc ? `${STAR} ${esc(D.settings.tbcLabel.toLowerCase())}` : `${items.length} items`)}</span>
       </div></div>`;
   }
@@ -283,9 +285,9 @@
     if (day.note && !on) html += `<div class="bi-daynote">${day.title ? `<b>${esc(day.title)}</b>` : ''}${esc(day.note)}</div>`;
     html += '<div class="bi-list">';
     let meal = null, count = 0;
-    const close = () => { if (meal !== null) { html += meal.body ? `<section class="bi-meal" aria-label="${esc(meal.name)}"><div class="bi-meal__head"><span>${esc(meal.name)}</span><i></i></div>${meal.body}</section>` : ''; meal = null; } };
+    const close = () => { if (meal !== null) { html += meal.body ? `<section class="bi-meal" aria-label="${esc(meal.name)}"><div class="bi-meal__head"><span>${esc(meal.name)}</span><i></i>${meal.time ? `<em>${esc(meal.time)}</em>` : ''}</div>${meal.note ? `<p class="bi-meal__note">${esc(meal.note)}</p>` : ''}${meal.body}</section>` : ''; meal = null; } };
     day.items.forEach((it, i) => {
-      if (it.heading) { close(); meal = { name: it.heading, body: '' }; return; }
+      if (it.heading) { close(); meal = { name: it.heading, time: it.time, note: it.note, body: '' }; return; }
       const inMeal = meal && it.cat === 'food';
       if (meal && !inMeal) close();
       if (!vis(it)) return;

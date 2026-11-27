@@ -5,9 +5,9 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:wed-10-00-am-aqua-nick@bb10.husna.com
-DTSTAMP:20261113T023023Z
+DTSTAMP:20261127T060133Z
 DTSTART:20261223T140000Z
-DTEND:20261223T203000Z
+DTEND:20261223T210000Z
 SUMMARY:Aqua Nick
 DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-10-00-am-aqua-nick
 URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/wed/wed-10-00-am-aqua-nick

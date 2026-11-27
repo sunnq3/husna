@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:sat-10-00-am-spanish-lessons@bb10.husna.com
-DTSTAMP:20261113T023023Z
+DTSTAMP:20261127T060133Z
 DTSTART:20261219T140000Z
 DTEND:20261219T150000Z
 SUMMARY:Spanish Lessons
-LOCATION:Mango's Bar\, Nickelodeon Punta Cana
-DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-spanish-lessons
+LOCATION:Lighthouse Covered Terrace\, Nickelodeon Punta Cana
+DESCRIPTION:Women only\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-spanish-lessons
 URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-10-00-am-spanish-lessons
 END:VEVENT
 END:VCALENDAR

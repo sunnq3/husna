@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sat-6-45-am-fajr-congregation@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261219T104500Z
+DTEND:20261219T114500Z
+SUMMARY:Fajr Congregation
+LOCATION:Lighthouse Terrace\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-6-45-am-fajr-congregation
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/sat/sat-6-45-am-fajr-congregation
+END:VEVENT
+END:VCALENDAR

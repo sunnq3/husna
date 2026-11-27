@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fri-3-15-pm-jumu-ah-congregation@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261218T191500Z
+DTEND:20261218T201500Z
+SUMMARY:Jumu'ah Congregation
+LOCATION:Lighthouse Terrace & Beach\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-3-15-pm-jumu-ah-congregation
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-3-15-pm-jumu-ah-congregation
+END:VEVENT
+END:VCALENDAR

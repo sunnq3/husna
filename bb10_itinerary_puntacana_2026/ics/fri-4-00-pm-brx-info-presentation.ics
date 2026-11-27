@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fri-4-00-pm-brx-info-presentation@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261218T200000Z
+DTEND:20261218T210000Z
+SUMMARY:BRX Info Presentation
+LOCATION:Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Excursions\, transfers and how to book\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-4-00-pm-brx-info-presentation
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-4-00-pm-brx-info-presentation
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-6-30-pm-meet-greet-ninja-turtles@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261221T223000Z
+DTEND:20261221T233000Z
+SUMMARY:Meet & Greet Ninja Turtles
+LOCATION:Gourmet Village\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-30-pm-meet-greet-ninja-turtles
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-6-30-pm-meet-greet-ninja-turtles
+END:VEVENT
+END:VCALENDAR

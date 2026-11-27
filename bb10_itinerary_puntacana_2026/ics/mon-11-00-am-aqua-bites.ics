@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mon-11-00-am-aqua-bites@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261221T150000Z
+DTEND:20261221T210000Z
+SUMMARY:Aqua Bites
+LOCATION:Aqua Nick\, Nickelodeon Punta Cana
+DESCRIPTION:Food truck · cuisine changes daily\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-00-am-aqua-bites
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/mon/mon-11-00-am-aqua-bites
+END:VEVENT
+END:VCALENDAR

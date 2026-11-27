@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fri-5-00-pm-guided-tour-of-the-resort-aqua-park@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261218T210000Z
+DTEND:20261218T220000Z
+SUMMARY:Guided Tour of the Resort & Aqua Park
+LOCATION:Meet at the Show Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-5-00-pm-guided-tour-of-the-resort-aqua-park
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-5-00-pm-guided-tour-of-the-resort-aqua-park
+END:VEVENT
+END:VCALENDAR

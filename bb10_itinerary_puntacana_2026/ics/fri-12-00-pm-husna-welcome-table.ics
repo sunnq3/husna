@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Husna Vacations//BB10 Itinerary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fri-12-00-pm-husna-welcome-table@bb10.husna.com
+DTSTAMP:20261127T060133Z
+DTSTART:20261218T160000Z
+DTEND:20261218T170000Z
+SUMMARY:Husna Welcome Table
+LOCATION:Prestige Lounge\, Nickelodeon Punta Cana
+DESCRIPTION:Early arrivals: come say salaam and pick up your info\nhttps://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-12-00-pm-husna-welcome-table
+URL:https://husna.com/itinerary-beach-beyond-punta-cana-2026#itinerary/fri/fri-12-00-pm-husna-welcome-table
+END:VEVENT
+END:VCALENDAR
