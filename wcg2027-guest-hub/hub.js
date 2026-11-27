@@ -155,7 +155,7 @@
       return true;
     }
     const make = y => ({ x: rnd(0, W), y: y == null ? rnd(-20, H) : y,
-      r: rnd(1, 2.6), v: rnd(6, 14), a: rnd(.28, .6), p: rnd(0, Math.PI * 2), w: rnd(5, 14), d: rnd(.25, .55) });
+      r: rnd(1, 2.8), v: rnd(26, 55), a: rnd(.35, .7), p: rnd(0, Math.PI * 2), w: rnd(5, 14), d: rnd(.4, .8) });
     const fill = () => { flakes = []; const n = Math.round(Math.min(28, Math.max(14, W / 34))); while (flakes.length < n) flakes.push(make()); };
 
     function paint(dt){
